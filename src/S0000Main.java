@@ -2,7 +2,8 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0007ReverseInteger r = new S0007ReverseInteger();
-        StdOut.println(r.reverse(1534236469));
+        S0038CountAndSay s0038CountAndSay = new S0038CountAndSay();
+        StdOut.println(s0038CountAndSay.countAndSay(4));
+        StdOut.println(s0038CountAndSay.countAndSay(8));
     }
 }
