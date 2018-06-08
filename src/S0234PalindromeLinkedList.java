@@ -1,7 +1,5 @@
-import java.util.Stack;
-
 public class S0234PalindromeLinkedList {
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
@@ -10,20 +8,49 @@ public class S0234PalindromeLinkedList {
         }
     }
 
-    //TODO: O(n) time, O(1) space
     public boolean isPalindrome(ListNode head) {
-        ListNode origin = head;
-
-        Stack<ListNode> reverse = new Stack<>();
-        while (head != null) {
-            reverse.add(head);
-            head = head.next;
+        if (head == null || head.next == null) {
+            return true;
         }
-        while (!reverse.isEmpty()) {
-            if (reverse.pop().val != origin.val) {
+
+        // >= 2
+        // N
+        int size = 0;
+        ListNode n = head;
+        while (n != null) {
+            size++;
+            n = n.next;
+        }
+
+        ListNode p = null, c = null;
+        n = head;
+        int halfSize = size/2;
+        do {
+            p = c;
+            c = n;
+            n = n.next;
+            c.next = p;
+            halfSize--;
+        } while (halfSize > 0);
+        ListNode left = c, right = n;
+        if (size%2 == 1) {
+            p = c;
+            c = n;
+            n = n.next;
+            left = p;
+            right = n;
+        }
+        halfSize = size/2;
+        while (halfSize > 0) {
+            if (left == null || right == null) {
                 return false;
             }
-            origin = origin.next;
+            if (left.val != right.val) {
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+            halfSize--;
         }
         return true;
     }
