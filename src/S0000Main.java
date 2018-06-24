@@ -1,6 +1,6 @@
 public class S0000Main {
     public static void main(String[] args) {
-        S0039CombinationSum sum = new S0039CombinationSum();
-        sum.combinationSum(new int[]{1}, 2);
+        S0040CombinationSumII sum = new S0040CombinationSumII();
+        sum.combinationSum2(new int[]{1, 1}, 1);
     }
 }
