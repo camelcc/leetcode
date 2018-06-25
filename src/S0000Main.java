@@ -1,6 +1,8 @@
+import edu.princeton.cs.algs4.StdOut;
+
 public class S0000Main {
     public static void main(String[] args) {
-        S0040CombinationSumII sum = new S0040CombinationSumII();
-        sum.combinationSum2(new int[]{1, 1}, 1);
+        S0043MultiplyStrings mul = new S0043MultiplyStrings();
+        StdOut.println(mul.multiply("123", "456"));
     }
 }
