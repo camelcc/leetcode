@@ -1,39 +1,41 @@
+import javafx.util.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class S0127WordLadder {
-    private static class Node {
-        int steps;
-        String word;
-        List<Node> wordList;
-
-        public Node(int steps, String word, List<Node> wordList) {
-            this.steps = steps;
-            this.word = word;
-            this.wordList = wordList;
-        }
-    }
-
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         if (!wordList.contains(endWord)) {
             return 0;
         }
 
-        List<String> l = new ArrayList<>(wordList);
-        l.remove(beginWord);
+        List<String> visited = new ArrayList<>();
+        visited.add(beginWord);
 
+        List<Pair<Integer, String>> nodes = new ArrayList<>();
+        nodes.add(new Pair<>(1, beginWord));
+        while (!nodes.isEmpty()) {
+            Pair<Integer, String> n = nodes.remove(0);
+            List<String> adjcents = new ArrayList<>();
+            for (String w : wordList) {
+                if (isAdj(n.getValue(), w)) {
+                    adjcents.add(w);
+                }
+            }
 
-        return 0;
-    }
+            for (String adj : adjcents) {
+                if (visited.contains(adj)) {
+                    continue;
+                }
+                if (adj.equals(endWord)) {
+                    return n.getKey()+1;
+                }
 
-    private List<String> adj(String word, List<String> wordList) {
-        List<String> res = new ArrayList<>();
-        for (String w : wordList) {
-            if (isAdj(word, w)) {
-                res.add(w);
+                nodes.add(new Pair<>(n.getKey()+1, adj));
+                visited.add(adj);
             }
         }
-        return res;
+        return 0;
     }
 
     private boolean isAdj(String a, String b) {
