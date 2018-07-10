@@ -1,6 +1,10 @@
+import edu.princeton.cs.algs4.StdOut;
+
+import java.util.Arrays;
+
 public class S0000Main {
     public static void main(String[] args) {
-        S0090SubsetsII set = new S0090SubsetsII();
-        set.subsetsWithDup(new int[] {1,4,3,5,4,4,7,7,8,0});
+        S0127WordLadder ladder = new S0127WordLadder();
+        StdOut.println(ladder.ladderLength("hit", "cog", Arrays.asList("hot","dot","dog","lot","log")));
     }
 }
