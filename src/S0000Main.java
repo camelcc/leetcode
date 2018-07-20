@@ -1,10 +1,13 @@
-import edu.princeton.cs.algs4.StdOut;
-
-import java.util.Arrays;
-
 public class S0000Main {
     public static void main(String[] args) {
-        S0127WordLadder ladder = new S0127WordLadder();
-        StdOut.println(ladder.ladderLength("hit", "cog", Arrays.asList("hot","dot","dog","lot","log", "cog")));
+        S0148SortList list = new S0148SortList();
+        S0148SortList.ListNode l = new S0148SortList.ListNode(4);
+        S0148SortList.ListNode h = l;
+        l.next = new S0148SortList.ListNode(2);
+        l = l.next;
+        l.next = new S0148SortList.ListNode(1);
+        l = l.next;
+        l.next = new S0148SortList.ListNode(3);
+        list.sortList(h);
     }
 }
