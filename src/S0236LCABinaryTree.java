@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Stack;
 
 public class S0236LCABinaryTree {
     public class TreeNode {
@@ -13,38 +12,43 @@ public class S0236LCABinaryTree {
     }
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        List<TreeNode> pPath = new ArrayList<>();
-        pPath.add(root);
+        Stack<TreeNode> pPath = new Stack<>();
+        contains(root, p, pPath);
+        Stack<TreeNode> qPath = new Stack<>();
+        contains(root, q, qPath);
 
-
-        List<TreeNode> qPath = new ArrayList<>();
-        pPath.add(root);
-        if (root.val == p.val) {
-        } else {
-
+        int commonSize = Math.min(pPath.size(), qPath.size());
+        while (pPath.size() > commonSize) {
+            pPath.pop();
+        }
+        while (qPath.size() > commonSize) {
+            qPath.pop();
         }
 
-        TreeNode res = root;
         while (!pPath.isEmpty() && !qPath.isEmpty()) {
-            TreeNode pn = pPath.remove(0);
-            TreeNode qn = qPath.remove(0);
+            TreeNode pn = pPath.pop();
+            TreeNode qn = qPath.pop();
             if (pn == qn) {
-                res = pn;
-            } else {
-                break;
+                return pn;
             }
         }
-        return res;
+        return null;
     }
 
-    private boolean contains(TreeNode root, TreeNode p) {
-        if (root == null) {
-            return false;
-        }
-
+    private boolean contains(TreeNode root, TreeNode p, Stack<TreeNode> path) {
+        path.push(root);
         if (root.val == p.val) {
             return true;
         }
-        return contains(root.left, p) || contains(root.right, p);
+
+        if (root.left != null && contains(root.left, p, path)) {
+            return true;
+        }
+        if (root.right != null && contains(root.right, p, path)) {
+            return true;
+        }
+
+        path.pop();
+        return false;
     }
 }
