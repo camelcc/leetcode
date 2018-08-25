@@ -1,33 +1,66 @@
-import java.util.Stack;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 public class S0423ReconstructOriginalDigits {
-    String[] numbers = new String[] {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"}
-
     public String originalDigits(String s) {
-        int[] chars = new int[26];
+        if (s.isEmpty()) {
+            return s;
+        }
+        int[] charCounts = new int[26];
         for (char c : s.toCharArray()) {
-            chars[c - 'a']++;
+            charCounts[c-'a']++;
         }
 
-        Stack<int[]> stack = new Stack<>();
-        stack.push(chars);
 
-        Stack<Integer> nums = new Stack<>();
-        while (s.isEmpty()) {
-            boolean valid = false;
-
-            for (int i = 0; i < 10; i++) {
+        String[] numbers = new String[] {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+        HashMap<Character, List<Integer>> digitChars = new HashMap<>();
+        for (int i = 0; i < 10; i++) {
+            for (char c : numbers[i].toCharArray()) {
+                if (!digitChars.containsKey(c)) {
+                    digitChars.put(c, new ArrayList<>());
+                }
+                if (!digitChars.get(c).contains(i)) {
+                    digitChars.get(c).add(i);
+                }
             }
         }
-    }
 
-    private boolean getNum(int[] chars, int num) {
-        for (char c : numbers[num].toCharArray()) {
-            chars[c-'a']--;
-            if (chars[c-'a'] < 0) {
-                return false;
+        boolean containsSingleCount = true;
+        StringBuilder sb = new StringBuilder();
+
+        while (containsSingleCount) {
+            containsSingleCount = false;
+            for (char c : digitChars.keySet()) {
+                if (digitChars.get(c).size() == 1) {
+                    containsSingleCount = true;
+
+                    int num = digitChars.get(c).get(0);
+                    int times = charCounts[c - 'a'];
+                    int[] remains = Arrays.copyOf(charCounts, charCounts.length);
+                    for (char ch : numbers[num].toCharArray()) {
+                        remains[ch-'a'] -= times;
+                    }
+                    charCounts = remains;
+                    for (int i = 0; i < times; i++) {
+                        sb.append(String.valueOf(num));
+                    }
+                    for (List<Integer> v : digitChars.values()) {
+                        v.remove((Integer)num);
+                    }
+                    break;
+                }
+            }
+            for (int i = 0; i < 26; i++) {
+                char c = (char)('a' + i);
+                if (digitChars.containsKey(c) && digitChars.get(c).isEmpty()) {
+                    digitChars.remove(c);
+                }
             }
         }
-        return true;
+        char[] digits = sb.toString().toCharArray();
+        Arrays.sort(digits);
+        return String.valueOf(digits);
     }
 }
