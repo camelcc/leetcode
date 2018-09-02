@@ -27,14 +27,11 @@ public class S0491IncreasingSubsequences {
         // path.size >= 1
         HashSet<Integer> b = bigger(start, nums);
         if (b.isEmpty()) {
-            if (path.size() > 1) {
-                res.add(path);
-            }
             return;
         }
 
         for (int v : b) {
-            List<Integer> r = new ArrayList<>(b);
+            List<Integer> r = new ArrayList<>(path);
             r.add(v);
             res.add(r);
 
@@ -52,7 +49,7 @@ public class S0491IncreasingSubsequences {
         int v = nums[position];
         for (int i = position + 1; i < nums.length; i++) {
             if (nums[i] >= v) {
-                res.add(v);
+                res.add(nums[i]);
             }
         }
         return res;

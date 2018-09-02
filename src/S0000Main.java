@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0481MagicalString magic = new S0481MagicalString();
-        StdOut.println(magic.magicalString(100000));
+        S0491IncreasingSubsequences subsequences = new S0491IncreasingSubsequences();
+        StdOut.println(subsequences.findSubsequences(new int[] {4,6,7,7}));
     }
 }
