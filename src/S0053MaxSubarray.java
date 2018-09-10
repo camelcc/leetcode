@@ -1,19 +1,17 @@
 public class S0053MaxSubarray {
     // TODO: DP and Divide & conqur
     public int maxSubArray(int[] nums) {
-        int[] sums = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            sums[i] = 0;
+        if (nums.length == 1)
+            return nums[0];
+
+        int localMax = nums[0];
+        int globalMax = nums[0];
+
+        for ( int i = 1; i < nums.length ; i++ ){
+            localMax = Math.max(nums[i] + localMax , nums[i]);
+            globalMax = Math.max(localMax, globalMax);
         }
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i; j >= 0; j--) {
-                sums[j] += nums[i];
-                if (sums[j] > max) {
-                    max = sums[j];
-                }
-            }
-        }
-        return max;
+
+        return globalMax;
     }
 }
