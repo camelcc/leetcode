@@ -1,57 +1,51 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class S0241DifferentWaysAddParentheses {
+    HashMap<String, List<Integer>> vals = new HashMap<>();
+
     public List<Integer> diffWaysToCompute(String input) {
         String arith = input.replaceAll(" ", "");
-
-        List<Integer> vals = new ArrayList<>();
-        List<Character> ops = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i <= arith.length(); i++) {
-            if (i == arith.length()) {
-                vals.add(Integer.valueOf(sb.toString()));
-                continue;
-            }
-
-            char c = arith.charAt(i);
-            if (c == '+' || c ==  '-' || c == '*') {
-                vals.add(Integer.valueOf(sb.toString()));
-                sb = new StringBuilder();
-                ops.add(c);
-            } else {
-                sb.append(c);
-            }
-        }
-
-        List<Integer> res = new ArrayList<>();
-        cal(vals, ops, res);
-        return res;
+        HashMap<String, List<Integer>> map = new HashMap<>();
+        return cal(arith, map);
     }
 
-    private void cal(List<Integer> vals, List<Character> ops, List<Integer> res) {
-        if (ops.isEmpty()) {
-            if (!res.contains(vals.get(0))) {
-                res.add(vals.get(0));
-            }
-            return;
+    private List<Integer> cal(String arith, HashMap<String, List<Integer>> map) {
+        if (map.containsKey(arith)) {
+            return map.get(arith);
+        }
+        List<Integer> res = new ArrayList<>();
+        if (!(arith.contains("+") || arith.contains("-") || arith.contains("*"))) {
+            res.add(Integer.valueOf(arith));
+            map.put(arith, res);
+            return res;
         }
 
-        for (int i = 0; i < ops.size(); i++) {
-            List<Character> opsClone = new ArrayList<>(ops);
-            char op = opsClone.remove(i);
-            List<Integer> valsClone = new ArrayList<>(vals);
-            int v1 = valsClone.remove(i);
-            int v2 = valsClone.remove(i);
-            if (op == '+') {
-                valsClone.add(i, v1 + v2);
-            } else if (op == '-') {
-                valsClone.add(i, v1 - v2);
-            } else if (op == '*') {
-                valsClone.add(i, v1 * v2);
+        for (int i = 0; i < arith.length(); i++) {
+            char c = arith.charAt(i);
+            if (c == '+' || c == '-' || c == '*') {
+                String left = arith.substring(0, i);
+                String right = arith.substring(i+1);
+                List<Integer> lv = cal(left, map);
+                List<Integer> rv = cal(right, map);
+                for (int l : lv) {
+                    for (int r : rv) {
+                        int val = 0;
+                        if (c == '+') {
+                            val = l + r;
+                        } else if (c == '-') {
+                            val = l - r;
+                        } else if (c == '*') {
+                            val = l * r;
+                        }
+                        res.add(val);
+                    }
+                }
             }
-
-            cal(valsClone, opsClone, res);
         }
+
+        map.put(arith, res);
+        return res;
     }
 }
