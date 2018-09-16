@@ -1,27 +1,22 @@
 public class S0264UglyNumberII {
     public int nthUglyNumber(int n) {
-        int c = 0;
-        for (int i = 1; i < Integer.MAX_VALUE; i++) {
-            if (isUgly(i)) {
-                c++;
-                if (c == n) {
-                    return i;
-                }
+        int[] ugly = new int[n];
+        ugly[0] = 1;
+        int i2 = 0, i3 = 0, i5 = 0;
+        int f2 = 2, f3 = 3, f5 = 5;
+        for (int i = 1; i < n; i++) {
+            int m = Math.min(Math.min(f2, f3), f5);
+            ugly[i] = m;
+            if (f2 == m) {
+                f2 = ugly[++i2] * 2;
+            }
+            if (f3 == m) {
+                f3 = ugly[++i3] * 3;
+            }
+            if (f5 == m) {
+                f5 = ugly[++i5] * 5;
             }
         }
-        throw new IllegalArgumentException("can not find");
-    }
-
-    private boolean isUgly(int n) {
-        while (n%2 == 0) {
-            n = n/2;
-        }
-        while (n%3 == 0) {
-            n = n/3;
-        }
-        while (n%5 == 0) {
-            n = n/5;
-        }
-        return n == 1;
+        return ugly[n-1];
     }
 }
