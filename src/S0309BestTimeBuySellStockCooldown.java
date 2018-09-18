@@ -1,60 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class S0309BestTimeBuySellStockCooldown {
-    //TODO: DP solution
     public int maxProfit(int[] prices) {
+        if (prices.length <= 1) {
+            return 0;
+        }
         // 0 - start, 1 - buy, 2 - buy cool down, 3 - sell cool down, 4 - sell
-        return market(prices, 0, 0, 0);
-    }
-
-    private int market(int[] prices, int day, int previsouAction, int profit) {
-        if (day == prices.length) {
-            return profit;
+        List<Integer> s0 = new ArrayList<>();
+        List<Integer> s1 = new ArrayList<>();
+        List<Integer> s2 = new ArrayList<>();
+        s0.add(0);
+        s1.add(-prices[0]);
+        s2.add(Integer.MIN_VALUE);
+        for (int i = 1; i < prices.length; i++) {
+            s0.add(Math.max(s0.get(i-1), s2.get(i-1)));
+            s1.add(Math.max(s1.get(i-1), s0.get(i-1) - prices[i]));
+            s2.add(s1.get(i-1) + prices[i]);
         }
-
-        int res = Integer.MIN_VALUE;
-        if (previsouAction == 0) { // start
-            // start
-            int start = market(prices, day+1, 0, profit);
-            if (res < start) {
-                res = start;
-            }
-
-            // buy
-            int buy = market(prices, day+1, 1, profit - prices[day]);
-            if (res < buy) {
-                res = buy;
-            }
-        } else if (previsouAction == 1 || previsouAction == 2) { // buy, buy cool down
-            // sell
-            int sell = market(prices, day+1, 4, profit + prices[day]);
-            if (res < sell) {
-                res = sell;
-            }
-
-            // buy cool down
-            int cool = market(prices, day+1, 2, profit);
-            if (res < cool) {
-                res = cool;
-            }
-        } else if (previsouAction == 3) { // sell cool down
-            // buy
-            int buy = market(prices, day+1, 1, profit - prices[day]);
-            if (res < buy) {
-                res = buy;
-            }
-
-            // sell cool down
-            int cool = market(prices, day+1, 3, profit);
-            if (res < cool) {
-                res = cool;
-            }
-        } else if (previsouAction == 4) { // sell
-            // must sell cool down
-            int cool = market(prices, day+1, 3, profit);
-            if (res < cool) {
-                res = cool;
-            }
-        }
-
-        return res;
+        return Math.max(s0.get(prices.length-1), s2.get(prices.length-1));
     }
 }

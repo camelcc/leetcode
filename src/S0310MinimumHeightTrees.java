@@ -1,51 +1,49 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class S0310MinimumHeightTrees {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-        int[] roots = new int[n];
-        int minRoot = Integer.MAX_VALUE;
-
-        for (int root = 0; root < n; root++) {
-            boolean[] visited = new boolean[n];
-            int[] heights = new int[n];
-
-            int h = 0;
-            visited[root] = true;
-            heights[root] = 0;
-            List<Integer> queue = new ArrayList<>();
-            queue.add(root);
-
-            while (!queue.isEmpty()) {
-                int node = queue.remove(0);
-                h = heights[node];
-                if (h > minRoot) {
-                    h = Integer.MAX_VALUE;
-                    break;
-                }
-
-                for (int adj : adj(edges, node)) {
-                    if (!visited[adj] || heights[adj] > heights[node] + 1) {
-                        visited[adj] = true;
-                        heights[adj] = heights[node] + 1;
-                        queue.add(adj);
-                    }
-                }
-            }
-
-            roots[root] = h;
-            if (minRoot > h) {
-                minRoot = h;
-            }
-        }
-
         List<Integer> res = new ArrayList<>();
+        if (n < 1) {
+            return res;
+        }
+        if (n == 1) {
+            res.add(n-1);
+            return res;
+        }
+        if (n == 2) {
+            res.add(0);
+            res.add(1);
+            return res;
+        }
+
+        List<Set<Integer>> adjs = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
-            if (roots[i] == minRoot) {
-                res.add(i);
+            adjs.add(new HashSet<>(adj(edges, i)));
+        }
+
+        List<Integer> leafs = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if (adjs.get(i).size() == 1) {
+                leafs.add(i);
             }
         }
-        return res;
+        while (n > 2) {
+            n -= leafs.size();
+            List<Integer> upper = new ArrayList<>();
+            for (int l : leafs) {
+                int u = adjs.get(l).iterator().next();
+                adjs.get(u).remove(l);
+                if (adjs.get(u).size() == 1) {
+                    upper.add(u);
+                }
+                adjs.get(l).clear();
+            }
+            leafs = upper;
+        }
+        return leafs;
     }
 
     private List<Integer> adj(int[][] edges, int n) {
