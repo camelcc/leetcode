@@ -1,31 +1,52 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
-//TODO: DFS and DP solution
 public class S0464CanIWin {
+    private boolean[] used;
+    private HashMap<Integer, Boolean> map;
+
     public boolean canIWin(int maxChoosableInteger, int desiredTotal) {
-        List<Integer> pool = new ArrayList<>();
-        for (int i = 1; i <= maxChoosableInteger; i++) {
-            pool.add(i);
-        }
-        return win(pool, desiredTotal);
+        int sum = (1+maxChoosableInteger)*maxChoosableInteger/2;
+        if(sum < desiredTotal) return false;
+        if(desiredTotal <= 0) return true;
+
+        map = new HashMap<>();
+        used = new boolean[maxChoosableInteger+1];
+        return win(desiredTotal);
     }
 
-    private boolean win(List<Integer> pickPool, int total) {
-        assert pickPool != null && pickPool.size() > 0 && total >= 0;
-
-        for (int i = pickPool.size()-1; i>= 0; i--) {
-            int pick = pickPool.get(i);
-            if (pick >= total) {
-                return true;
-            }
-
-            List<Integer> remains = new ArrayList<>(pickPool);
-            remains.remove((Integer)pick);
-            if (!win(remains, total-pick)) {
-                return true;
-            }
+    private boolean win(int total) {
+        if (total <= 0) {
+            return false;
         }
+        int val = format(used);
+        if (map.containsKey(val)) {
+            return map.get(val);
+        }
+        for (int i = 1; i < used.length; i++) {
+            if (used[i]) {
+                continue;
+            }
+
+            used[i] = true;
+
+            if (!win(total - i)) {
+                map.put(val, true);
+                used[i] = false;
+                return true;
+            }
+
+            used[i] = false;
+        }
+        map.put(val, false);
         return false;
+    }
+
+    public int format(boolean[] used){
+        int num = 0;
+        for(boolean b: used){
+            num <<= 1;
+            if(b) num |= 1;
+        }
+        return num;
     }
 }
