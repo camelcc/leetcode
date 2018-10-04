@@ -5,26 +5,23 @@ public class S0014LongestCommonPrefix {
             return "";
         }
 
-        StringBuilder prefix = new StringBuilder();
-        int index = 0;
-        char c;
-        boolean allEqual;
-        do {
-            c = index >= strs[0].length() ? '\0' : strs[0].charAt(index);
-            allEqual = true;
-            for (int i = 1; i < strs.length; i++) {
-                if ((index >= strs[i].length() ? '\0' : strs[i].charAt(index)) != c) {
-                    allEqual = false;
-                    break;
-                }
+        String smallest = strs[0];
+        String largest = strs[0];
+        for (String str : strs) {
+            if (smallest.compareTo(str) > 0) {
+                smallest = str;
             }
-            if (allEqual) {
-                if (c != '\0') {
-                    prefix.append(c);
-                }
-                index++;
+            if (largest.compareTo(str) < 0) {
+                largest = str;
             }
-        } while (allEqual && c != '\0');
-        return prefix.toString();
+        }
+
+        int i = 0;
+        for (i = 0; i < Math.min(smallest.length(), largest.length()); i++) {
+            if (smallest.charAt(i) != largest.charAt(i)) {
+                break;
+            }
+        }
+        return smallest.substring(0, i);
     }
 }

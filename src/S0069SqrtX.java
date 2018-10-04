@@ -1,16 +1,25 @@
 public class S0069SqrtX {
     public int mySqrt(int x) {
-        float torrance = 0.00001f;
-        float guess = 1;
-        float improve = 1;
-        do {
-            guess = improve;
-            improve =(guess + 1.0f*x/guess)/2;
-        } while (Math.abs(guess - improve) > torrance);
-        long g =(long)Math.ceil(guess);
-        while (g*g > (long)x) {
-            g--;
+        if (x <= 1) {
+            return x;
         }
-        return (int)g;
+
+        int lo = 1, hi = x;
+        while (lo < hi) {
+            int mid = (lo + hi)/2;
+            int div = x / mid;
+            if (div == mid) {
+                return mid;
+            } else if (div > mid) {
+                if (lo == mid) {
+                    return lo;
+                }
+
+                lo = mid;
+            } else { // v > x
+                hi = mid;
+            }
+        }
+        return lo;
     }
 }

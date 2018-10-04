@@ -16,34 +16,26 @@ public class S0021MergeSortedList {
             return l1;
         }
 
-        ListNode head = null;
-        ListNode tail = null;
-
-        ListNode l1Node = l1;
-        ListNode l2Node = l2;
-        while (l1Node != null && l2Node != null) {
-            if (l1Node.val > l2Node.val) {
-                if (head == null) {
-                    head = l2Node;
-                    tail = head;
-                } else {
-                    tail.next = l2Node;
-                    tail = l2Node;
-                }
-                l2Node = l2Node.next;
-            } else {
-                if (head == null) {
-                    head = l1Node;
-                    tail = head;
-                } else {
-                    tail.next = l1Node;
-                    tail = l1Node;
-                }
-                l1Node = l1Node.next;
-            }
+        ListNode head = l1.val < l2.val ? l1 : l2;
+        ListNode tail = head;
+        if (l1.val < l2.val) {
+            l1 = l1.next;
+        } else {
+            l2 = l2.next;
         }
 
-        tail.next = l1Node == null ? l2Node : l1Node;
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                tail.next = l1;
+                l1 = l1.next;
+            } else {
+                tail.next = l2;
+                l2 = l2.next;
+            }
+            tail = tail.next;
+        }
+
+        tail.next = (l1 == null ? l2 : l1);
         return head;
     }
 }

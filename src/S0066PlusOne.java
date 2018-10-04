@@ -1,33 +1,26 @@
-import java.util.Stack;
-
 public class S0066PlusOne {
     public int[] plusOne(int[] digits) {
-        Stack<Integer> sum = new Stack<>();
-        int added = 1;
+        int c = 1;
         for (int i = digits.length-1; i >= 0; i--) {
-            if (added == 0) {
-                sum.push(digits[i]);
-                continue;
-            }
-
-            int s = digits[i] + added;
-            if (s >= 10) {
-                sum.push(s-10);
-                added = 1;
+            if (digits[i] == 9) {
+                digits[i] = 0;
             } else {
-                sum.push(s);
-                added = 0;
+                digits[i]++;
+                c = 0;
+                break;
             }
         }
-        if (added == 1) {
-            sum.push(added);
+
+        if (c == 0) {
+            return digits;
+        } else {
+            int[] res = new int[digits.length+1];
+            res[0] = 1;
+            for (int i = 0; i < digits.length; i++) {
+                res[i+1] = digits[i];
+            }
+            return res;
         }
-        int i = 0;
-        int[] res = new int[sum.size()];
-        while (!sum.empty()) {
-            res[i++] = sum.pop();
-        }
-        return res;
     }
 
 }

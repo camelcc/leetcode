@@ -1,43 +1,25 @@
-import java.util.Stack;
-
 public class S0067AddBinary {
     public String addBinary(String a, String b) {
-        int ai = a.length()-1, bi = b.length()-1;
-        char added = '0';
-        Stack<Character> sum = new Stack<>();
-        while (ai >= 0 || bi >= 0) {
-            int s = 0;
-            s = s + (added == '1' ? 1 : 0);
-            if (ai < 0) {
-                s = s + (b.charAt(bi--) == '1' ? 1 : 0);
-            } else if (bi < 0) {
-                s = s + (a.charAt(ai--) == '1' ? 1 : 0);
-            } else {
-                s = s + (a.charAt(ai--) == '1' ? 1 : 0);
-                s = s + (b.charAt(bi--) == '1' ? 1 : 0);
+        StringBuilder sb = new StringBuilder();
+        int ia = a.length()-1;
+        int ib = b.length()-1;
+        int c = 0;
+        while (ia >= 0 || ib >= 0) {
+            int s = c;
+            if (ia >= 0) {
+                s += (a.charAt(ia) == '0' ? 0 : 1);
+                ia--;
             }
-
-            if (s == 0) {
-                sum.push('0');
-                added = '0';
-            } else if (s == 1) {
-                sum.push('1');
-                added = '0';
-            } else if (s == 2) {
-                sum.push('0');
-                added = '1';
-            } else if (s == 3) {
-                sum.push('1');
-                added = '1';
+            if (ib >= 0) {
+                s += (b.charAt(ib) == '0' ? 0 : 1);
+                ib--;
             }
+            sb.append(s % 2 == 0 ? '0' : '1');
+            c = s/2;
         }
-        if (added == '1') {
-            sum.push('1');
+        if (c != 0) {
+            sb.append('1');
         }
-        StringBuilder res = new StringBuilder();
-        while (!sum.empty()) {
-            res.append(sum.pop());
-        }
-        return res.toString();
+        return sb.reverse().toString();
     }
 }

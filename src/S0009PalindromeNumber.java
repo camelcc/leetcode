@@ -9,18 +9,15 @@ public class S0009PalindromeNumber {
     }
 
     public boolean isPalindrome(int x) {
-        if (x < 0) {
+        if (x < 0 || (x != 0 && x % 10 == 0)) {
             return false;
-        } else if (x == 0) {
-            return true;
         }
 
         int reversed = 0;
-        int t = x;
-        while (t > 0) {
-            reversed = 10 * reversed + t % 10;
-            t = t / 10;
+        while (x > reversed) {
+            reversed = 10 * reversed + x % 10;
+            x /= 10;
         }
-        return x == reversed;
+        return x == reversed || reversed/10 == x;
     }
 }

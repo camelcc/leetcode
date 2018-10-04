@@ -23,13 +23,14 @@ public class S0001TwoSum {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> st = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            Integer index = st.get(target-nums[i]);
-            if (index != null) {
-                return new int[] {index, i};
+            int remains = target - nums[i];
+            if (st.containsKey(target-nums[i])) {
+                return new int[] {st.get(remains), i};
+            } else {
+                st.put(nums[i], i);
             }
-            st.put(nums[i], i);
         }
-        throw new IllegalStateException("can not find solution");
+        return null;
     }
 }
 
