@@ -1,4 +1,4 @@
-public class S083RemoveDuplicatesfromSortedList {
+public class S0083RemoveDuplicatesfromSortedList {
     public class ListNode {
         int val;
         ListNode next;

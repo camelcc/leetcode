@@ -5,11 +5,12 @@ Issues in whitelist is easy & simple so don't need to revisited after one time p
 All solutions aimed to achieve high performance and easy to understand goal.
 
 
+## Easy
 ```text
-[W] - white list, easy and one time pass, no need to revisit.
-[L] - light grey, easy but with some corner case or have more effective solution than first instinct.
-[G] - grey list, need to carefully handle the edge case, revisit multiple times to ensure understand.
-[B] - black list, have no idea what the solution is unless given the solution, need revisit from time to time.
+[W] - white list, easy and one time pass.
+[L] - light grey, easy but with few corner cases.
+[G] - grey list, intricate corner cases.
+[B] - black list, brilliant and intellectual challenge solution.
 
 [L] 0001. Two Sum
 [W] 0002. Add Two Numbers
@@ -42,6 +43,26 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0112. Path Sum
 [W] 0118. Pascal's Triangle
 [W] 0119. Pascal's Triangle II
+[W] 0121. Best Time to Buy and Sell Stock
+[B] 0122. Best Time to Buy and Sell Stock II
+[W] 0125. Valid Palindrome
+[W] 0136. Single Number
+[W] 0141. Linked List Cycle
+[B] 0155. Min Stack
+[W] 0160. Intersection of Two Linked Lists
+[B] 0167. Two Sum II - Input array is sorted
+[L] 0168. Excel Sheet Column Title
+[B] 0169. Majority Element [moore voting]
+[W] 0171. Excel Sheet Column Number
+[W] 0172. Factorial Trailing Zeroes
+[B] 0189. Rotate Array [O(1) space, O(n) time]
+[L] 0190. Reverse Bits
+[W] 0191. Number of 1 Bits
+[G] 0198. House Robber
+[B] 0202. Happy Number
+[L] 0203. Remove Linked List Elements
+[G] 0204. Count Primes
+[L] 0205. Isomorphic Strings
 
 ```
 

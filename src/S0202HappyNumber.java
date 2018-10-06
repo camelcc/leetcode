@@ -1,23 +1,14 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class S0202HappyNumber {
     public boolean isHappy(int n) {
-        Set<Integer> nums = new HashSet<>();
-        nums.add(n);
-        int sum = n;
-        while (true) {
-             sum = squareDigits(n);
-             n = sum;
-
-            if (sum == 1) {
-                return true;
+        int slow = n, fast = n;
+        while (slow != 1) {
+            slow = squareDigits(slow);
+            fast = squareDigits(squareDigits(fast));
+            if (slow == fast) {
+                break;
             }
-            if (nums.contains(sum)) {
-                return false;
-            }
-            nums.add(sum);
         }
+        return slow == 1;
     }
 
     private int squareDigits(int n) {

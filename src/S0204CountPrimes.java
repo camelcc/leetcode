@@ -1,27 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class S0204CountPrimes {
     public int countPrimes(int n) {
-        if (n <= 1) {
+        if (n <= 2) {
             return 0;
         }
-        List<Integer> prims = new ArrayList<>();
-        for (int i = 2; i < n; i++) {
-            boolean isPrime = true;
-            for (int p : prims) {
-                if (p*p > i) {
-                    break;
+        boolean[] notPrims = new boolean[n];
+        notPrims[0] = true;
+        notPrims[1] = true;
+        notPrims[2] = false;
+        int count = 1;
+        for (int i = 3; i < n; i+=2) {
+            if (!notPrims[i]) {
+                count++;
+                for (int j = i+i; j < n; j+=i) {
+                    notPrims[j] = true;
                 }
-                if (i%p == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-            if (isPrime) {
-                prims.add(i);
             }
         }
-        return prims.size();
+        return count;
     }
 }
