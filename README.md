@@ -63,6 +63,19 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0203. Remove Linked List Elements
 [G] 0204. Count Primes
 [L] 0205. Isomorphic Strings
-
+[L] 0206. Reverse Linked List
+[W] 0217. Contains Duplicate
+[W] 0219. Contains Duplicate II
+[W] 0225. Implement Stack using Queues
+[W] 0226. Invert Binary Tree
+[W] 0231. Power of Two
+[L] 0232. Implement Queue using Stacks
+[G] 0234. Palindrome Linked List
+[L] 0235. Lowest Common Ancestor of a Binary Search Tree
+[L] 0237. Delete Node in a Linked List
+[W] 0242. Valid Anagram
+[L] 0257. Binary Tree Paths
+[W] 0258. Add Digits
+[W] 0263. Ugly Number
 ```
 
