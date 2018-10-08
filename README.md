@@ -77,5 +77,24 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0257. Binary Tree Paths
 [W] 0258. Add Digits
 [W] 0263. Ugly Number
+[W] 0268. Missing Number
+[L] 0278. First Bad Version
+[L] 0283. Move Zeroes
+[W] 0290. Word Pattern
+[W] 0268. Missing Number 
+[L] 0278. First Bad Version
+[L] 0283. Move Zeroes
+[L] 0290. Word Pattern
+[W] 0292. Nim Game
+[W] 0303. Range Sum Query - Immutable
+[B] 0326. Power of Three
+[B] 0342. Power of Four
+[W] 0344. Reverse String
+[L] 0345. Reverse Vowels of a String
+[W] 0349. Intersection of Two Arrays
+[L] 0350. Intersection of Two Arrays II
+[W] 0367. Valid Perfect Square
+[W] 0371. Sum of Two Integers
+
 ```
 
