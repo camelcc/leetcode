@@ -1,30 +1,39 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class S0414ThirdMaximumNumber {
     public int thirdMax(int[] nums) {
-        List<Integer> maxlist = new ArrayList<>();
-        for (int i = 0; i < nums.length; i++) {
+        int max = nums[0];
+        Integer secondMax = null;
+        Integer thirdMax = null;
+        for (int i = 1; i < nums.length; i++) {
             int v = nums[i];
-            int j = 0;
-            for (int m : maxlist) {
-                if (v == m) {
-                    j = -1;
-                    break;
-                }
-                if (v > m) {
-                    break;
-                }
-                j++;
-                if (j > 3) {
-                    break;
-                }
-            }
-            if (j == -1) {
+            if (v > max) {
+                thirdMax = secondMax;
+                secondMax = max;
+                max = v;
                 continue;
             }
-            maxlist.add(j, v);
+            if (v == max) {
+                continue;
+            }
+            if (secondMax == null) {
+                secondMax = v;
+                continue;
+            }
+            if (v > secondMax) {
+                thirdMax = secondMax;
+                secondMax = nums[i];
+                continue;
+            }
+            if (v == secondMax) {
+                continue;
+            }
+            if (thirdMax == null) {
+                thirdMax = v;
+                continue;
+            }
+            if (v > thirdMax) {
+                thirdMax = v;
+            }
         }
-        return maxlist.size() < 3 ? maxlist.get(0) : maxlist.get(2);
+        return thirdMax == null ? max : thirdMax;
     }
 }

@@ -8,11 +8,11 @@ public class S0415AddStrings {
             int v2 = s2index >= 0 ? num2.charAt(s2index--) - '0' : 0;
             int t = sup + v1 + v2;
             sup = t >= 10 ? t/10: 0;
-            sum.insert(0, t%10);
+            sum.append(t%10);
         }
         if (sup > 0) {
-            sum.insert(0, String.valueOf(sup));
+            sum.append(String.valueOf(sup));
         }
-        return sum.toString();
+        return sum.reverse().toString();
     }
 }

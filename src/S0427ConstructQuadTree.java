@@ -21,18 +21,21 @@ public class S0427ConstructQuadTree {
     }
 
     public Node construct(int[][] grid) {
-        if (grid.length == 0) {
+        return construct(grid, 0, 0, grid.length);
+    }
+
+    private Node construct(int[][] grid, int l, int t, int len) {
+        if (len == 0) {
             return null;
         }
-        if (grid.length == 1) {
-            return new Node(grid[0][0] == 1, true, null, null, null, null);
+        if (len == 1) {
+            return new Node(grid[t][l] == 1, true, null, null, null, null);
         }
-
-        int N = grid.length;
-        int V = grid[0][0];
+        int N = len;
+        int V = grid[t][l];
         boolean same = true;
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
+        for (int i = t; i < t+N; i++) {
+            for (int j = l; j < l+N; j++) {
                 if (grid[i][j] != V) {
                     same = false;
                     break;
@@ -45,19 +48,9 @@ public class S0427ConstructQuadTree {
         if (same) {
             return new Node(V == 1, true, null, null, null, null);
         }
-
-        int[][] lt = new int[N/2][N/2];
-        int[][] rt = new int[N/2][N/2];
-        int[][] lb = new int[N/2][N/2];
-        int[][] rb = new int[N/2][N/2];
-        for (int i = 0; i < N/2; i++) {
-            for (int j = 0; j < N/2; j++) {
-                lt[i][j] = grid[i][j];
-                rt[i][j] = grid[i][j+N/2];
-                lb[i][j] = grid[i+N/2][j];
-                rb[i][j] = grid[i+N/2][j+N/2];
-            }
-        }
-        return new Node(true, false, construct(lt), construct(rt), construct(lb), construct(rb));
+        return new Node(true, false, construct(grid, l, t, N/2),
+                construct(grid, l+N/2, t, N/2),
+                construct(grid, l, t+N/2, N/2),
+                construct(grid, l+N/2, t+N/2, N/2));
     }
 }

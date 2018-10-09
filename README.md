@@ -95,6 +95,24 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0350. Intersection of Two Arrays II
 [W] 0367. Valid Perfect Square
 [W] 0371. Sum of Two Integers
+[W] 0374. Guess Number Higher or Lower
+[W] 0383. Ransom Note
+[L] 0387. First Unique Character in a String
+[W] 0389. Find the Difference
+[G] 0400. Nth Digit
+[L] 0401. Binary Watch
+[W] 0404. Sum of Left Leaves
+[G] 0405. Convert a Number to Hexadecimal
+[W] 0409. Longest Palindrome
+[W] 0412. Fizz Buzz
+[L] 0414. Third Maximum Number
+[W] 0415. Add Strings
+[L] 0427. Construct Quad Tree
+[W] 0429. N-ary Tree Level Order Traversal
+[W] 0434. Number of Segments in a String
+[G] 0437. Path Sum III
+[W] 0438. Find All Anagrams in a String
+[G] 0441. Arranging Coins
 
 ```
 
