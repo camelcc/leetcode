@@ -110,9 +110,12 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0427. Construct Quad Tree
 [W] 0429. N-ary Tree Level Order Traversal
 [W] 0434. Number of Segments in a String
-[G] 0437. Path Sum III
+[B] 0437. Path Sum III
 [W] 0438. Find All Anagrams in a String
 [G] 0441. Arranging Coins
+[G] 0443. String Compression
+[L] 0447. Number of Boomerangs
+[B] 0448. Find All Numbers Disappeared in an Array
 
 ```
 

@@ -1,32 +1,20 @@
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class S0447NumberBoomerangs {
-    // TODO: do better
     public int numberOfBoomerangs(int[][] points) {
         int res = 0;
-
         for (int i = 0; i < points.length; i++) {
-            int[] source = points[i];
-
-            HashMap<Integer, HashSet<Integer>> distances = new HashMap<>();
+            HashMap<Integer, Integer> distances = new HashMap<>();
             for (int j = 0; j < points.length; j++) {
                 if (j == i) {
                     continue;
                 }
 
-                int d = squareDis(source, points[j]);
-                HashSet<Integer> p = distances.containsKey(d) ? distances.get(d) : new HashSet<>();
-                p.add(j);
-                distances.put(d, p);
+                int d = squareDis(points[i], points[j]);
+                distances.put(d, distances.getOrDefault(d, 0) + 1);
             }
-
-            for (HashSet<Integer> booms : distances.values()) {
-                if (booms.size() <= 1) {
-                    continue;
-                }
-
-                res += booms.size() * (booms.size() - 1);
+            for (int booms : distances.values()) {
+                res += booms * (booms - 1);
             }
         }
 
