@@ -116,6 +116,23 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [G] 0443. String Compression
 [L] 0447. Number of Boomerangs
 [B] 0448. Find All Numbers Disappeared in an Array
+[B] 0453. Minimum Moves to Equal Array Elements
+[W] 0455. Assign Cookies
+[L] 0458. Poor Pigs
+[W] 0459. Repeated Substring Pattern
+[W] 0461. Hamming Distance
+[W] 0463. Island Perimeter
+[L] 0475. Heaters
+[W] 0476. Number Complement
+[G] 0479. Largest Palindrome Product
+[W] 0482. License Key Formatting
+[L] 0485. Max Consecutive Ones
+[W] 0492. Construct the Rectangle
+[B] 0496. Next Greater Element I
+[W] 0500. Keyboard Row
+[B] 0501. Find Mode in Binary Search Tree
+[W] 0504. Base 7
+[W] 0506. Relative Ranks
 
 ```
 
