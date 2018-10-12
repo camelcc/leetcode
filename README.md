@@ -151,6 +151,14 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0572. Subtree of Another Tree
 [W] 0575. Distribute Candies
 [L] 0581. Shortest Unsorted Continuous Subarray
+[W] 0589. N-ary Tree Preorder Traversal
+[W] 0590. N-ary Tree Postorder Traversal
+[W] 0594. Longest Harmonious Subsequence
+[W] 0598. Range Addition II
+[W] 0599. Minimum Index Sum of Two Lists
+[L] 0605. Can Place Flowers
+[W] 0606. Construct String from Binary Tree
+[W] 0617. Merge Two Binary Trees
 
 ```
 
