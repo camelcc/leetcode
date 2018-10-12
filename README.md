@@ -133,6 +133,24 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [B] 0501. Find Mode in Binary Search Tree
 [W] 0504. Base 7
 [W] 0506. Relative Ranks
+[W] 0507. Perfect Number
+[L] 0520. Detect Capital
+[W] 0521. Longest Uncommon Subsequence I
+[W] 0530. Minimum Absolute Difference in BST
+[W] 0532. K-diff Pairs in an Array
+[W] 0538. Convert BST to Greater Tree
+[W] 0541. Reverse String II
+[W] 0543. Diameter of Binary Tree
+[W] 0551. Student Attendance Record I
+[W] 0557. Reverse Words in a String III
+[L] 0558. Quad Tree Intersection
+[W] 0559. Maximum Depth of N-ary Tree
+[W] 0561. Array Partition I
+[W] 0563. Binary Tree Tilt
+[W] 0566. Reshape the Matrix
+[L] 0572. Subtree of Another Tree
+[W] 0575. Distribute Candies
+[L] 0581. Shortest Unsorted Continuous Subarray
 
 ```
 
