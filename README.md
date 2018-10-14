@@ -159,6 +159,7 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0605. Can Place Flowers
 [W] 0606. Construct String from Binary Tree
 [W] 0617. Merge Two Binary Trees
+[B] 0628. Maximum Product of Three Numbers
 
 ```
 
