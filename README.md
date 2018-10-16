@@ -160,6 +160,18 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0606. Construct String from Binary Tree
 [W] 0617. Merge Two Binary Trees
 [B] 0628. Maximum Product of Three Numbers
+[L] 0637. Average of Levels in Binary Tree
+[L] 0643. Maximum Average Subarray I
+[W] 0645. Set Mismatch
+[W] 0653. Two Sum IV - Input is a BST
+[W] 0657. Robot Return to Origin
+[W] 0661. Image Smoother
+[G] 0665. Non-decreasing Array
+[W] 0669. Trim a Binary Search Tree
+[G] 0671. Second Minimum Node In a Binary Tree
+[W] 0674. Longest Continuous Increasing Subsequence
+[G] 0680. Valid Palindrome II
+[W] 0682. Baseball Game
 
 ```
 
