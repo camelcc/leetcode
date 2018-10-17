@@ -172,6 +172,22 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0674. Longest Continuous Increasing Subsequence
 [G] 0680. Valid Palindrome II
 [W] 0682. Baseball Game
+[L] 0686. Repeated String Match
+[G] 0687. Longest Univalue Path
+[W] 0690. Employee Importance
+[W] 0693. Binary Number with Alternating Bits
+[B] 0696. Count Binary Substrings
+[W] 0697. Degree of an Array
+[W] 0717. 1-bit and 2-bit Characters
+[W] 0720. Longest Word in Dictionary
+[W] 0724. Find Pivot Index
+[W] 0728. Self Dividing Numbers
+[L] 0733. Flood Fill
+[G] 0743. Network Delay Time
+[L] 0744. Find Smallest Letter Greater Than Target
+[L] 0746. Min Cost Climbing Stairs
+[L] 0747. Largest Number At Least Twice of Others
+[W] 0748. Shortest Completing Word
 
 ```
 

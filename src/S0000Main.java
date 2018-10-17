@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0680ValidPalindromeII palindromeII = new S0680ValidPalindromeII();
-        StdOut.println(palindromeII.validPalindrome("abc"));
+        S0747LargestNumberAtLeastTwiceOthers others = new S0747LargestNumberAtLeastTwiceOthers();
+        StdOut.println(others.dominantIndex(new int[]{0,0,1,2}));
     }
 }
