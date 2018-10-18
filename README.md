@@ -188,6 +188,14 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0746. Min Cost Climbing Stairs
 [L] 0747. Largest Number At Least Twice of Others
 [W] 0748. Shortest Completing Word
+[B] 0754. Reach a Number
+[W] 0762. Prime Number of Set Bits in Binary Representation
+[W] 0766. Toeplitz Matrix
+[W] 0771. Jewels and Stones
+[B] 0783. Minimum Distance Between BST Nodes
+[W] 0784. Letter Case Permutation
+
+
 
 ```
 
