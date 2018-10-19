@@ -194,8 +194,16 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0771. Jewels and Stones
 [B] 0783. Minimum Distance Between BST Nodes
 [W] 0784. Letter Case Permutation
-
-
+[B] 0788. Rotated Digits
+[B] 0796. Rotate String
+[W] 0804. Unique Morse Code Words
+[W] 0806. Number of Lines To Write String
+[W] 0811. Subdomain Visit Count
+[W] 0812. Largest Triangle Area
+[L] 0819. Most Common Word
+[W] 0821. Shortest Distance to a Character
+[W] 0824. Goat Latin
+[W] 0830. Positions of Large Groups
 
 ```
 
