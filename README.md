@@ -204,6 +204,22 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0821. Shortest Distance to a Character
 [W] 0824. Goat Latin
 [W] 0830. Positions of Large Groups
+[W] 0832. Flipping an Image
+[W] 0836. Rectangle Overlap
+[W] 0840. Magic Squares In Grid
+[L] 0844. Backspace String Compare
+[L] 0849. Maximize Distance to Closest Person
+[W] 0852. Peak Index in a Mountain Array
+[W] 0859. Buddy Strings
+[W] 0860. Lemonade Change
+[W] 0867. Transpose Matrix
+[W] 0868. Binary Gap
+[L] 0872. Leaf-Similar Trees
+[G] 0874. Walking Robot Simulation
+[W] 0876. Middle of the Linked List
+[W] 0883. Projection Area of 3D Shapes
+[W] 0884. Uncommon Words from Two Sentences
+
 
 ```
 
