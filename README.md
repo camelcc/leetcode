@@ -219,6 +219,10 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0876. Middle of the Linked List
 [W] 0883. Projection Area of 3D Shapes
 [W] 0884. Uncommon Words from Two Sentences
+[W] 0888. Fair Candy Swap
+[G] 0892. Surface Area of 3D Shapes
+
+
 
 
 ```
