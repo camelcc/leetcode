@@ -221,9 +221,9 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0884. Uncommon Words from Two Sentences
 [W] 0888. Fair Candy Swap
 [G] 0892. Surface Area of 3D Shapes
-
-
-
+[W] 0893. Groups of Special-Equivalent Strings
+[W] 0896. Monotonic Array
+[L] 0897. Increasing Order Search Tree
 
 ```
 
