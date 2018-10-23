@@ -4,14 +4,15 @@ Issues in whitelist is easy & simple so don't need to revisited after one time p
 
 All solutions aimed to achieve high performance and easy to understand goal.
 
-
-## Easy
 ```text
 [W] - white list, easy and one time pass.
 [L] - light grey, easy but with few corner cases.
 [G] - grey list, intricate corner cases.
 [B] - black list, brilliant and intellectual challenge solution.
+```
 
+## Easy
+```text
 [L] 0001. Two Sum
 [W] 0002. Add Two Numbers
 [G] 0007. Reverse Integer
@@ -224,6 +225,17 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0893. Groups of Special-Equivalent Strings
 [W] 0896. Monotonic Array
 [L] 0897. Increasing Order Search Tree
+```
+
+## Medium
+```text
+[W] 0002. Add Two Numbers
+[B] 0003. Longest Substring Without Repeating Characters
+[B] 0005. Longest Palindromic Substring
+[L] 0006. ZigZag Conversion
+[W] 0008. String to Integer (atoi)
+
+
 
 ```
 
