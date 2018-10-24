@@ -234,7 +234,13 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [B] 0005. Longest Palindromic Substring
 [L] 0006. ZigZag Conversion
 [W] 0008. String to Integer (atoi)
-
+[B] 0011. Container With Most Water
+[G] 0012. Integer to Roman
+[B] 0015. 3Sum
+[W] 0017. Letter Combinations of a Phone Number
+[B] 0018. 4Sum
+[B] 0019. Remove Nth Node From End of List
+[L] 0022. Generate Parentheses
 
 
 ```
