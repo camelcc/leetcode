@@ -241,7 +241,13 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [B] 0018. 4Sum
 [B] 0019. Remove Nth Node From End of List
 [L] 0022. Generate Parentheses
-
+[W] 0024. Swap Nodes in Pairs
+[G] 0029. Divide Two Integers
+[W] 0031. Next Permutation
+[L] 0033. Search in Rotated Sorted Array
+[L] 0034. Find First and Last Position of Element in Sorted Array
+[W] 0036. Valid Sudoku
+[L] 0039. Combination Sum
 
 ```
 
