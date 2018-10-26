@@ -248,6 +248,22 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0034. Find First and Last Position of Element in Sorted Array
 [W] 0036. Valid Sudoku
 [L] 0039. Combination Sum
+[L] 0040. Combination Sum II
+[B] 0043. Multiply Strings
+[W] 0046. Permutations
+[L] 0047. Permutations II
+[W] 0048. Rotate Image
+[W] 0049. Group Anagrams
+[L] 0050. Pow(x, n)
+[G] 0054. Spiral Matrix
+
+
+
+
+
+
+
+
 
 ```
 
