@@ -256,6 +256,8 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0049. Group Anagrams
 [L] 0050. Pow(x, n)
 [G] 0054. Spiral Matrix
+[W] 0055. Jump Game
+
 
 
 
