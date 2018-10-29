@@ -258,6 +258,26 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [G] 0054. Spiral Matrix
 [W] 0055. Jump Game
 [W] 0056. Merge Intervals
+[W] 0059. Spiral Matrix II
+[W] 0060. Permutation Sequence
+[W] 0061. Rotate List
+[B] 0062. Unique Paths
+[B] 0063. Unique Paths II
+[W] 0064. Minimum Path Sum
+[G] 0071. Simplify Path
+[L] 0073. Set Matrix Zeroes
+[W] 0074. Search a 2D Matrix
+[W] 0075. Sort Colors
+
+
+
+
+
+
+
+
+
+
 
 
 
