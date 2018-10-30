@@ -268,26 +268,5 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0073. Set Matrix Zeroes
 [W] 0074. Search a 2D Matrix
 [W] 0075. Sort Colors
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 
