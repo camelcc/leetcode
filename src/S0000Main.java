@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0576OutBoundaryPaths paths = new S0576OutBoundaryPaths();
-        StdOut.println(paths.findPaths(1 ,3 ,3, 0, 1));
+        S0592FractionAdditionSubtraction subtraction = new S0592FractionAdditionSubtraction();
+        StdOut.println(subtraction.fractionAddition("-4/7-3/4+2/3"));
     }
 }
