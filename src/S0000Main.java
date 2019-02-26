@@ -1,14 +1,8 @@
 import edu.princeton.cs.algs4.StdOut;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class S0000Main {
     public static void main(String[] args) {
-        S0756PyramidTransitionMatrix matrix = new S0756PyramidTransitionMatrix();
-        List<String> allowed = new ArrayList<>();
-        Collections.addAll(allowed, "CBB","ACB","ABD","CDB","BDC","CBC","DBA","DBB","CAB","BCB","BCC","BAA","CCD","BDD","DDD","CCA","CAA","CCC","CCB");
-        StdOut.println(matrix.pyramidTransition("CCC", allowed));
+        S0787CheapestFlightsWithinKStops stops = new S0787CheapestFlightsWithinKStops();
+        StdOut.println(stops.findCheapestPrice(5, new int[][] {{0,1,5},{1,2,5},{0,3,2},{3,1,2},{1,4,1},{4,2,1}}, 0, 2, 2));
     }
 }
