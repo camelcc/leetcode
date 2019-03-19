@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0822CardFlippingGame game = new S0822CardFlippingGame();
-        StdOut.println(game.flipgame(new int[] {1,2,4,4,7}, new int[]{1,3,4,1,3}));
+        S0825FriendsOfAppropriateAges ages = new S0825FriendsOfAppropriateAges();
+        StdOut.println(ages.numFriendRequests(new int[] {89,76,80,106,103,99,32,90,59,80,78,57,116,60,26,112,43,59,90,69}));
     }
 }
