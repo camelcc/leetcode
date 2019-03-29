@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0842SplitArrayFibonacciSequence sequence = new S0842SplitArrayFibonacciSequence();
-        StdOut.println(sequence.splitIntoFibonacci("1101111"));
+        S0846HandStraights hands = new S0846HandStraights();
+        StdOut.println(hands.isNStraightHand(new int[] {1, 1, 2, 2, 3, 3}, 3));
     }
 }
