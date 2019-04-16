@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0885SpiralMatrixIII matrix = new S0885SpiralMatrixIII();
-        StdOut.println(matrix.spiralMatrixIII(1, 4, 0, 0));
+        S0886PossibleBipartition bipartition = new S0886PossibleBipartition();
+        StdOut.println(bipartition.possibleBipartition(4, new int[][]{{1,2},{1,3},{2,4}}));
     }
 }
