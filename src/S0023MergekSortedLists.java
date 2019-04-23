@@ -1,3 +1,6 @@
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class S0023MergekSortedLists {
     public class ListNode {
         int val;
@@ -9,35 +12,29 @@ public class S0023MergekSortedLists {
     }
 
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode head = null, tail = null;
-        boolean exist = true;
-        while (exist) {
-            exist = false;
-
-            int min = -1;
-            for (int i = 0; i < lists.length; i++) {
-                if (lists[i] == null) {
-                    continue;
-                }
-
-                if (min == -1 || lists[i].val < lists[min].val) {
-                    exist = true;
-                    min = i;
-                }
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(new Comparator<ListNode>() {
+            @Override
+            public int compare(ListNode o1, ListNode o2) {
+                return o1.val - o2.val;
             }
-
-            if (exist) {
-                if (head == null) {
-                    head = lists[min];
-                    tail = lists[min];
-                } else {
-                    tail.next = lists[min];
-                    tail = tail.next;
-                }
-
-                lists[min] = lists[min].next;
+        });
+        for (ListNode l : lists) {
+            if (l != null) {
+                queue.add(l);
             }
         }
-        return head;
+        ListNode res = new ListNode(0);
+        ListNode tail = res;
+        while (!queue.isEmpty()) {
+            ListNode min = queue.poll();
+            tail.next = min;
+            min = min.next;
+            if (min != null) {
+                queue.add(min);
+            }
+            tail = tail.next;
+        }
+
+        return res.next;
     }
 }
