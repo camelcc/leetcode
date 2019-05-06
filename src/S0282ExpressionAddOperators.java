@@ -1,75 +1,53 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class S0282ExpressionAddOperators {
     public List<String> addOperators(String num, int target) {
-        if (num.isEmpty()) {
-            return new ArrayList<>();
-        }
-        char[] c = num.toCharArray();
-        int[] digits = new int[c.length];
-        for (int i = 0; i < c.length; i++) {
-            digits[i] = c[i]-'0';
-        }
-
-        HashMap<Integer, List<String>>[] dp = new HashMap[digits.length];
-        for (int i = 0; i < digits.length; i++) {
-            dp[i] = new HashMap<>();
-        }
-        return ops(digits, 0, target, dp);
+        return ops(num, target, "", 0, 0);
     }
 
-    private List<String> ops(int[] digits, int start, int target, HashMap<Integer, List<String>>[] dp) {
-        if (dp[start].containsKey(target)) {
-            return dp[start].get(target);
+    private List<String> ops(String num, int target, String str, int val, int last) {
+        List<String> res = new ArrayList<>();
+        if (num.isEmpty()) {
+            if (val == target) {
+                res.add(str);
+            }
+            return res;
         }
 
-        List<String> res = new ArrayList<>();
-        if (start == digits.length-1) {
-            if (digits[start] == target) {
-                res.add(String.valueOf(digits[start]));
-            }
-        } else {
-            // start < digits.len-1
+        if (num.startsWith("0")) {
+            String remains = num.substring(1);
             // +
-            int t = target - digits[start];
-            for (String r : ops(digits, start+1, t, dp)) {
-                res.add(String.valueOf(digits[start] + "+" + r));
+            res.addAll(ops(remains, target, str.isEmpty() ? "0" : str + "+0", val, 0));
+            if (str.isEmpty()) {
+                return res;
             }
             // -
-            t = digits[start]-target;
-            for (String r : ops(digits, start+1, t, dp)) {
-                res.add(String.valueOf(digits[start]) + "-" + r);
-            }
+            res.addAll(ops(remains, target, str + "-0", val, 0));
             // *
-            StringBuilder sb = new StringBuilder();
-            int d = digits[start];
-            sb.append(String.valueOf(d));
-            int i = start+1;
-            while (i < digits.length) {
-                d = d * digits[i];
-                sb.append("*"+String.valueOf(digits[i]));
-                if (i == digits.length-1) {
-                    if (d == target) {
-                        res.add(sb.toString());
-                    }
-                    break;
-                }
-
-                // +
-                for (String r : ops(digits, i+1, target-d, dp)) {
-                    res.add(sb.toString() + "+" + r);
-                }
-                // -
-                for (String r : ops(digits, i+1, d-target, dp)) {
-                    res.add(sb.toString() + "-" + r);
-                }
-                // *
-                i++;
-            }
+            res.addAll(ops(remains, target, str + "*0", (val-last), 0));
+            return res;
         }
-        dp[start].put(target, res);
+
+        for (int i = 0; i < num.length(); i++) {
+            int current;
+            try {
+                current = Integer.valueOf(num.substring(0, i+1));
+            } catch (NumberFormatException e) {
+                continue;
+            }
+
+            String remains = num.substring(i+1);
+            // +
+            res.addAll(ops(remains, target, str.isEmpty() ? String.valueOf(current) : str + "+" + String.valueOf(current), val+current, current));
+            if (str.isEmpty()) {
+                continue;
+            }
+            // -
+            res.addAll(ops(remains, target, str + "-" + String.valueOf(current), val-current, -current));
+            // *
+            res.addAll(ops(remains, target, str + "*" + String.valueOf(current), (val-last+(last*current)), last*current));
+        }
         return res;
     }
 }
