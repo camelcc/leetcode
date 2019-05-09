@@ -2,7 +2,16 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0329LongestIncreasingPathMatrix matrix = new S0329LongestIncreasingPathMatrix();
-        StdOut.println(matrix.longestIncreasingPath(new int[][]{{9,9,4},{6,6,8},{2,1,1}}));
+        S0352DataStreamDisjointIntervals.SummaryRanges intervals = new S0352DataStreamDisjointIntervals.SummaryRanges();
+        intervals.addNum(1);
+        intervals.getIntervals();
+        intervals.addNum(3);
+        intervals.getIntervals();
+        intervals.addNum(7);
+        intervals.getIntervals();
+        intervals.addNum(2);
+        intervals.getIntervals();
+        intervals.addNum(6);
+        intervals.getIntervals();
     }
 }
