@@ -2,8 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0749ContainVirus virus = new S0749ContainVirus();
-//        StdOut.println(virus.containVirus(new int[][]{{0,1,0,0,0,0,0,1},{0,1,0,0,0,0,0,1},{0,0,0,0,0,0,0,1},{0,0,0,0,0,0,0,0}}));
-        StdOut.println(virus.containVirus(new int[][]{{1,1,1,0,0,0,0,0,0},{1,0,1,0,1,1,1,1,1},{1,1,1,0,0,0,0,0,0}}));
+        S0757SetIntersectionSizeAtLeastTwo intersection = new S0757SetIntersectionSizeAtLeastTwo();
+        StdOut.println(intersection.intersectionSizeTwo(new int[][]{{0,21},{1,2},{3,7},{0,1},{13,24}}));
     }
 }
