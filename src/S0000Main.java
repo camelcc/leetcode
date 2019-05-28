@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0757SetIntersectionSizeAtLeastTwo intersection = new S0757SetIntersectionSizeAtLeastTwo();
-        StdOut.println(intersection.intersectionSizeTwo(new int[][]{{0,21},{1,2},{3,7},{0,1},{13,24}}));
+        S0770BasicCalculatorIV calculator = new S0770BasicCalculatorIV();
+        StdOut.println(calculator.basicCalculatorIV("((a - b) * (b - c) + (c - a)) * ((a - b) + (b - c) * (c - a))", new String[] {}, new int[]{}));
     }
 }
