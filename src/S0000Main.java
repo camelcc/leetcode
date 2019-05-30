@@ -1,6 +1,8 @@
+import edu.princeton.cs.algs4.StdOut;
+
 public class S0000Main {
     public static void main(String[] args) {
-        S0803BricksFallingWhenHit hit = new S0803BricksFallingWhenHit();
-        hit.hitBricks(new int[][]{{1,0,1},{1,1,1}}, new int[][]{{0,0},{0,2},{1,1}});
+        S0818RaceCar car = new S0818RaceCar();
+        StdOut.println(car.racecar(5));
     }
 }
