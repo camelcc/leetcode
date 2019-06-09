@@ -68,13 +68,31 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [G] 0054. Spiral Matrix
 [W] 0055. Jump Game
 [W] 0056. Merge Intervals
-
-
+[L] 0057. Insert Interval
 [L] 0058. Length of Last Word
+[W] 0059. Spiral Matrix II
+[B] 0060. Permutation Sequence
+[W] 0061. Rotate List
+[B] 0062. Unique Paths
+[B] 0063. Unique Paths II
+[W] 0064. Minimum Path Sum
+[G] 0065. Valid Number
 [L] 0066. Plus One
 [L] 0067. Add Binary
+[G] 0068. Text Justification
 [L] 0069. Sqrt(x)
 [L] 0070. Climbing Stairs
+[G] 0071. Simplify Path
+[B] 0072. Edit Distance
+[L] 0073. Set Matrix Zeroes
+[W] 0074. Search a 2D Matrix
+[W] 0075. Sort Colors
+[W] 0076. Minimum Window Substring
+[W] 0077. Combinations
+[W] 0078. Subsets
+[W] 0079. Word Search
+
+
 [W] 0083. Remove Duplicates from Sorted List
 [W] 0088. Merge Sorted Array
 [W] 0100. Same Tree
@@ -269,15 +287,5 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0896. Monotonic Array
 [L] 0897. Increasing Order Search Tree
 
-[W] 0059. Spiral Matrix II
-[W] 0060. Permutation Sequence
-[W] 0061. Rotate List
-[B] 0062. Unique Paths
-[B] 0063. Unique Paths II
-[W] 0064. Minimum Path Sum
-[G] 0071. Simplify Path
-[L] 0073. Set Matrix Zeroes
-[W] 0074. Search a 2D Matrix
-[W] 0075. Sort Colors
 ```
 

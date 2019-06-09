@@ -1,51 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class S0060PermutationSequence {
     public String getPermutation(int n, int k) {
-        if (n == 1) {
-            return "1";
-        }
-
-        char[] c = new char[n];
+        List<Integer> nums = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
-            c[i-1] = (char)('0' + i);
+            nums.add(i);
         }
-        return getPermutation(c, k-1);
-    }
-
-    private String getPermutation(char[] chars, int k) {
-        if (chars.length == 0) {
-            return "";
+        int[] fac = new int[n];
+        fac[0] = 1;
+        for (int i = 1; i < n; i++) {
+            fac[i] = i*fac[i-1];
         }
-        if (chars.length == 1) {
-            return String.valueOf(chars[0]);
+        k = k-1;
+        StringBuilder sb = new StringBuilder();
+        for (int i = n; i > 0; i--) {
+            int pos = k/fac[i-1];
+            k = k%fac[i-1];
+            sb.append(nums.get(pos));
+            nums.remove(pos);
         }
-
-        int m = mul(chars.length - 1);
-        for (int i = 0; i < chars.length; i++) {
-            int lo = i * m;
-            int hi = (i+1) * m - 1;
-            if (k >= lo && k <= hi) {
-                return String.valueOf(chars[i]) + getPermutation(remove(chars, i), k-lo);
-            }
-        }
-        throw new IllegalArgumentException("invalid k");
-    }
-
-    private char[] remove(char[] chars, int p) {
-        char[] remains = new char[chars.length-1];
-        for (int i = 0, w = 0; i < chars.length; i++) {
-            if (i == p) {
-                continue;
-            }
-            remains[w++] = chars[i];
-        }
-        return remains;
-    }
-
-    private int mul(int n) {
-        int res = 1;
-        while (n > 1) {
-            res = res * n--;
-        }
-        return res;
+        return sb.toString();
     }
 }

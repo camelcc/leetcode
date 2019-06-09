@@ -1,39 +1,27 @@
-import java.util.HashMap;
-
 public class S0072EditDistance {
     public int minDistance(String word1, String word2) {
-        HashMap<String, HashMap<String, Integer>> map = new HashMap<>();
-        return distance(word1, word2, map);
-    }
+        int m = word1.length();
+        int n = word2.length();
 
-    private int distance(String word1, String word2, HashMap<String, HashMap<String, Integer>> map) {
-        if (word1.length() > word2.length()) {
-            String t = word1;
-            word1 = word2;
-            word2 = t;
-        }
-        // word1.len <= word2.len
-        if (map.containsKey(word1) && map.get(word1).containsKey(word2)) {
-            return map.get(word1).get(word2);
-        }
+        int[][] cost = new int[m + 1][n + 1];
+        for(int i = 0; i <= m; i++)
+            cost[i][0] = i;
+        for(int i = 1; i <= n; i++)
+            cost[0][i] = i;
 
-        int res = 0;
-        if (word1.isEmpty()) {
-            res = word2.length();
-        } else {
-            int delete = 1 + distance(word1.substring(1), word2, map);
-            int insert = 1 + distance(word1, word2.substring(1), map);
-            int replace = 0;
-            if (word1.charAt(0) == word2.charAt(0)) {
-                replace = distance(word1.substring(1), word2.substring(1), map);
-            } else {
-                replace = 1 + distance(word1.substring(1), word2.substring(1), map);
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                if(word1.charAt(i) == word2.charAt(j))
+                    cost[i + 1][j + 1] = cost[i][j];
+                else {
+                    int a = cost[i][j];
+                    int b = cost[i][j + 1];
+                    int c = cost[i + 1][j];
+                    cost[i + 1][j + 1] = a < b ? (a < c ? a : c) : (b < c ? b : c);
+                    cost[i + 1][j + 1]++;
+                }
             }
-            res = Math.min(Math.min(delete, insert), replace);
         }
-        HashMap<String, Integer> m = map.getOrDefault(word1, new HashMap<>());
-        m.put(word2, res);
-        map.put(word1, m);
-        return res;
+        return cost[m][n];
     }
 }

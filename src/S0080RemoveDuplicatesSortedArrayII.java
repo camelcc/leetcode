@@ -3,33 +3,14 @@ public class S0080RemoveDuplicatesSortedArrayII {
         if (nums.length <= 2) {
             return nums.length;
         }
-
-        int len = nums.length;
-
-        int lastIndex = 0;
-        int last = nums[0];
-        for (int i = 0; i < len; i++) {
-            if (nums[i] == last) {
-                continue;
+        int len = 1;
+        int last = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[last] || last == 0 || nums[last] != nums[last-1]) {
+                last++;
+                nums[last] = nums[i];
+                len++;
             }
-
-            if (i - lastIndex <= 2) {
-                last = nums[i];
-                lastIndex = i;
-                continue;
-            }
-
-            for (int j = i, k = lastIndex+2; j < len; j++, k++) {
-                nums[k] = nums[j];
-            }
-            len -= i - (lastIndex+2);
-            i = lastIndex+2;
-            lastIndex = i;
-            last = nums[lastIndex];
-        }
-
-        if (len - lastIndex > 2) {
-            len -= len - (lastIndex+2);
         }
         return len;
     }
