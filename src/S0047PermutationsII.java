@@ -3,7 +3,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class S0047PermutationsII {
-    //TODO: DFS permutation?
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
         if(nums==null || nums.length==0) return res;

@@ -4,34 +4,23 @@ import java.util.List;
 public class S0046Permutations {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> permutations = new ArrayList<>();
-        if (nums.length == 0) {
-            return permutations;
-        }
-        if (nums.length == 1) {
-            List<Integer> a = new ArrayList<>();
-            a.add(nums[0]);
-            permutations.add(a);
-            return permutations;
+        backtrack(permutations, new ArrayList<>(), nums, 0);
+        return permutations;
+    }
+
+    private void backtrack(List<List<Integer>> res, List<Integer> per, int[] nums, int start) {
+        if (per.size() == nums.length) {
+            res.add(new ArrayList<>(per));
+            return;
         }
 
         for (int i = 0; i < nums.length; i++) {
-            int picked = nums[i];
-
-            int[] remains = new int[nums.length-1];
-            int k = 0;
-            for (int j = 0; j < nums.length; j++) {
-                if (j == i) {
-                    continue;
-                }
-                remains[k++] = nums[j];
+            if (per.contains(nums[i])) {
+                continue;
             }
-
-            List<List<Integer>> perm = permute(remains);
-            for (List<Integer> p : perm) {
-                p.add(picked);
-                permutations.add(p);
-            }
+            per.add(nums[i]);
+            backtrack(res, per, nums, start+1);
+            per.remove((Integer)nums[i]);
         }
-        return permutations;
     }
 }

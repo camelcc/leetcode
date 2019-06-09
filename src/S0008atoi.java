@@ -8,40 +8,22 @@ public class S0008atoi {
         if (i == str.length()) {
             return res;
         }
-        boolean positive = true;
-        char first = str.charAt(i);
-        if (first == '-') {
-            positive = false;
+        int sign = 1;
+        if (str.charAt(i) == '+') {
+            sign = 1;
             i++;
-        } else if (first == '+') {
+        } else if (str.charAt(i) == '-') {
+            sign = -1;
             i++;
-        } else if (first >= '0' && first <= '9') {
-
-        } else {
-            return res;
         }
-
-        for (; i < str.length(); i++) {
-            char c = str.charAt(i);
-            if (c >= '0' && c <= '9') {
-                int d = c-'0';
-                if (positive) {
-                    if ((Integer.MAX_VALUE - d)/10 < res) {
-                        return Integer.MAX_VALUE;
-                    }
-
-                    res = res * 10 + d;
-                } else {
-                    if ((Integer.MIN_VALUE + d)/10 > res) {
-                        return Integer.MIN_VALUE;
-                    }
-
-                    res = res * 10 - d;
-                }
-            } else {
-                break;
+        while (i < str.length() && str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+            int d = str.charAt(i)-'0';
+            if (res > Integer.MAX_VALUE/10 || (res == Integer.MAX_VALUE/10 && d > Integer.MAX_VALUE%10)) {
+                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             }
+            res = res * 10 + d;
+            i++;
         }
-        return res;
+        return res*sign;
     }
 }

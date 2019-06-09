@@ -4,10 +4,10 @@ public class S0007ReverseInteger {
         while (x != 0) {
             int r = x % 10;
             x /= 10;
-            if (res > Integer.MAX_VALUE/10 || (res == Integer.MAX_VALUE/10 && r > 7)) {
+            if (res > Integer.MAX_VALUE/10 || (res == Integer.MAX_VALUE/10 && r > Integer.MAX_VALUE%10)) {
                 return 0;
             }
-            if (res < Integer.MIN_VALUE/10 || (res == Integer.MIN_VALUE/10 && r < -8)) {
+            if (res < Integer.MIN_VALUE/10 || (res == Integer.MIN_VALUE/10 && r < Integer.MIN_VALUE%10)) {
                 return 0;
             }
             res = res * 10 + r;

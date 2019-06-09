@@ -1,5 +1,4 @@
 public class S0053MaxSubarray {
-    // TODO: DP and Divide & conqur
     public int maxSubArray(int[] nums) {
         if (nums.length == 1)
             return nums[0];

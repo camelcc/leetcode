@@ -11,22 +11,65 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [B] - black list, brilliant and intellectual challenge solution.
 ```
 
-## Easy
 ```text
 [L] 0001. Two Sum
 [W] 0002. Add Two Numbers
+[B] 0003. Longest Substring Without Repeating Characters
+[B] 0004. Median of Two Sorted Arrays
+[B] 0005. Longest Palindromic Substring
+[L] 0006. ZigZag Conversion
 [G] 0007. Reverse Integer
+[W] 0008. String to Integer (atoi)
 [G] 0009. Palindrome Number
+[G] 0010. Regular Expression Matching
+[B] 0011. Container With Most Water
+[G] 0012. Integer to Roman
 [W] 0013. Roman to Integer
 [W] 0014. Longest Common Prefix
+[B] 0015. 3Sum
+[B] 0016. 3Sum Closest
+[W] 0017. Letter Combinations of a Phone Number
+[B] 0018. 4Sum
+[B] 0019. Remove Nth Node From End of List
 [W] 0020. Valid Parentheses
 [W] 0021. Merge Two Sorted Lists
+[L] 0022. Generate Parentheses
+[B] 0023. Merge k Sorted Lists
+[W] 0024. Swap Nodes in Pairs
+[W] 0025. Reverse Nodes in k-Group
 [W] 0026. Remove Duplicates from Sorted Array
 [W] 0027. Remove Element
 [W] 0028. Implement strStr()
+[G] 0029. Divide Two Integers
+[G] 0030. Substring with Concatenation of All Words
+[B] 0031. Next Permutation
+[B] 0032. Longest Valid Parentheses
+[B] 0033. Search in Rotated Sorted Array
+[B] 0034. Find First and Last Position of Element in Sorted Array
 [W] 0035. Search Insert Position
+[B] 0036. Valid Sudoku
+[W] 0037. Sudoku Solver
 [W] 0038. Count and Say
+[L] 0039. Combination Sum
+[L] 0040. Combination Sum II
+[B] 0041. First Missing Positive
+[B] 0042. Trapping Rain Water
+[B] 0043. Multiply Strings
+[B] 0044. Wildcard Matching
+[B] 0045. Jump Game II
+[B] 0046. Permutations
+[L] 0047. Permutations II
+[W] 0048. Rotate Image
+[W] 0049. Group Anagrams
+[L] 0050. Pow(x, n)
+[W] 0051. N-Queens
+[W] 0052. N-Queens II
 [B] 0053. Maximum Subarray
+[G] 0054. Spiral Matrix
+[W] 0055. Jump Game
+[W] 0056. Merge Intervals
+
+
 [L] 0058. Length of Last Word
 [L] 0066. Plus One
 [L] 0067. Add Binary
@@ -225,39 +268,7 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0893. Groups of Special-Equivalent Strings
 [W] 0896. Monotonic Array
 [L] 0897. Increasing Order Search Tree
-```
 
-## Medium
-```text
-[W] 0002. Add Two Numbers
-[B] 0003. Longest Substring Without Repeating Characters
-[B] 0005. Longest Palindromic Substring
-[L] 0006. ZigZag Conversion
-[W] 0008. String to Integer (atoi)
-[B] 0011. Container With Most Water
-[G] 0012. Integer to Roman
-[B] 0015. 3Sum
-[W] 0017. Letter Combinations of a Phone Number
-[B] 0018. 4Sum
-[B] 0019. Remove Nth Node From End of List
-[L] 0022. Generate Parentheses
-[W] 0024. Swap Nodes in Pairs
-[G] 0029. Divide Two Integers
-[W] 0031. Next Permutation
-[L] 0033. Search in Rotated Sorted Array
-[L] 0034. Find First and Last Position of Element in Sorted Array
-[W] 0036. Valid Sudoku
-[L] 0039. Combination Sum
-[L] 0040. Combination Sum II
-[B] 0043. Multiply Strings
-[W] 0046. Permutations
-[L] 0047. Permutations II
-[W] 0048. Rotate Image
-[W] 0049. Group Anagrams
-[L] 0050. Pow(x, n)
-[G] 0054. Spiral Matrix
-[W] 0055. Jump Game
-[W] 0056. Merge Intervals
 [W] 0059. Spiral Matrix II
 [W] 0060. Permutation Sequence
 [W] 0061. Rotate List

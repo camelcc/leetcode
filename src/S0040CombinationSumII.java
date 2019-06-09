@@ -5,69 +5,40 @@ import java.util.List;
 public class S0040CombinationSumII {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
-        return combination(candidates, target);
+        return sum(candidates, 0, target);
     }
 
-    private List<List<Integer>> combination(int[] candidates, int target) {
+    private List<List<Integer>> sum(int[] candidates, int start, int target) {
         List<List<Integer>> res = new ArrayList<>();
-        if (candidates.length == 0) {
+        if (candidates[start] > target) {
             return res;
         }
-        if (candidates[0] > target) {
-            return res;
+        int next = start;
+        while (next < candidates.length && candidates[next] == candidates[start]) {
+            next++;
+        }
+        if (next < candidates.length) {
+            res.addAll(sum(candidates, next, target));
         }
 
-        for (int i = 0; i < candidates.length && candidates[i] <= target; i++) {
-            int picked = candidates[i];
-            if (picked == target) {
-                List<Integer> t = new ArrayList<>();
-                t.add(picked);
-                res.add(t);
+        List<Integer> current = new ArrayList<>();
+        int sum = 0;
+        int c = start;
+        while (c < next) {
+            sum += candidates[c];
+            current.add(candidates[c]);
+            if (sum == target) {
+                res.add(new ArrayList<>(current));
             }
-            if (i == candidates.length-1) {
-                return res;
-            }
-
-            int dup = i+1;
-            while (dup < candidates.length && candidates[dup] == candidates[i]) {
-                dup++;
-            }
-
-            if (dup > i+1) {
-                List<Integer> d = new ArrayList<>();
-                d.add(picked);
-                int t = target-picked;
-                int m = i+1;
-                while (m < dup && t > 0) {
-                    t -= candidates[m];
-                    d.add(candidates[m++]);
-                }
-                if (t == 0 && m > i+1) {
-                    res.add(d);
-                }
-                if (dup == candidates.length) {
-                    return res;
+            // consume
+            if (next < candidates.length) {
+                for (List<Integer> r : sum(candidates, next, target-sum)) {
+                    List<Integer> t = new ArrayList<>(current);
+                    t.addAll(r);
+                    res.add(t);
                 }
             }
-
-            int[] remainingCards = new int[candidates.length-dup];
-            for (int k = dup; k < candidates.length; k++) {
-                remainingCards[k-dup] = candidates[k];
-            }
-
-            List<Integer> selected = new ArrayList<>();
-            int remainingTarget = target;
-            for (int t = i; t < dup; t++) {
-                remainingTarget = remainingTarget - candidates[t];
-                selected.add(candidates[t]);
-
-                List<List<Integer>> rest = combination(remainingCards, remainingTarget);
-                for (List<Integer> r : rest) {
-                    r.addAll(selected);
-                    res.add(r);
-                }
-            }
-            i = dup-1;
+            c++;
         }
         return res;
     }

@@ -1,25 +1,26 @@
-import java.util.Arrays;
-
 public class S0031NextPermutation {
     public void nextPermutation(int[] nums) {
-        for (int i = nums.length-1; i>= 0; i--) {
-            int n = Integer.MAX_VALUE;
-            int ni = i;
-            for (int j = i+1; j < nums.length; j++) {
-                if (nums[j] > nums[i] && n > nums[j]) {
-                    n = nums[j];
-                    ni = j;
-                }
-            }
-            if (ni > i) {
-                int t = nums[i];
-                nums[i] = n;
-                nums[ni] = t;
-                Arrays.sort(nums, i+1, nums.length);
-                return;
-            }
+        int decrease = nums.length-2;
+        while (decrease >= 0 && nums[decrease] >= nums[decrease+1]) {
+            decrease--;
         }
-
-        Arrays.sort(nums);
+        if (decrease >= 0) {
+            int j = nums.length-1;
+            while (nums[j] <= nums[decrease]) {
+                j--;
+            }
+            int t = nums[decrease];
+            nums[decrease] = nums[j];
+            nums[j] = t;
+        }
+        // reverse [decrease+1, end]
+        int lo = decrease+1, hi = nums.length-1;
+        while (lo < hi) {
+            int t = nums[lo];
+            nums[lo] = nums[hi];
+            nums[hi] = t;
+            lo++;
+            hi--;
+        }
     }
 }
