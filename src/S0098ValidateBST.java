@@ -13,39 +13,26 @@ public class S0098ValidateBST {
         if (root == null) {
             return true;
         }
-        // leaf
-        if (root.left == null && root.right == null) {
-            return true;
-        }
-        if (!isValidBST(root.left) || !isValidBST(root.right)) {
-            return false;
-        }
-        if ((root.left != null && root.val <= max(root.left)) ||
-            (root.right != null && root.val >= min(root.right))) {
-            return false;
-        }
-
-        return true;
+        return valid(root) != null;
     }
 
-    private int max(TreeNode root) {
-        int val = root.val;
-
-        while (root != null) {
-            val = root.val;
-            root = root.right;
+    private int[] valid(TreeNode root) {
+        assert root != null;
+        int min = root.val, max = root.val;
+        if (root.left != null) {
+            int[] l = valid(root.left);
+            if (l == null || root.val <= l[1]) {
+                return null;
+            }
+            min = l[0];
         }
-        return val;
-    }
-
-    private int min(TreeNode root) {
-        int val = root.val;
-
-        while (root != null) {
-            val = root.val;
-            root = root.left;
+        if (root.right != null) {
+            int[] r = valid(root.right);
+            if (r == null || root.val >= r[0]) {
+                return null;
+            }
+            max = r[1];
         }
-
-        return val;
+        return new int[]{min, max};
     }
 }

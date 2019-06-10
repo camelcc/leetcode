@@ -9,29 +9,18 @@ public class S0114FlattenBT2LinkedList {
         }
     }
 
-    public void flatten(TreeNode root) {
+    public TreeNode flatten(TreeNode root) {
+        return flatten(root, null);
+    }
+
+    private TreeNode flatten(TreeNode root, TreeNode pre) {
         if (root == null) {
-            return;
+            return pre;
         }
-        if (root.left == null && root.right == null) {
-            return;
-        }
-
-        TreeNode left = root.left;
-        TreeNode right = root.right;
-
-        if (left != null) {
-            flatten(left);
-            TreeNode last = left;
-            while (last.right != null) {
-                last = last.right;
-            }
-            last.right = right;
-            root.right = left;
-            root.left = null;
-        }
-        if (right != null) {
-            flatten(right);
-        }
+        pre = flatten(root.right, pre);
+        pre = flatten(root.left, pre);
+        root.right = pre;
+        root.left = null;
+        return pre;
     }
 }

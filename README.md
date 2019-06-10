@@ -91,22 +91,50 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0077. Combinations
 [W] 0078. Subsets
 [W] 0079. Word Search
-
-
+[W] 0080. Remove Duplicates from Sorted Array II
+[L] 0081. Search in Rotated Sorted Array II
+[L] 0082. Remove Duplicates from Sorted List II
 [W] 0083. Remove Duplicates from Sorted List
+[B] 0084. Largest Rectangle in Histogram
+[B] 0085. Maximal Rectangle
+[W] 0086. Partition List
+[B] 0087. Scramble String
 [W] 0088. Merge Sorted Array
+[B] 0089. Gray Code
+[G] 0091. Decode Ways
+[W] 0092. Reverse Linked List II
+[G] 0093. Restore IP Addresses
+[W] 0094. Binary Tree Inorder Traversal
+[B] 0095. Unique Binary Search Trees II
+[W] 0096. Unique Binary Search Trees
+[B] 0097. Interleaving String
+[L] 0098. Validate Binary Search Tree
+[B] 0099. Recover Binary Search Tree
 [W] 0100. Same Tree
 [L] 0101. Symmetric Tree
+[L] 0102. Binary Tree Level Order Traversal
+[L] 0103. Binary Tree Zigzag Level Order Traversal
 [W] 0104. Maximum Depth of Binary Tree
+[W] 0105. Construct Binary Tree from Preorder and Inorder Traversal
+[W] 0106. Construct Binary Tree from Inorder and Postorder Traversal
 [W] 0107. Binary Tree Level Order Traversal II
 [W] 0108. Convert Sorted Array to Binary Search Tree
+[B] 0109. Convert Sorted List to Binary Search Tree
 [G] 0110. Balanced Binary Tree
 [L] 0111. Minimum Depth of Binary Tree
 [L] 0112. Path Sum
+[W] 0113. Path Sum II
+[B] 0114. Flatten Binary Tree to Linked List
+[B] 0115. Distinct Subsequences
+[W] 0116. Populating Next Right Pointers in Each Node
+[B] 0117. Populating Next Right Pointers in Each Node II
 [W] 0118. Pascal's Triangle
 [W] 0119. Pascal's Triangle II
+[G] 0120. Triangle
 [W] 0121. Best Time to Buy and Sell Stock
 [B] 0122. Best Time to Buy and Sell Stock II
+[B] 0123. Best Time to Buy and Sell Stock III
+
 [W] 0125. Valid Palindrome
 [W] 0136. Single Number
 [W] 0141. Linked List Cycle

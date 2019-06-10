@@ -10,36 +10,24 @@ public class S0110BalancedBTree {
     }
 
     public boolean isBalanced(TreeNode root) {
-        if (root == null) {
-            return true;
-        }
-        return height(root, 0) >= 0;
+        return height(root) >= 0;
     }
 
-    private int height(TreeNode node, int height) {
-        if (node.left == null && node.right == null) {
-            return height;
+    private int height(TreeNode node) {
+        if (node == null) {
+            return 0;
         }
 
-        if (node.left == null || node.right == null) {
-            int h = height(node.left == null ? node.right : node.left, height+1);
-            if (h == height + 1) {
-                return h;
-            } else {
-                return -1;
-            }
-        }
-
-        int lh = height(node.left, height+1);
+        int lh = height(node.left);
         if (lh < 0) {
             return -1;
         }
-        int rh = height(node.right, height+1);
+        int rh = height(node.right);
         if (rh < 0) {
             return -1;
         }
         if (lh == rh || Math.max(lh, rh) == Math.min(lh, rh) + 1) {
-            return Math.max(lh, rh);
+            return Math.max(lh, rh)+1;
         } else {
             return -1;
         }

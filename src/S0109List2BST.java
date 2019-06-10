@@ -22,29 +22,22 @@ public class S0109List2BST {
         if (head == null) {
             return null;
         }
-        if (head.next == null) {
-            return new TreeNode(head.val);
-        }
+        return bst(head, null);
+    }
 
-        int len = 0;
-        ListNode n = head;
-        while (n != null) {
-            len++;
-            n = n.next;
+    private TreeNode bst(ListNode head, ListNode tail) {
+        if (head == tail) {
+            return null;
         }
-        int mid = len/2;
-
-        ListNode midNode = head;
-        for (int i = 1; i < mid; i++) {
-            midNode = midNode.next;
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != tail && fast.next != tail) {
+            fast = fast.next.next;
+            slow = slow.next;
         }
-        ListNode t = midNode;
-        midNode = midNode.next;
-        t.next = null;
-
-        TreeNode root = new TreeNode(midNode.val);
-        root.left = sortedListToBST(head);
-        root.right = sortedListToBST(midNode.next);
-        return root;
+        TreeNode res = new TreeNode(slow.val);
+        res.left = bst(head, slow);
+        res.right = bst(slow.next, tail);
+        return res;
     }
 }

@@ -1,32 +1,13 @@
 public class S0123BestTimeBuySellStockIII {
     public int maxProfit(int[] prices) {
-        int res = 0;
-        if (prices.length == 0) {
-            return res;
+        int hold1 = Integer.MIN_VALUE, hold2 = Integer.MIN_VALUE;
+        int release1 = 0, release2 = 0;
+        for(int i:prices){                              // Assume we only have 0 money at first
+            release2 = Math.max(release2, hold2+i);     // The maximum if we've just sold 2nd stock so far.
+            hold2    = Math.max(hold2,    release1-i);  // The maximum if we've just buy  2nd stock so far.
+            release1 = Math.max(release1, hold1+i);     // The maximum if we've just sold 1nd stock so far.
+            hold1    = Math.max(hold1,    -i);          // The maximum if we've just buy  1st stock so far.
         }
-
-        res = Math.max(res, maxProfit(prices, 0, prices.length)); // one
-        int v = 0;
-        int min = prices[0];
-        for (int i = 1; i < prices.length; i++) {
-            v = Math.max(v, prices[i]-min);
-            min = Math.min(min, prices[i]);
-            res = Math.max(res, v + maxProfit(prices, i+1, prices.length));
-        }
-        return res;
-    }
-
-    private int maxProfit(int[] prices, int start, int end) {
-        int res = 0;
-        if (start >= prices.length) {
-            return res;
-        }
-
-        int min = prices[start];
-        for (int i = start+1; i < end; i++) {
-            res = Math.max(res, prices[i]-min);
-            min = Math.min(min, prices[i]);
-        }
-        return res;
+        return release2; ///Since release1 is initiated as 0, so release2 will always higher than release1.
     }
 }

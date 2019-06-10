@@ -13,69 +13,37 @@ public class S0095UniqueBSTII {
     }
 
     public List<TreeNode> generateTrees(int n) {
-        int[] nums = new int[n];
-        for (int i = 1; i <= n; i++) {
-            nums[i-1] = i;
+        if (n == 0) {
+            return new ArrayList<>();
         }
-        return gen(nums);
-    }
+        List<TreeNode>[] dp = new ArrayList[n+1];
+        dp[0] = new ArrayList<>();
+        dp[0].add(null);
 
-    private List<TreeNode> gen(int[] nums) {
-        List<TreeNode> forest = new ArrayList<>();
-        if (nums.length == 0) {
-            return forest;
-        }
-        if (nums.length == 1) {
-            TreeNode root = new TreeNode(nums[0]);
-            forest.add(root);
-            return forest;
-        }
-
-        for (int i = 0; i < nums.length; i++) {
-            if (i == 0) {
-                List<TreeNode> rights = gen(right(nums, i));
-                for (TreeNode r : rights) {
-                    TreeNode root = new TreeNode(nums[i]);
-                    root.right = r;
-                    forest.add(root);
-                }
-            } else if (i == nums.length-1) {
-                List<TreeNode> lefts = gen(left(nums, i));
-                for (TreeNode l : lefts) {
-                    TreeNode root = new TreeNode(nums[i]);
-                    root.left = l;
-                    forest.add(root);
-                }
-            } else {
-                List<TreeNode> lefts = gen(left(nums, i));
-                List<TreeNode> rights = gen(right(nums, i));
-                for (TreeNode l : lefts) {
-                    for (TreeNode r : rights) {
-                        TreeNode root = new TreeNode(nums[i]);
-                        root.left = l;
-                        root.right = r;
-                        forest.add(root);
+        for (int len = 1; len <= n; len++) {
+            List<TreeNode> res = new ArrayList<>();
+            for (int left = 0; left < len; left++) {
+                for (TreeNode l : dp[left]) {
+                    for (TreeNode r : dp[len-left-1]) {
+                        TreeNode node = new TreeNode(left+1);
+                        node.left = l;
+                        node.right = clone(r, left+1);
+                        res.add(node);
                     }
                 }
             }
+            dp[len] = res;
         }
-
-        return forest;
+        return dp[n];
     }
 
-    private int[] left(int[] nums, int p) {
-        int[] res = new int[p];
-        for (int i = 0; i < p; i++) {
-            res[i] = nums[i];
+    private TreeNode clone(TreeNode node, int offset) {
+        if (node == null) {
+            return null;
         }
-        return res;
-    }
-
-    private int[] right(int[] nums, int p) {
-        int[] res = new int[nums.length-p-1];
-        for (int i = p+1, k = 0; i < nums.length; i++) {
-            res[k++] = nums[i];
-        }
+        TreeNode res = new TreeNode(node.val+offset);
+        res.left = clone(node.left, offset);
+        res.right = clone(node.right, offset);
         return res;
     }
 }
