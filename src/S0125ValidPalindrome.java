@@ -1,17 +1,30 @@
 public class S0125ValidPalindrome {
     public boolean isPalindrome(String s) {
-        StringBuilder cs = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')) {
-                cs.append(c);
+        int lo = 0, hi = s.length()-1;
+        while (lo < hi) {
+            char lc = s.charAt(lo);
+            if ((lc >= 'a' && lc <= 'z') || (lc >= '0' && lc <= '9') || (lc >= 'A' && lc <= 'Z')) {
+                if (lc >= 'A' && lc <= 'Z') {
+                    lc = (char)(lc-'A'+'a');
+                }
+            } else {
+                lo++;
+                continue;
             }
-        }
-        String cleaned = cs.toString().toLowerCase();
-        for (int i = 0, j = cleaned.length()-1; i < j; i++, j--) {
-            if (cleaned.charAt(i) != cleaned.charAt(j)) {
+            char hc = s.charAt(hi);
+            if ((hc >= 'a' && hc <= 'z') || (hc >= '0' && hc <= '9') || (hc >= 'A' && hc <= 'Z')) {
+                if (hc >= 'A' && hc <= 'Z') {
+                    hc = (char)(hc-'A'+'a');
+                }
+            } else {
+                hi--;
+                continue;
+            }
+            if (lc != hc) {
                 return false;
             }
+            lo++;
+            hi--;
         }
         return true;
     }

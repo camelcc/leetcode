@@ -1,52 +1,44 @@
 public class S0138CopyListRandomPointer {
-    class RandomListNode {
-        int label;
-        RandomListNode next, random;
+    class Node {
+        int val;
+        Node next, random;
 
-        RandomListNode(int x) {
-            this.label = x;
+        Node(int x) {
+            this.val= x;
         }
     }
 
-    public RandomListNode copyRandomList(RandomListNode head) {
+    public Node copyRandomList(Node head) {
         if (head == null) {
             return null;
         }
-        RandomListNode res = new RandomListNode(head.label);
-
-        // copy next
-        RandomListNode h = head;
-        RandomListNode r = res;
-        while (h.next != null) {
-            r.next = new RandomListNode(h.next.label);
-            h = h.next;
-            r = r.next;
+        Node node = head;
+        while (node != null) {
+            Node clone = new Node(node.val);
+            clone.next = node.next;
+            node.next = clone;
+            node = node.next.next;
         }
 
-        // copy random
-        h = head;
-        r = res;
-        while (h != null) {
-            if (h.random == null) {
-                r.random = null;
-            } else {
-                int step = 0;
-                RandomListNode old = head;
-                while (old != null && h.random != old) {
-                    old = old.next;
-                    step++;
-                }
-
-                RandomListNode search = res;
-                for (int i = 0; i < step; i++) {
-                    search = search.next;
-                }
-
-                r.random = search;
+        node = head;
+        while (node != null) {
+            if (node.random != null) {
+                node.next.random = node.random.next;
             }
-            h = h.next;
-            r = r.next;
+
+            node = node.next.next;
         }
-        return res;
+
+        Node res = new Node(0);
+        Node tail = res;
+        node = head;
+        while (node != null) {
+            tail.next = node.next;
+            tail = node.next;
+
+            node.next = node.next.next;
+            node = node.next;
+        }
+        return res.next;
     }
 }

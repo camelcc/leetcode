@@ -1,27 +1,23 @@
 public class S0134GasStation {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int N = gas.length;
+        int res = 0;
+        int totalGas = 0;
+        int totalCost = 0;
+        int tank = 0;
         for (int i = 0; i < N; i++) {
-            if (cost[i] > gas[i]) {
-                continue;
+            totalGas += gas[i];
+            totalCost += cost[i];
+            tank += gas[i]-cost[i];
+            if (tank < 0) {
+                res = i + 1;
+                tank = 0;
             }
-
-            boolean end = true;
-            int car = 0;
-            for (int start = i; start < i + N; start++) {
-                car += gas[(start+N)%N];
-                car -= cost[(start+N)%N];
-                if (car < 0) {
-                    end = false;
-                    break;
-                }
-            }
-            if (!end) {
-                continue;
-            }
-
-            return i;
         }
-        return -1;
+        if (totalGas < totalCost) {
+            return -1;
+        } else {
+            return res;
+        }
     }
 }

@@ -134,21 +134,58 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0121. Best Time to Buy and Sell Stock
 [B] 0122. Best Time to Buy and Sell Stock II
 [B] 0123. Best Time to Buy and Sell Stock III
-
 [W] 0125. Valid Palindrome
+[G] 0126. Word Ladder II
+[G] 0127. Word Ladder
+[W] 0128. Longest Consecutive Sequence
+[W] 0129. Sum Root to Leaf Numbers
+[L] 0130. Surrounded Regions
+[L] 0131. Palindrome Partitioning
+[G] 0132. Palindrome Partitioning II
+[G] 0133. Clone Graph
+[B] 0134. Gas Station
+[B] 0135. Candy
 [W] 0136. Single Number
+[B] 0137. Single Number II
+[B] 0138. Copy List with Random Pointer
+[B] 0139. Word Break
+[G] 0140. Word Break II
 [W] 0141. Linked List Cycle
+[B] 0142. Linked List Cycle II
+[L] 0143. Reorder List
+[L] 0144. Binary Tree Preorder Traversal
+[W] 0145. Binary Tree Postorder Traversal
+[G] 0146. LRU Cache
+[W] 0147. Insertion Sort List
+[G] 0148. Sort List
+[G] 0149. Max Points on a Line
+[W] 0150. Evaluate Reverse Polish Notation
+[L] 0151. Reverse Words in a String
+[B] 0152. Maximum Product Subarray
+[W] 0153. Find Minimum in Rotated Sorted Array
 [B] 0155. Min Stack
 [W] 0160. Intersection of Two Linked Lists
+[W] 0162. Find Peak Element
+[B] 0164. Maximum Gap
+[L] 0165. Compare Version Numbers
+[G] 0166. Fraction to Recurring Decimal
 [B] 0167. Two Sum II - Input array is sorted
 [L] 0168. Excel Sheet Column Title
 [B] 0169. Majority Element [moore voting]
 [W] 0171. Excel Sheet Column Number
 [W] 0172. Factorial Trailing Zeroes
+[W] 0173. Binary Search Tree Iterator
+[L] 0174. Dungeon Game
+[B] 0179. Largest Number
+[B] 0187. Repeated DNA Sequences
+[B] 0188. Best Time to Buy and Sell Stock IV
 [B] 0189. Rotate Array [O(1) space, O(n) time]
 [L] 0190. Reverse Bits
 [W] 0191. Number of 1 Bits
 [G] 0198. House Robber
+[L] 0199. Binary Tree Right Side View
+[L] 0200. Number of Islands
+
 [B] 0202. Happy Number
 [L] 0203. Remove Linked List Elements
 [G] 0204. Count Primes

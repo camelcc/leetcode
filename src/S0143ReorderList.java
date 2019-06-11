@@ -1,5 +1,5 @@
 public class S0143ReorderList {
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
@@ -12,27 +12,38 @@ public class S0143ReorderList {
         if (head == null || head.next == null) {
             return;
         }
-
-        ListNode h = head;
-        while (h != null && h.next != null) {
-            h.next = reverseLast(h.next);
-            h = h.next.next;
-        }
-    }
-
-    private ListNode reverseLast(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
 
-        ListNode last = head;
-        while (last.next.next != null) {
-            last = last.next;
+        ListNode right = slow.next;
+        slow.next = null;
+
+        ListNode n = right == null ? null : right.next;
+        right.next = null;
+        while (n != null) {
+            ListNode t = n.next;
+            n.next = right;
+            right = n;
+            n = t;
         }
 
-        ListNode h = last.next;
-        last.next = null;
-        h.next = head;
-        return h;
+        ListNode tail = new ListNode(0);
+        ListNode l = head, r = right;
+        while (l != null) {
+            ListNode nl = l.next;
+            tail.next = l;
+            tail = tail.next;
+            l = nl;
+            if (r != null) {
+                ListNode nr = r.next;
+                tail.next = r;
+                tail = tail.next;
+                r = nr;
+            }
+        }
     }
 }
