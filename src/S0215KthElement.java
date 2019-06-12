@@ -1,40 +1,41 @@
 public class S0215KthElement {
     public int findKthLargest(int[] nums, int k) {
-        int[] knum = new int[k];
-        for (int i = 0; i < k; i++) {
-            knum[i] = Integer.MIN_VALUE;
-        }
-
-        for (int i = 0; i < nums.length; i++) {
-            if (knum[k-1] >= nums[i]) {
-                continue;
+        k = nums.length-k;
+        int lo = 0, hi = nums.length-1;
+        while (lo < hi) {
+            int j = partition(nums, lo, hi);
+            if (j < k) {
+                lo = j+1;
+            } else if (j > k) {
+                hi = j-1;
+            } else {
+                break;
             }
-
-            int pos = search(knum, nums[i]);
-            for (int j = k - 1; j > pos; j--) {
-                knum[j] = knum[j - 1];
-            }
-            knum[pos] = nums[i];
         }
-
-        return knum[k-1];
+        return nums[k];
     }
 
-    private int search(int[] nums, int num) {
-        int lo = 0, hi = nums.length-1;
-        assert nums[hi] < num;
-
-        while (lo < hi) {
-            int mid = (lo + hi)/2;
-            if (nums[mid] == num) {
-                return mid;
-            } else if (nums[mid] < num) {
-                hi = mid;
-            } else if (nums[mid] > num) {
-                lo = mid+1;
+    private int partition(int[] nums, int lo, int hi) {
+        int l = lo+1, r = hi;
+        while (true) {
+            while (l < hi && nums[l] < nums[lo]) {
+                l++;
             }
+            while (r > lo && nums[lo] < nums[r]) {
+                r--;
+            }
+            if (l >= r) {
+                break;
+            }
+            int t = nums[l];
+            nums[l] = nums[r];
+            nums[r] = t;
+            l++;
+            r--;
         }
-
-        return lo;
+        int t = nums[lo];
+        nums[lo] = nums[r];
+        nums[r] = t;
+        return r;
     }
 }

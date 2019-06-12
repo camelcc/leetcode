@@ -185,22 +185,49 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [G] 0198. House Robber
 [L] 0199. Binary Tree Right Side View
 [L] 0200. Number of Islands
-
+[B] 0201. Bitwise AND of Numbers Range
 [B] 0202. Happy Number
 [L] 0203. Remove Linked List Elements
 [G] 0204. Count Primes
 [L] 0205. Isomorphic Strings
 [L] 0206. Reverse Linked List
+[L] 0207. Course Schedule
+[W] 0208. Implement Trie (Prefix Tree)
+[W] 0209. Minimum Size Subarray Sum
+[B] 0210. Course Schedule II
+[L] 0211. Add and Search Word - Data structure design
+[G] 0212. Word Search II
+[B] 0213. House Robber II
+[B] 0214. Shortest Palindrome
+[B] 0215. Kth Largest Element in an Array
+[W] 0216. Combination Sum III
 [W] 0217. Contains Duplicate
+[B] 0218. The Skyline Problem
 [W] 0219. Contains Duplicate II
+[B] 0220. Contains Duplicate III
+[L] 0221. Maximal Square
+[W] 0222. Count Complete Tree Nodes
+[W] 0223. Rectangle Area
+[W] 0224. Basic Calculator
 [W] 0225. Implement Stack using Queues
 [W] 0226. Invert Binary Tree
+[G] 0227. Basic Calculator II
+[G] 0228. Summary Ranges
+[B] 0229. Majority Element II
+[W] 0230. Kth Smallest Element in a BST
 [W] 0231. Power of Two
 [L] 0232. Implement Queue using Stacks
+[B] 0233. Number of Digit One
 [G] 0234. Palindrome Linked List
 [L] 0235. Lowest Common Ancestor of a Binary Search Tree
+[B] 0236. Lowest Common Ancestor of a Binary Tree
 [L] 0237. Delete Node in a Linked List
+[W] 0238. Product of Array Except Self
+[B] 0239. Sliding Window Maximum
+[B] 0240. Search a 2D Matrix II
+[G] 0241. Different Ways to Add Parentheses
 [W] 0242. Valid Anagram
+
 [L] 0257. Binary Tree Paths
 [W] 0258. Add Digits
 [W] 0263. Ugly Number

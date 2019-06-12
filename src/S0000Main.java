@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0224BasicCalculator calculator = new S0224BasicCalculator();
-        StdOut.println(calculator.calculate("(1+(4+5+2)-3)+(6+8)"));
+        S0215KthElement element = new S0215KthElement();
+        StdOut.println(element.findKthLargest(new int[]{7,6,5,4,3,2,1}, 5));
     }
 }
