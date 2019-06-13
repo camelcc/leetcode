@@ -227,20 +227,46 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [B] 0240. Search a 2D Matrix II
 [G] 0241. Different Ways to Add Parentheses
 [W] 0242. Valid Anagram
-
 [L] 0257. Binary Tree Paths
 [W] 0258. Add Digits
+[B] 0260. Single Number III
 [W] 0263. Ugly Number
+[B] 0264. Ugly Number II
 [W] 0268. Missing Number
+[W] 0273. Integer to English Words
+[G] 0274. H-Index
+[G] 0275. H-Index II
 [L] 0278. First Bad Version
+[G] 0279. Perfect Squares
+[G] 0282. Expression Add Operators
 [L] 0283. Move Zeroes
+[W] 0284. Peeking Iterator
+[B] 0287. Find the Duplicate Number
+[W] 0289. Game of Life
 [W] 0290. Word Pattern
-[W] 0268. Missing Number 
-[L] 0278. First Bad Version
-[L] 0283. Move Zeroes
-[L] 0290. Word Pattern
 [W] 0292. Nim Game
+[L] 0295. Find Median from Data Stream
+[W] 0297. Serialize and Deserialize Binary Tree
+[W] 0299. Bulls and Cows
+[B] 0300. Longest Increasing Subsequence
+[B] 0301. Remove Invalid Parentheses
 [W] 0303. Range Sum Query - Immutable
+[W] 0304. Range Sum Query 2D - Immutable
+[G] 0306. Additive Number
+[B] 0307. Range Sum Query - Mutable
+[B] 0309. Best Time to Buy and Sell Stock with Cooldown
+[B] 0310. Minimum Height Trees
+[B] 0312. Burst Balloons
+[W] 0313. Super Ugly Number
+[B] 0315. Count of Smaller Numbers After Self
+[B] 0316. Remove Duplicate Letters
+[L] 0318. Maximum Product of Word Lengths
+[B] 0319. Bulb Switcher
+[B] 0321. Create Maximum Number
+[L] 0322. Coin Change
+[B] 0324. Wiggle Sort II
+
+
 [B] 0326. Power of Three
 [B] 0342. Power of Four
 [W] 0344. Reverse String

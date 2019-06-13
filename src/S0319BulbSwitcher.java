@@ -1,5 +1,7 @@
 public class S0319BulbSwitcher {
     public int bulbSwitch(int n) {
+        // sqrt(n) is the answer
+
         int count = 0; // 1
         for (int i = 1; i <= n; i++) {
             if (divideCount(i)) {
