@@ -265,37 +265,103 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [B] 0321. Create Maximum Number
 [L] 0322. Coin Change
 [B] 0324. Wiggle Sort II
-
-
 [B] 0326. Power of Three
+[B] 0327. Count of Range Sum
+[W] 0329. Longest Increasing Path in a Matrix
+[B] 0330. Patching Array
+[L] 0331. Verify Preorder Serialization of a Binary Tree
+[L] 0332. Reconstruct Itinerary
+[L] 0334. Increasing Triplet Subsequence
+[B] 0335. Self Crossing
+[W] 0336. Palindrome Pairs
+[W] 0337. House Robber III
+[B] 0338. Counting Bits
+[L] 0341. Flatten Nested List Iterator
 [B] 0342. Power of Four
+[W] 0343. Integer Break
 [W] 0344. Reverse String
 [L] 0345. Reverse Vowels of a String
+[L] 0347. Top K Frequent Elements
 [W] 0349. Intersection of Two Arrays
 [L] 0350. Intersection of Two Arrays II
+[W] 0352. Data Stream as Disjoint Intervals
+[L] 0354. Russian Doll Envelopes
+[G] 0355. Design Twitter
+[L] 0357. Count Numbers with Unique Digits
+[B] 0363. Max Sum of Rectangle No Larger Than K
+[B] 0365. Water and Jug Problem
 [W] 0367. Valid Perfect Square
+[B] 0368. Largest Divisible Subset
 [W] 0371. Sum of Two Integers
+[B] 0372. Super Pow
+[B] 0373. Find K Pairs with Smallest Sums
 [W] 0374. Guess Number Higher or Lower
+[B] 0375. Guess Number Higher or Lower II
+[L] 0376. Wiggle Subsequence
+[G] 0377. Combination Sum IV
+[B] 0378. Kth Smallest Element in a Sorted Matrix
+[W] 0380. Insert Delete GetRandom O(1)
+[W] 0381. Insert Delete GetRandom O(1) - Duplicates allowed
+[B] 0382. Linked List Random Node
 [W] 0383. Ransom Note
+[W] 0384. Shuffle an Array
+[G] 0385. Mini Parser
+[L] 0386. Lexicographical Numbers
 [L] 0387. First Unique Character in a String
+[G] 0388. Longest Absolute File Path
 [W] 0389. Find the Difference
+[W] 0390. Elimination Game
+[G] 0391. Perfect Rectangle
+[W] 0392. Is Subsequence
+[W] 0393. UTF-8 Validation
+[W] 0394. Decode String
+[B] 0395. Longest Substring with At Least K Repeating Characters
+[B] 0396. Rotate Function
+[G] 0397. Integer Replacement
+[W] 0398. Random Pick Index
+[L] 0399. Evaluate Division
 [G] 0400. Nth Digit
 [L] 0401. Binary Watch
+[G] 0402. Remove K Digits
+[W] 0403. Frog Jump
 [W] 0404. Sum of Left Leaves
 [G] 0405. Convert a Number to Hexadecimal
+[W] 0406. Queue Reconstruction by Height
+[B] 0407. Trapping Rain Water II
 [W] 0409. Longest Palindrome
+[B] 0410. Split Array Largest Sum
 [W] 0412. Fizz Buzz
+[W] 0413. Arithmetic Slices
 [L] 0414. Third Maximum Number
 [W] 0415. Add Strings
+[B] 0416. Partition Equal Subset Sum
+[W] 0417. Pacific Atlantic Water Flow
+[W] 0419. Battleships in a Board
+[B] 0420. Strong Password Checker
+[B] 0421. Maximum XOR of Two Numbers in an Array
+[L] 0423. Reconstruct Original Digits from English
+[B] 0424. Longest Repeating Character Replacement
 [L] 0427. Construct Quad Tree
 [W] 0429. N-ary Tree Level Order Traversal
+[W] 0430. Flatten a Multilevel Doubly Linked List
+[G] 0432. All O`one Data Structure
+[L] 0433. Minimum Genetic Mutation
 [W] 0434. Number of Segments in a String
+[B] 0435. Non-overlapping Intervals
+[B] 0436. Find Right Interval
 [B] 0437. Path Sum III
 [W] 0438. Find All Anagrams in a String
+[G] 0440. K-th Smallest in Lexicographical Order
 [G] 0441. Arranging Coins
+[W] 0442. Find All Duplicates in an Array
 [G] 0443. String Compression
+[L] 0445. Add Two Numbers II
+[B] 0446. Arithmetic Slices II - Subsequence
 [L] 0447. Number of Boomerangs
 [B] 0448. Find All Numbers Disappeared in an Array
+[W] 0449. Serialize and Deserialize BST
+[G] 0450. Delete Node in a BST
+
 [B] 0453. Minimum Moves to Equal Array Elements
 [W] 0455. Assign Cookies
 [L] 0458. Poor Pigs

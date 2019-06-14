@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class S0436FindRightInterval {
     public class Interval {
@@ -18,32 +20,18 @@ public class S0436FindRightInterval {
     }
 
     public int[] findRightInterval(Interval[] intervals) {
-        int[] res = new int[intervals.length];
-        Arrays.fill(res, -1);
-        if (intervals.length <= 1) {
-            return res;
+        int[] result = new int[intervals.length];
+        java.util.NavigableMap<Integer, Integer> intervalMap = new TreeMap<>();
+
+        for (int i = 0; i < intervals.length; ++i) {
+            intervalMap.put(intervals[i].start, i);
         }
 
-        Integer[] index = new Integer[intervals.length];
-        for (int i = 0; i < intervals.length; i++) {
-            index[i] = i;
+        for (int i = 0; i < intervals.length; ++i) {
+            Map.Entry<Integer, Integer> entry = intervalMap.ceilingEntry(intervals[i].end);
+            result[i] = (entry != null) ? entry.getValue() : -1;
         }
-        Arrays.sort(index, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return intervals[o1].start - intervals[o2].start;
-            }
-        });
-        for (int i = 0; i < index.length; i++) {
-            int j = i+1;
-            int end = intervals[index[i]].end;
-            while (j < index.length && intervals[index[j]].start < end) {
-                j++;
-            }
-            if (j < index.length) {
-                res[index[i]] = index[j];
-            }
-        }
-        return res;
+
+        return result;
     }
 }

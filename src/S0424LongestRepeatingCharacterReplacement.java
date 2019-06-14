@@ -1,27 +1,16 @@
 public class S0424LongestRepeatingCharacterReplacement {
     public int characterReplacement(String s, int k) {
-        int max = 0;
-
-        int maxCount = 0;
+        int len = s.length();
         int[] count = new int[26];
-        int start = 0;
-        int end = 0;
-        for (end = 0; end < s.length(); end++) {
-            count[s.charAt(end) - 'A']++;
-            maxCount = Math.max(maxCount, count[s.charAt(end) - 'A']);
-            if (end - start + 1 - maxCount > k) {
+        int start = 0, maxCount = 0, maxLength = 0;
+        for (int end = 0; end < len; end++) {
+            maxCount = Math.max(maxCount, ++count[s.charAt(end) - 'A']);
+            while (end - start + 1 - maxCount > k) {
                 count[s.charAt(start) - 'A']--;
                 start++;
-
-                maxCount = 0;
-                for (int i = 0; i < 26; i++) {
-                    if (maxCount < count[i]) {
-                        maxCount = count[i];
-                    }
-                }
             }
-            max = Math.max(max, end - start + 1);
+            maxLength = Math.max(maxLength, end - start + 1);
         }
-        return max;
+        return maxLength;
     }
 }
