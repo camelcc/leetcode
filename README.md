@@ -361,15 +361,30 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [B] 0448. Find All Numbers Disappeared in an Array
 [W] 0449. Serialize and Deserialize BST
 [G] 0450. Delete Node in a BST
-
+[W] 0451. Sort Characters By Frequency
+[W] 0452. Minimum Number of Arrows to Burst Balloons
 [B] 0453. Minimum Moves to Equal Array Elements
+[B] 0454. 4Sum II
 [W] 0455. Assign Cookies
-[L] 0458. Poor Pigs
+[B] 0456. 132 Pattern
+[G] 0457. Circular Array Loop
+[B] 0458. Poor Pigs
 [W] 0459. Repeated Substring Pattern
+[B] 0460. LFU Cache
 [W] 0461. Hamming Distance
+[B] 0462. Minimum Moves to Equal Array Elements II
 [W] 0463. Island Perimeter
+[B] 0464. Can I Win
+[G] 0466. Count The Repetitions
+[B] 0467. Unique Substrings in Wraparound String
+[G] 0468. Validate IP Address
+[B] 0470. Implement Rand10() Using Rand7()
+[B] 0472. Concatenated Words
+[L] 0473. Matchsticks to Square
+[B] 0474. Ones and Zeroes
 [L] 0475. Heaters
 [W] 0476. Number Complement
+
 [G] 0479. Largest Palindrome Product
 [W] 0482. License Key Formatting
 [L] 0485. Max Consecutive Ones
