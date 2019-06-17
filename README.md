@@ -384,25 +384,64 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [B] 0474. Ones and Zeroes
 [L] 0475. Heaters
 [W] 0476. Number Complement
-
+[W] 0477. Total Hamming Distance
+[G] 0478. Generate Random Point in a Circle
 [G] 0479. Largest Palindrome Product
+[B] 0480. Sliding Window Median
+[B] 0481. Magical String
 [W] 0482. License Key Formatting
+[W] 0483. Smallest Good Base
 [L] 0485. Max Consecutive Ones
+[G] 0486. Predict the Winner
+[L] 0491. Increasing Subsequences
 [W] 0492. Construct the Rectangle
+[B] 0493. Reverse Pairs
+[L] 0494. Target Sum
+[W] 0495. Teemo Attacking
 [B] 0496. Next Greater Element I
+[W] 0497. Random Point in Non-overlapping Rectangles
+[L] 0498. Diagonal Traverse
 [W] 0500. Keyboard Row
 [B] 0501. Find Mode in Binary Search Tree
+[B] 0502. IPO
+[B] 0503. Next Greater Element II
 [W] 0504. Base 7
 [W] 0506. Relative Ranks
 [W] 0507. Perfect Number
+[G] 0508. Most Frequent Subtree Sum
+[W] 0509. Fibonacci Number
+[W] 0513. Find Bottom Left Tree Value
+[W] 0514. Freedom Trail
+[W] 0515. Find Largest Value in Each Tree Row
+[B] 0516. Longest Palindromic Subsequence
+[B] 0517. Super Washing Machines
+[B] 0518. Coin Change 2
+[B] 0519. Random Flip Matrix
 [L] 0520. Detect Capital
 [W] 0521. Longest Uncommon Subsequence I
+[B] 0522. Longest Uncommon Subsequence II
+[B] 0523. Continuous Subarray Sum
+[G] 0524. Longest Word in Dictionary through Deleting
+[W] 0525. Contiguous Array
+[L] 0526. Beautiful Arrangement
+[W] 0528. Random Pick with Weight
+[G] 0529. Minesweeper
 [W] 0530. Minimum Absolute Difference in BST
 [W] 0532. K-diff Pairs in an Array
+[W] 0535. Encode and Decode TinyURL
+[L] 0537. Complex Number Multiplication
 [W] 0538. Convert BST to Greater Tree
+[W] 0539. Minimum Time Difference
+[B] 0540. Single Element in a Sorted Array
 [W] 0541. Reverse String II
+[W] 0542. 01 Matrix
 [W] 0543. Diameter of Binary Tree
+[B] 0546. Remove Boxes
+[G] 0547. Friend Circles
 [W] 0551. Student Attendance Record I
+[G] 0552. Student Attendance Record II
+[W] 0553. Optimal Division
+
 [W] 0557. Reverse Words in a String III
 [L] 0558. Quad Tree Intersection
 [W] 0559. Maximum Depth of N-ary Tree

@@ -1,4 +1,3 @@
-//TODO: Kolakoski sequence
 public class S0481MagicalString {
     public int magicalString(int n) {
         if (n == 0) {
