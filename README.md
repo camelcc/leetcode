@@ -441,21 +441,33 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0551. Student Attendance Record I
 [G] 0552. Student Attendance Record II
 [W] 0553. Optimal Division
-
+[G] 0556. Next Greater Element III
 [W] 0557. Reverse Words in a String III
 [L] 0558. Quad Tree Intersection
 [W] 0559. Maximum Depth of N-ary Tree
+[W] 0560. Subarray Sum Equals K
 [W] 0561. Array Partition I
 [W] 0563. Binary Tree Tilt
+[G] 0564. Find the Closest Palindrome
+[W] 0565. Array Nesting
 [W] 0566. Reshape the Matrix
+[L] 0567. Permutation in String
 [L] 0572. Subtree of Another Tree
 [W] 0575. Distribute Candies
+[G] 0576. Out of Boundary Paths
 [L] 0581. Shortest Unsorted Continuous Subarray
+[G] 0583. Delete Operation for Two Strings
+[B] 0587. Erect the Fence
 [W] 0589. N-ary Tree Preorder Traversal
 [W] 0590. N-ary Tree Postorder Traversal
+[G] 0591. Tag Validator
+[G] 0592. Fraction Addition and Subtraction
+[L] 0593. Valid Square
 [W] 0594. Longest Harmonious Subsequence
 [W] 0598. Range Addition II
 [W] 0599. Minimum Index Sum of Two Lists
+[G] 0600. Non-negative Integers without Consecutive Ones
+
 [L] 0605. Can Place Flowers
 [W] 0606. Construct String from Binary Tree
 [W] 0617. Merge Two Binary Trees
