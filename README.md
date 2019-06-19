@@ -572,22 +572,72 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0747. Largest Number At Least Twice of Others
 [W] 0748. Shortest Completing Word
 [B] 0749. Contain Virus
-
+[L] 0752. Open the Lock
+[B] 0753. Cracking the Safe
 [B] 0754. Reach a Number
+[L] 0756. Pyramid Transition Matrix
+[B] 0761. Special Binary String
 [W] 0762. Prime Number of Set Bits in Binary Representation
+[W] 0763. Partition Labels
+[W] 0764. Largest Plus Sign
+[B] 0765. Couples Holding Hands
 [W] 0766. Toeplitz Matrix
+[G] 0767. Reorganize String
+[B] 0768. Max Chunks To Make Sorted II
+[G] 0769. Max Chunks To Make Sorted
+[B] 0770. Basic Calculator IV
 [W] 0771. Jewels and Stones
+[L] 0773. Sliding Puzzle
+[W] 0775. Global and Local Inversions
+[B] 0777. Swap Adjacent in LR String
+[W] 0778. Swim in Rising Water
+[W] 0779. K-th Symbol in Grammar
+[B] 0780. Reaching Points
+[G] 0781. Rabbits in Forest
+[B] 0782. Transform to Chessboard
 [B] 0783. Minimum Distance Between BST Nodes
 [W] 0784. Letter Case Permutation
+[W] 0785. Is Graph Bipartite?
+[B] 0786. K-th Smallest Prime Fraction
+[L] 0787. Cheapest Flights Within K Stops
 [B] 0788. Rotated Digits
+[L] 0789. Escape The Ghosts
+[G] 0790. Domino and Tromino Tiling
+[W] 0791. Custom Sort String
+[L] 0792. Number of Matching Subsequences
+[B] 0793. Preimage Size of Factorial Zeroes Function
+[L] 0794. Valid Tic-Tac-Toe State
+[G] 0795. Number of Subarrays with Bounded Maximum
 [B] 0796. Rotate String
+[W] 0797. All Paths From Source to Target
+[B] 0798. Smallest Rotation with Highest Score
+[G] 0799. Champagne Tower
+[L] 0801. Minimum Swaps To Make Sequences Increasing
+[W] 0802. Find Eventual Safe States
+[G] 0803. Bricks Falling When Hit
 [W] 0804. Unique Morse Code Words
+[B] 0805. Split Array With Same Average
 [W] 0806. Number of Lines To Write String
+[W] 0807. Max Increase to Keep City Skyline
+[G] 0808. Soup Servings
+[L] 0809. Expressive Words
+[B] 0810. Chalkboard XOR Game
 [W] 0811. Subdomain Visit Count
 [W] 0812. Largest Triangle Area
+[W] 0813. Largest Sum of Averages
+[W] 0814. Binary Tree Pruning
+[L] 0815. Bus Routes
+[W] 0816. Ambiguous Coordinates
+[W] 0817. Linked List Components
+[B] 0818. Race Car
 [L] 0819. Most Common Word
+[W] 0820. Short Encoding of Words
 [W] 0821. Shortest Distance to a Character
+[W] 0822. Card Flipping Game
+[L] 0823. Binary Trees With Factors
 [W] 0824. Goat Latin
+[G] 0825. Friends Of Appropriate Ages
+
 [W] 0830. Positions of Large Groups
 [W] 0832. Flipping an Image
 [W] 0836. Rectangle Overlap
