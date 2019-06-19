@@ -1,27 +1,25 @@
-import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class S0703KthLargestElementStream {
     class KthLargest {
-        private int[] array = new int[0];
+        final PriorityQueue<Integer> q;
+        final int k;
 
-        public KthLargest(int k, int[] nums) {
-            array = new int[k];
-            Arrays.fill(array, Integer.MIN_VALUE);
-            for (int n : nums) {
+        public KthLargest(int k, int[] a) {
+            this.k = k;
+            q = new PriorityQueue<>(k);
+            for (int n : a)
                 add(n);
-            }
         }
 
-        public int add(int val) {
-            if (array.length == 0) {
-                return Integer.MIN_VALUE;
+        public int add(int n) {
+            if (q.size() < k)
+                q.offer(n);
+            else if (q.peek() < n) {
+                q.poll();
+                q.offer(n);
             }
-            if (val < array[0]) {
-                return array[0];
-            }
-            array[0] = val;
-            Arrays.sort(array);
-            return array[0];
+            return q.peek();
         }
     }
 }

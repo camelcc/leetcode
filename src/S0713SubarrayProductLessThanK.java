@@ -1,16 +1,15 @@
 public class S0713SubarrayProductLessThanK {
     public int numSubarrayProductLessThanK(int[] nums, int k) {
-        int res = 0;
-        for (int i = 0; i < nums.length; i++) {
-            int p = 1;
-            for (int j = i; j >= 0 && p < k; j--) {
-                p *= nums[j];
-                if (p < k) {
-                    res++;
-                }
+        if (k == 0) return 0;
+        int cnt = 0;
+        int pro = 1;
+        for (int i = 0, j = 0; j < nums.length; j++) {
+            pro *= nums[j];
+            while (i <= j && pro >= k) {
+                pro /= nums[i++];
             }
+            cnt += j - i + 1;
         }
-
-        return res;
+        return cnt;
     }
 }

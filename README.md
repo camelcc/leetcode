@@ -467,39 +467,112 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [W] 0598. Range Addition II
 [W] 0599. Minimum Index Sum of Two Lists
 [G] 0600. Non-negative Integers without Consecutive Ones
-
 [L] 0605. Can Place Flowers
 [W] 0606. Construct String from Binary Tree
+[L] 0609. Find Duplicate File in System
+[G] 0611. Valid Triangle Number
 [W] 0617. Merge Two Binary Trees
+[W] 0621. Task Scheduler
+[L] 0622. Design Circular Queue
+[W] 0623. Add One Row to Tree
 [B] 0628. Maximum Product of Three Numbers
+[B] 0629. K Inverse Pairs Array
+[B] 0630. Course Schedule III
+[B] 0632. Smallest Range
+[L] 0633. Sum of Square Numbers
+[L] 0636. Exclusive Time of Functions
 [L] 0637. Average of Levels in Binary Tree
+[W] 0638. Shopping Offers
+[W] 0640. Solve the Equation
+[W] 0641. Design Circular Deque
 [L] 0643. Maximum Average Subarray I
 [W] 0645. Set Mismatch
-[W] 0653. Two Sum IV - Input is a BST
+[W] 0646. Maximum Length of Pair Chain
+[W] 0647. Palindromic Substrings
+[W] 0648. Replace Words
+[W] 0649. Dota2 Senate
+[L] 0650. 2 Keys Keyboard
+[B] 0652. Find Duplicate Subtrees
+[L] 0653. Two Sum IV - Input is a BST
+[W] 0654. Maximum Binary Tree
+[W] 0655. Print Binary Tree
 [W] 0657. Robot Return to Origin
+[L] 0658. Find K Closest Elements
+[W] 0659. Split Array into Consecutive Subsequences
 [W] 0661. Image Smoother
+[W] 0662. Maximum Width of Binary Tree
+[B] 0664. Strange Printer
 [G] 0665. Non-decreasing Array
+[B] 0667. Beautiful Arrangement II
+[B] 0668. Kth Smallest Number in Multiplication Table
 [W] 0669. Trim a Binary Search Tree
+[G] 0670. Maximum Swap
 [G] 0671. Second Minimum Node In a Binary Tree
+[B] 0672. Bulb Switcher II
+[G] 0673. Number of Longest Increasing Subsequence
 [W] 0674. Longest Continuous Increasing Subsequence
+[L] 0676. Implement Magic Dictionary
+[W] 0677. Map Sum Pairs
+[W] 0678. Valid Parenthesis String
+[G] 0679. 24 Game
 [G] 0680. Valid Palindrome II
 [W] 0682. Baseball Game
+[B] 0684. Redundant Connection
+[B] 0685. Redundant Connection II
 [L] 0686. Repeated String Match
 [G] 0687. Longest Univalue Path
+[L] 0688. Knight Probability in Chessboard
+[L] 0689. Maximum Sum of 3 Non-Overlapping Subarrays
 [W] 0690. Employee Importance
+[W] 0691. Stickers to Spell Word
+[G] 0692. Top K Frequent Words
 [W] 0693. Binary Number with Alternating Bits
+[W] 0695. Max Area of Island
 [B] 0696. Count Binary Substrings
 [W] 0697. Degree of an Array
+[L] 0698. Partition to K Equal Sum Subsets
+[L] 0699. Falling Squares
+[W] 0700. Search in a Binary Search Tree
+[W] 0701. Insert into a Binary Search Tree
+[W] 0704. Binary Search
+[W] 0705. Design HashSet
+[W] 0706. Design HashMap
+[G] 0707. Design Linked List
+[W] 0709. To Lower Case
+[W] 0710. Random Pick with Blacklist
+[G] 0712. Minimum ASCII Delete Sum for Two Strings
+[B] 0713. Subarray Product Less Than K
+[L] 0714. Best Time to Buy and Sell Stock with Transaction Fee
+[W] 0715. Range Module
 [W] 0717. 1-bit and 2-bit Characters
+[G] 0718. Maximum Length of Repeated Subarray
+[B] 0719. Find K-th Smallest Pair Distance
 [W] 0720. Longest Word in Dictionary
+[L] 0721. Accounts Merge
+[G] 0722. Remove Comments
 [W] 0724. Find Pivot Index
+[W] 0725. Split Linked List in Parts
+[L] 0726. Number of Atoms
 [W] 0728. Self Dividing Numbers
+[W] 0729. My Calendar I
+[W] 0730. Count Different Palindromic Subsequences
+[B] 0731. My Calendar II
+[B] 0732. My Calendar III
 [L] 0733. Flood Fill
+[L] 0735. Asteroid Collision
+[W] 0736. Parse Lisp Expression
+[W] 0738. Monotone Increasing Digits
+[W] 0739. Daily Temperatures
+[G] 0740. Delete and Earn
+[B] 0741. Cherry Pickup
 [G] 0743. Network Delay Time
 [L] 0744. Find Smallest Letter Greater Than Target
+[G] 0745. Prefix and Suffix Search
 [L] 0746. Min Cost Climbing Stairs
 [L] 0747. Largest Number At Least Twice of Others
 [W] 0748. Shortest Completing Word
+[B] 0749. Contain Virus
+
 [B] 0754. Reach a Number
 [W] 0762. Prime Number of Set Bits in Binary Representation
 [W] 0766. Toeplitz Matrix

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class S069TopKFrequentWords {
+public class S0692TopKFrequentWords {
     public List<String> topKFrequent(String[] words, int k) {
         HashMap<String, Integer> cnt = new HashMap<>();
         Comparator<String> comp = new Comparator<String>() {
