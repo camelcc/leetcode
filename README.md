@@ -709,5 +709,11 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 0898. Bitwise ORs of Subarrays
 [B] 0899. Orderly Queue
 [W] 0900. RLE Iterator
+[W] 0901. Online Stock Span
+[G] 0902. Numbers At Most N Given Digit Set
+[B] 0903. Valid Permutations for DI Sequence
+[G] 0904. Fruit Into Baskets
+[W] 0905. Sort Array By Parity
+
 ```
 
