@@ -64,40 +64,4 @@ public class S0827MakingALargeIsland {
         }
         return cnt;
     }
-
-
-
-
-//    private int dfs(int[][] grid) {
-//        int M = grid.length, N = grid[0].length;
-//        boolean[][] visited = new boolean[M][N];
-//        int res = 0;
-//        for (int r = 0; r < M; r++) {
-//            for (int c = 0; c < N; c++) {
-//                if (grid[r][c] == 0 || visited[r][c]) {
-//                    continue;
-//                }
-//                res = Math.max(res, cal(grid, visited, r, c));
-//            }
-//        }
-//        return res;
-//    }
-//
-//    private int cal(int[][] grid, boolean[][] visited, int r, int c) {
-//        int M = grid.length, N = grid[0].length;
-//        assert grid[r][c] == 1;
-//        assert !visited[r][c];
-//        visited[r][c] = true;
-//        int[][] directions = new int[][]{{0, -1}, {-1, 0}, {0, 1}, {1, 0}};
-//        int res = 0;
-//        for (int[] dir : directions) {
-//            int dr = r+dir[0], dc = c+dir[1];
-//            if (dr < 0 || dr >= M || dc < 0 || dc >= N) {
-//                continue;
-//            }
-//            if (grid[dr][dc] == 1) {
-//                assert
-//            }
-//        }
-//    }
 }

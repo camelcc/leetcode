@@ -637,28 +637,80 @@ All solutions aimed to achieve high performance and easy to understand goal.
 [L] 0823. Binary Trees With Factors
 [W] 0824. Goat Latin
 [G] 0825. Friends Of Appropriate Ages
-
+[G] 0826. Most Profit Assigning Work
+[B] 0827. Making A Large Island
+[B] 0828. Unique Letter String
+[G] 0829. Consecutive Numbers Sum
 [W] 0830. Positions of Large Groups
+[W] 0831. Masking Personal Information
 [W] 0832. Flipping an Image
+[W] 0833. Find And Replace in String
+[B] 0834. Sum of Distances in Tree
+[W] 0835. Image Overlap
 [W] 0836. Rectangle Overlap
+[B] 0837. New 21 Game
+[G] 0838. Push Dominoes
+[L] 0839. Similar String Groups
 [W] 0840. Magic Squares In Grid
+[W] 0841. Keys and Rooms
+[G] 0842. Split Array into Fibonacci Sequence
+[B] 0843. Guess the Word
 [L] 0844. Backspace String Compare
+[W] 0845. Longest Mountain in Array
+[G] 0846. Hand of Straights
+[B] 0847. Shortest Path Visiting All Nodes
+[W] 0848. Shifting Letters
 [L] 0849. Maximize Distance to Closest Person
+[B] 0850. Rectangle Area II
+[G] 0851. Loud and Rich
 [W] 0852. Peak Index in a Mountain Array
+[W] 0853. Car Fleet
+[W] 0854. K-Similar Strings
+[W] 0855. Exam Room
+[W] 0856. Score of Parentheses
+[B] 0857. Minimum Cost to Hire K Workers
+[W] 0858. Mirror Reflection
 [W] 0859. Buddy Strings
 [W] 0860. Lemonade Change
+[L] 0861. Score After Flipping Matrix
+[B] 0862. Shortest Subarray with Sum at Least K
+[W] 0863. All Nodes Distance K in Binary Tree
+[B] 0864. Shortest Path to Get All Keys
+[W] 0865. Smallest Subtree with all the Deepest Nodes
+[B] 0866. Prime Palindrome
 [W] 0867. Transpose Matrix
 [W] 0868. Binary Gap
+[W] 0869. Reordered Power of 2
+[W] 0870. Advantage Shuffle
+[B] 0871. Minimum Number of Refueling Stops
 [L] 0872. Leaf-Similar Trees
+[W] 0873. Length of Longest Fibonacci Subsequence
 [G] 0874. Walking Robot Simulation
+[W] 0875. Koko Eating Bananas
 [W] 0876. Middle of the Linked List
+[L] 0877. Stone Game
+[B] 0878. Nth Magical Number
+[B] 0879. Profitable Schemes
+[G] 0880. Decoded String at Index
+[W] 0881. Boats to Save People
+[G] 0882. Reachable Nodes In Subdivided Graph
 [W] 0883. Projection Area of 3D Shapes
 [W] 0884. Uncommon Words from Two Sentences
+[W] 0885. Spiral Matrix III
+[W] 0886. Possible Bipartition
+[B] 0887. Super Egg Drop
 [W] 0888. Fair Candy Swap
+[L] 0889. Construct Binary Tree from Preorder and Postorder Traversal
+[W] 0890. Find and Replace Pattern
+[B] 0891. Sum of Subsequence Widths
 [G] 0892. Surface Area of 3D Shapes
 [W] 0893. Groups of Special-Equivalent Strings
+[W] 0894. All Possible Full Binary Trees
+[L] 0895. Maximum Frequency Stack
 [W] 0896. Monotonic Array
 [L] 0897. Increasing Order Search Tree
-
+[L] 0898. Bitwise ORs of Subarrays
+[B] 0899. Orderly Queue
+[W] 0900. RLE Iterator
 ```
 

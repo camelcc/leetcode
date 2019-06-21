@@ -1,44 +1,13 @@
-import java.util.Arrays;
-
 public class S0866PrimePalindrome {
+
     public int primePalindrome(int N) {
-        char[] next = nextPalindrome(String.valueOf(N).toCharArray());
-        while (!isPrime(Integer.valueOf(String.valueOf(next)))) {
-            if (next.length > 1 && (next[0] - '0') % 2 == 0) {
-                next[0]++;
-                for (int i = 1; i < next.length; i++) {
-                    next[i] = '0';
-                }
-            }
-            int t = Integer.valueOf(String.valueOf(next)) + 1;
-            next = nextPalindrome(String.valueOf(t).toCharArray());
+        if (8 <= N && N <= 11) return 11;
+        for (int x = 1; x < 100000; x++) {
+            String s = Integer.toString(x), r = new StringBuilder(s).reverse().toString().substring(1);
+            int y = Integer.parseInt(s + r);
+            if (y >= N && isPrime(y)) return y;
         }
-        return Integer.valueOf(String.valueOf(next));
-    }
-
-    private char[] nextPalindrome(char[] digits) {
-        int v = Integer.valueOf(String.valueOf(digits));
-        int left = 0, right = digits.length - 1;
-        while (left < right) {
-            digits[right] = digits[left];
-            left++;
-            right--;
-        }
-        if (Integer.valueOf(String.valueOf(digits)) >= v) {
-            return digits;
-        }
-
-        int half = Integer.valueOf(String.valueOf(digits, 0, digits.length%2+digits.length/2)) + 1;
-        char[] increment = String.valueOf(half).toCharArray();
-        char[] res = new char[increment.length + digits.length / 2];
-        int i = 0;
-        for (int j = 0; j < increment.length; j++) {
-            res[i++] = increment[j];
-        }
-        for (int j = digits.length%2 + digits.length/2; j < digits.length; j++) {
-            res[i++] = '0';
-        }
-        return nextPalindrome(res);
+        return -1;
     }
 
     private boolean isPrime(int n) {
