@@ -1,8 +1,5 @@
 # leetcode
-
-Issues in whitelist is easy & simple so don't need to revisited after one time pass. Issues in Grey list need to revisited one more time (or 2~3 times) if necessary, but should be easy and simple too. Issues in blacklist is important and need many effect to solve and revisit from time to time.
-
-All solutions aimed to achieve high performance and easy to understand goal.
+This repo is leetcode solutions in Java. Also include `algs4.jar` library for textbook: `Robert Sedgewick and Kevin Wayne - Algorithms, 4th edition`
 
 ```text
 [W] - white list, easy and one time pass.
