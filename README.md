@@ -714,6 +714,12 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [B] 0903. Valid Permutations for DI Sequence
 [G] 0904. Fruit Into Baskets
 [W] 0905. Sort Array By Parity
+[G] 0906. Super Palindromes
+[G] 0907. Sum of Subarray Minimums
+[W] 0908. Smallest Range I
+[W] 0909. Snakes and Ladders
+
+
 
 ```
 
