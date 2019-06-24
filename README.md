@@ -719,6 +719,12 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0908. Smallest Range I
 [G] 0909. Snakes and Ladders
 [B] 0910. Smallest Range II
+[W] 0911. Online Election
+[W] 0912. Sort an Array
+[B] 0913. Cat and Mouse
+[L] 0914. X of a Kind in a Deck of Cards
+[W] 0915. Partition Array into Disjoint Intervals
+
 
 
 

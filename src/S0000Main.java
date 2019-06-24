@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0909SnakesandLadders ladders = new S0909SnakesandLadders();
-        StdOut.println(ladders.snakesAndLadders(new int[][]{{-1,-1,30,14,15,-1},{23,9,-1,-1,-1,9},{12,5,7,24,-1,30},{10,-1,-1,-1,25,17},{32,-1,28,-1,-1,32},{-1,-1,23,-1,13,19}}));
+        S0913CatandMouse mouse = new S0913CatandMouse();
+        StdOut.println(mouse.catMouseGame(new int[][]{{6},{4},{9},{5},{1,5},{3,4,6},{0,5,10},{8,9,10},{7},{2,7},{6,7}}));
     }
 }
