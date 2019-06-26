@@ -729,5 +729,11 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [G] 0918. Maximum Sum Circular Subarray
 [L] 0919. Complete Binary Tree Inserter
 [B] 0920. Number of Music Playlists
+[W] 0921. Minimum Add to Make Parentheses Valid
+[B] 0922. Sort Array By Parity II
+[L] 0923. 3Sum With Multiplicity
+[W] 0924. Minimize Malware Spread
+[G] 0925. Long Pressed Name
+
 ```
 
