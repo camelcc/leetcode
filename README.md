@@ -724,9 +724,10 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [B] 0913. Cat and Mouse
 [L] 0914. X of a Kind in a Deck of Cards
 [W] 0915. Partition Array into Disjoint Intervals
-
-
-
-
+[W] 0916. Word Subsets
+[W] 0917. Reverse Only Letters
+[G] 0918. Maximum Sum Circular Subarray
+[L] 0919. Complete Binary Tree Inserter
+[B] 0920. Number of Music Playlists
 ```
 
