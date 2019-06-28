@@ -734,6 +734,10 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 0923. 3Sum With Multiplicity
 [W] 0924. Minimize Malware Spread
 [G] 0925. Long Pressed Name
+[B] 0926. Flip String to Monotone Increasing
+[W] 0927. Three Equal Parts
+[B] 0928. Minimize Malware Spread II
+[W] 0929. Unique Email Addresses
 
 ```
 
