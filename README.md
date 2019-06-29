@@ -738,6 +738,12 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0927. Three Equal Parts
 [B] 0928. Minimize Malware Spread II
 [W] 0929. Unique Email Addresses
+[B] 0930. Binary Subarrays With Sum
+[L] 0931. Minimum Falling Path Sum
+[B] 0932. Beautiful Array
+[W] 0933. Number of Recent Calls
+[B] 0934. Shortest Bridge
+[W] 0935. Knight Dialer
 
 ```
 
