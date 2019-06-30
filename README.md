@@ -744,6 +744,9 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0933. Number of Recent Calls
 [B] 0934. Shortest Bridge
 [W] 0935. Knight Dialer
+[B] 0936. Stamping The Sequence
+[W] 0937. Reorder Log Files
+[W] 0938. Range Sum of BST
 
 ```
 
