@@ -747,6 +747,7 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [B] 0936. Stamping The Sequence
 [W] 0937. Reorder Log Files
 [W] 0938. Range Sum of BST
-
+[B] 0939. Minimum Area Rectangle
+[B] 0940. Distinct Subsequences II
 ```
 
