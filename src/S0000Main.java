@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S0940DistinctSubsequencesII subsequences = new S0940DistinctSubsequencesII();
-        StdOut.println(subsequences.distinctSubseqII("aba"));
+        S0949LargestTimeGivenDigits digits = new S0949LargestTimeGivenDigits();
+        StdOut.println(digits.largestTimeFromDigits(new int[]{1, 2, 3, 4}));
     }
 }

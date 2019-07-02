@@ -752,6 +752,13 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 0941. Valid Mountain Array
 [W] 0942. DI String Match
 [B] 0943. Find the Shortest Superstring
+[W] 0944. Delete Columns to Make Sorted
+[L] 0945. Minimum Increment to Make Array Unique
+[W] 0946. Validate Stack Sequences
+[W] 0947. Most Stones Removed with Same Row or Column
+[W] 0948. Bag of Tokens
+[W] 0949. Largest Time for Given Digits
+[W] 0950. Reveal Cards In Increasing Order
 
 ```
 
