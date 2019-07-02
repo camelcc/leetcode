@@ -749,5 +749,9 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0938. Range Sum of BST
 [B] 0939. Minimum Area Rectangle
 [B] 0940. Distinct Subsequences II
+[L] 0941. Valid Mountain Array
+[W] 0942. DI String Match
+[B] 0943. Find the Shortest Superstring
+
 ```
 
