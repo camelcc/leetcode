@@ -759,6 +759,13 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0948. Bag of Tokens
 [W] 0949. Largest Time for Given Digits
 [W] 0950. Reveal Cards In Increasing Order
+[W] 0951. Flip Equivalent Binary Trees
+[G] 0952. Largest Component Size by Common Factor
+[L] 0953. Verifying an Alien Dictionary
+[G] 0954. Array of Doubled Pairs
+[G] 0955. Delete Columns to Make Sorted II
+
+
 
 ```
 
