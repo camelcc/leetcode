@@ -765,6 +765,10 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [G] 0954. Array of Doubled Pairs
 [G] 0955. Delete Columns to Make Sorted II
 [B] 0956. Tallest Billboard
+[G] 0957. Prison Cells After N Days
+[W] 0958. Check Completeness of a Binary Tree
+[L] 0959. Regions Cut By Slashes
+[L] 0960. Delete Columns to Make Sorted III
 
 
 
