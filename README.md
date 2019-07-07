@@ -769,8 +769,8 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0958. Check Completeness of a Binary Tree
 [L] 0959. Regions Cut By Slashes
 [L] 0960. Delete Columns to Make Sorted III
-
-
+[W] 0961. N-Repeated Element in Size 2N Array
+[B] 962. Maximum Width Ramp
 
 ```
 
