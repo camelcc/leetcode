@@ -770,7 +770,10 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 0959. Regions Cut By Slashes
 [L] 0960. Delete Columns to Make Sorted III
 [W] 0961. N-Repeated Element in Size 2N Array
-[B] 962. Maximum Width Ramp
+[B] 0962. Maximum Width Ramp
+[B] 0963. Minimum Area Rectangle II
+[B] 0964. Least Operators to Express Number
+[W] 0965. Univalued Binary Tree
 
 ```
 
