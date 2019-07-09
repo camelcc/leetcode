@@ -774,6 +774,11 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [B] 0963. Minimum Area Rectangle II
 [B] 0964. Least Operators to Express Number
 [W] 0965. Univalued Binary Tree
+[W] 0966. Vowel Spellchecker
+[L] 0967. Numbers With Same Consecutive Differences
+[L] 0968. Binary Tree Cameras
+[L] 0969. Pancake Sorting
+[W] 0970. Powerful Integers
 
 ```
 
