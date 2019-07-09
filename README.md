@@ -779,6 +779,11 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 0968. Binary Tree Cameras
 [L] 0969. Pancake Sorting
 [W] 0970. Powerful Integers
+[W] 0971. Flip Binary Tree To Match Preorder Traversal
+[G] 0972. Equal Rational Numbers
+[W] 0973. K Closest Points to Origin
+[B] 0974. Subarray Sums Divisible by K
+[W] 0975. Odd Even Jump
 
 ```
 
