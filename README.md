@@ -784,6 +784,13 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0973. K Closest Points to Origin
 [B] 0974. Subarray Sums Divisible by K
 [W] 0975. Odd Even Jump
+[B] 0976. Largest Perimeter Triangle
+[B] 0977. Squares of a Sorted Array
+[W] 0978. Longest Turbulent Subarray
+[W] 0979. Distribute Coins in Binary Tree
+[W] 0980. Unique Paths III
+[W] 0981. Time Based Key-Value Store
+[B] 0982. Triples with Bitwise AND Equal To Zero
 
 ```
 
