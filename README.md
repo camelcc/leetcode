@@ -791,6 +791,14 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0980. Unique Paths III
 [W] 0981. Time Based Key-Value Store
 [B] 0982. Triples with Bitwise AND Equal To Zero
+[L] 0983. Minimum Cost For Tickets
+[W] 0984. String Without AAA or BBB
+[W] 0985. Sum of Even Numbers After Queries
+[W] 0986. Interval List Intersections
+[W] 0987. Vertical Order Traversal of a Binary Tree
+[G] 0988. Smallest String Starting From Leaf
+[W] 0989. Add to Array-Form of Integer
+[W] 0990. Satisfiability of Equality Equations
 
 ```
 
