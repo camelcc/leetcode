@@ -799,6 +799,12 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [G] 0988. Smallest String Starting From Leaf
 [W] 0989. Add to Array-Form of Integer
 [W] 0990. Satisfiability of Equality Equations
+[B] 0991. Broken Calculator
+[W] 0992. Subarrays with K Different Integers
+[L] 0993. Cousins in Binary Tree
+[W] 0994. Rotting Oranges
+[B] 0995. Minimum Number of K Consecutive Bit Flips
+
 
 ```
 
