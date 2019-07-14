@@ -804,6 +804,11 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 0993. Cousins in Binary Tree
 [W] 0994. Rotting Oranges
 [B] 0995. Minimum Number of K Consecutive Bit Flips
+[B] 0996. Number of Squareful Arrays
+[G] 0997. Find the Town Judge
+[W] 0998. Maximum Binary Tree II
+[W] 0999. Available Captures for Rook
+[B] 1000. Minimum Cost to Merge Stones
 
 
 ```
