@@ -814,6 +814,11 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1003. Check If Word Is Valid After Substitutions
 [G] 1004. Max Consecutive Ones III
 [W] 1005. Maximize Sum Of Array After K Negations
+[W] 1006. Clumsy Factorial
+[G] 1007. Minimum Domino Rotations For Equal Row
+[W] 1008. Construct Binary Search Tree from Preorder Traversal
+[L] 1009. Complement of Base 10 Integer
+[W] 1010. Pairs of Songs With Total Durations Divisible by 60
 
 
 ```
