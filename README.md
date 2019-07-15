@@ -809,6 +809,11 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0998. Maximum Binary Tree II
 [W] 0999. Available Captures for Rook
 [B] 1000. Minimum Cost to Merge Stones
+[G] 1001. Grid Illumination
+[W] 1002. Find Common Characters
+[W] 1003. Check If Word Is Valid After Substitutions
+[G] 1004. Max Consecutive Ones III
+[W] 1005. Maximize Sum Of Array After K Negations
 
 
 ```
