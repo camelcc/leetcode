@@ -819,6 +819,14 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1008. Construct Binary Search Tree from Preorder Traversal
 [L] 1009. Complement of Base 10 Integer
 [W] 1010. Pairs of Songs With Total Durations Divisible by 60
+[W] 1011. Capacity To Ship Packages Within D Days
+[W] 1012. Numbers With Repeated Digits
+[W] 1013. Partition Array Into Three Parts With Equal Sum
+[W] 1014. Best Sightseeing Pair
+[W] 1015. Smallest Integer Divisible by K
+[W] 1016. Binary String With Substrings Representing 1 To N
+[L] 1017. Convert to Base -2
+
 
 
 ```
