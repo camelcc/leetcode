@@ -826,6 +826,15 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1015. Smallest Integer Divisible by K
 [W] 1016. Binary String With Substrings Representing 1 To N
 [L] 1017. Convert to Base -2
+[W] 1018. Binary Prefix Divisible By 5
+[W] 1019. Next Greater Node In Linked List
+[W] 1020. Number of Enclaves
+[W] 1021. Remove Outermost Parentheses
+[W] 1022. Sum of Root To Leaf Binary Numbers
+[W] 1023. Camelcase Matching
+[W] 1024. Video Stitching
+[W] 1025. Divisor Game
+[W] 1026. Maximum Difference Between Node and Ancestor
 
 
 
