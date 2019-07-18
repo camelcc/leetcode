@@ -835,6 +835,14 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1024. Video Stitching
 [W] 1025. Divisor Game
 [W] 1026. Maximum Difference Between Node and Ancestor
+[W] 1027. Longest Arithmetic Sequence
+[L] 1028. Recover a Tree From Preorder Traversal
+[W] 1029. Two City Scheduling
+[L] 1030. Matrix Cells in Distance Order
+[L] 1031. Maximum Sum of Two Non-Overlapping Subarrays
+[L] 1032. Stream of Characters
+[L] 1033. Moving Stones Until Consecutive
+[L] 1034. Coloring A Border
 
 
 
