@@ -843,6 +843,12 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 1032. Stream of Characters
 [L] 1033. Moving Stones Until Consecutive
 [L] 1034. Coloring A Border
+[B] 1035. Uncrossed Lines
+[B] 1036. Escape a Large Maze
+[W] 1037. Valid Boomerang
+[W] 1038. Binary Search Tree to Greater Sum Tree
+[B] 1039. Minimum Score Triangulation of Polygon
+[B] 1040. Moving Stones Until Consecutive II
 
 
 
