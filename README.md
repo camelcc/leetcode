@@ -849,8 +849,13 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1038. Binary Search Tree to Greater Sum Tree
 [B] 1039. Minimum Score Triangulation of Polygon
 [B] 1040. Moving Stones Until Consecutive II
-
-
+[B] 1041. Robot Bounded In Circle
+[L] 1042. Flower Planting With No Adjacent
+[L] 1043. Partition Array for Maximum Sum
+[B] 1044. Longest Duplicate Substring
+[W] 1046. Last Stone Weight
+[W] 1047. Remove All Adjacent Duplicates In String
+[W] 1048. Longest String Chain
 
 ```
 
