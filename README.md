@@ -865,6 +865,11 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [B] 1072. Flip Columns For Maximum Number of Equal Rows
 [G] 1073. Adding Two Negabinary Numbers
 [B] 1074. Number of Submatrices That Sum to Target
+[W] 1078. Occurrences After Bigram
+[B] 1079. Letter Tile Possibilities
+[L] 1080. Insufficient Nodes in Root to Leaf Paths
+[B] 1081. Smallest Subsequence of Distinct Characters
+[B] 1089. Duplicate Zeros
 
 
 ```
