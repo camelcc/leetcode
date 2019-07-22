@@ -856,6 +856,16 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1046. Last Stone Weight
 [W] 1047. Remove All Adjacent Duplicates In String
 [W] 1048. Longest String Chain
+[B] 1049. Last Stone Weight II
+[W] 1051. Height Checker
+[W] 1052. Grumpy Bookstore Owner
+[L] 1053. Previous Permutation With One Swap
+[W] 1054. Distant Barcodes
+[W] 1071. Greatest Common Divisor of Strings
+[B] 1072. Flip Columns For Maximum Number of Equal Rows
+[G] 1073. Adding Two Negabinary Numbers
+[B] 1074. Number of Submatrices That Sum to Target
+
 
 ```
 
