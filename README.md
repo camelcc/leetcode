@@ -870,6 +870,13 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 1080. Insufficient Nodes in Root to Leaf Paths
 [B] 1081. Smallest Subsequence of Distinct Characters
 [B] 1089. Duplicate Zeros
+[L] 1090. Largest Values From Labels
+[L] 1091. Shortest Path in Binary Matrix
+[L] 1092. Shortest Common Supersequence
+[L] 1093. Statistics from a Large Sample
+[W] 1094. Car Pooling
+[L] 1095. Find in Mountain Array
+[L] 1096. Brace Expansion II
 
 
 ```
