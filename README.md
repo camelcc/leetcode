@@ -886,10 +886,16 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 1110. Delete Nodes And Return Forest
 [W] 1111. Maximum Nesting Depth of Two Valid Parentheses Strings
 [W] 1114. Print in Order
+[W] 1115. Print FooBar Alternately
+[G] 1116. Print Zero Even Odd
 
 [W] 1122. Relative Sort Array
 [B] 1123. Lowest Common Ancestor of Deepest Leaves
-
+[B] 1124. Longest Well-Performing Interval
+[W] 1128. Number of Equivalent Domino Pairs
+[W] 1129. Shortest Path with Alternating Colors
+[G] 1130. Minimum Cost Tree From Leaf Values
+[B] 1131. Maximum of Absolute Value Expression
 
 ```
 
