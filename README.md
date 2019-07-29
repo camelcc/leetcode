@@ -898,6 +898,8 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1129. Shortest Path with Alternating Colors
 [G] 1130. Minimum Cost Tree From Leaf Values
 [B] 1131. Maximum of Absolute Value Expression
+[W] 1137. N-th Tribonacci Number
+[W] 1138. Alphabet Board Path
 
 ```
 
