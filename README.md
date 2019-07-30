@@ -174,6 +174,8 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0173. Binary Search Tree Iterator
 [L] 0174. Dungeon Game
 [W] 0175. Combine Two Tables
+[W] 0176. Second Highest Salary
+[W] 0177. Nth Highest Salary
 [B] 0179. Largest Number
 [B] 0187. Repeated DNA Sequences
 [B] 0188. Best Time to Buy and Sell Stock IV
