@@ -903,6 +903,7 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1137. N-th Tribonacci Number
 [W] 1138. Alphabet Board Path
 [W] 1139. Largest 1-Bordered Square
+[W] 1143. Longest Common Subsequence
 
 ```
 
