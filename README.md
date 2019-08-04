@@ -904,6 +904,8 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1138. Alphabet Board Path
 [W] 1139. Largest 1-Bordered Square
 [W] 1143. Longest Common Subsequence
+[W] 1144. Decrease Elements To Make Array Zigzag
+[W] 1145. Binary Tree Coloring Game
 
 ```
 
