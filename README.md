@@ -906,6 +906,8 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1143. Longest Common Subsequence
 [W] 1144. Decrease Elements To Make Array Zigzag
 [W] 1145. Binary Tree Coloring Game
+[W] 1146. Snapshot Array
+[W] 1147. Longest Chunked Palindrome Decomposition
 
 ```
 
