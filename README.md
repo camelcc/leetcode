@@ -181,6 +181,8 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0181. Employees Earning More Than Their Managers
 [W] 0182. Duplicate Emails
 [W] 0183. Customers Who Never Order
+[W] 0184. Department Highest Salary
+[W] 0185. Department Top Three Salaries
 [B] 0187. Repeated DNA Sequences
 [B] 0188. Best Time to Buy and Sell Stock IV
 [B] 0189. Rotate Array [O(1) space, O(n) time]
