@@ -2,39 +2,37 @@ import java.util.Arrays;
 
 public class S0006ZigZagConversion {
     public String convert(String s, int numRows) {
-        if (numRows <= 1) {
+        assert numRows > 0;
+        if (numRows == 1 || s.length() <= 1) {
             return s;
         }
         StringBuilder[] sb = new StringBuilder[numRows];
-        for (int j = 0; j < numRows; j++) {
-            sb[j] = new StringBuilder();
+        for (int i = 0; i < numRows; i++) {
+            sb[i] = new StringBuilder();
         }
-
+        int row = 0;
         boolean down = true;
-        int r = 0;
-        int i = 0;
-        while (i < s.length()) {
-            char c = s.charAt(i);
+        for (char c : s.toCharArray()) {
+            sb[row].append(c);
             if (down) {
-                if (r == numRows) {
+                if (row == numRows-1) {
                     down = false;
-                    r = numRows - 2;
+                    row = row-1;
                 } else {
-                    sb[r++].append(c);
-                    i++;
+                    row++;
                 }
             } else {
-                if (r == 0) {
+                if (row == 0) {
                     down = true;
+                    row = 1;
                 } else {
-                    sb[r--].append(c);
-                    i++;
+                    row--;
                 }
             }
         }
         StringBuilder res = new StringBuilder();
-        for (int j = 0; j < sb.length; j++) {
-            res.append(sb[j].toString());
+        for (StringBuilder t : sb) {
+            res.append(t);
         }
         return res.toString();
     }
