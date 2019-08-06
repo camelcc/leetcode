@@ -177,7 +177,10 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0176. Second Highest Salary
 [W] 0177. Nth Highest Salary
 [B] 0179. Largest Number
-[W] 180. Consecutive Numbers
+[W] 0180. Consecutive Numbers
+[W] 0181. Employees Earning More Than Their Managers
+[W] 0182. Duplicate Emails
+[W] 0183. Customers Who Never Order
 [B] 0187. Repeated DNA Sequences
 [B] 0188. Best Time to Buy and Sell Stock IV
 [B] 0189. Rotate Array [O(1) space, O(n) time]
