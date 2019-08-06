@@ -5,40 +5,28 @@ import java.util.List;
 public class S0040CombinationSumII {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
-        return sum(candidates, 0, target);
+        return comb(candidates, target, 0);
     }
 
-    private List<List<Integer>> sum(int[] candidates, int start, int target) {
-        List<List<Integer>> res = new ArrayList<>();
-        if (candidates[start] > target) {
+    private List<List<Integer>> comb(int[] candidates, int target, int start) {
+        List<List<Integer>> res = new ArrayList();
+        if (target <= 0) {
             return res;
         }
-        int next = start;
-        while (next < candidates.length && candidates[next] == candidates[start]) {
-            next++;
-        }
-        if (next < candidates.length) {
-            res.addAll(sum(candidates, next, target));
-        }
-
-        List<Integer> current = new ArrayList<>();
-        int sum = 0;
-        int c = start;
-        while (c < next) {
-            sum += candidates[c];
-            current.add(candidates[c]);
-            if (sum == target) {
-                res.add(new ArrayList<>(current));
+        for (int i = start; i < candidates.length && candidates[i] <= target; i++) {
+            if (candidates[i] == target) {
+                List<Integer> r = new ArrayList();
+                r.add(target);
+                res.add(r);
+                return res;
             }
-            // consume
-            if (next < candidates.length) {
-                for (List<Integer> r : sum(candidates, next, target-sum)) {
-                    List<Integer> t = new ArrayList<>(current);
-                    t.addAll(r);
-                    res.add(t);
-                }
+            for (List<Integer> r : comb(candidates, target-candidates[i], i+1)) {
+                r.add(0, candidates[i]);
+                res.add(r);
             }
-            c++;
+            while (i < candidates.length-1 && candidates[i] == candidates[i+1]) {
+                i++;
+            }
         }
         return res;
     }
