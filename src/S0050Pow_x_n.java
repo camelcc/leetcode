@@ -1,27 +1,17 @@
 public class S0050Pow_x_n {
     public double myPow(double x, int n) {
-        if (x == 0) {
-            return 0;
-        }
-        if (n == 0) {
-            return 1;
-        }
-        boolean negative = n < 0;
-        if (negative) {
+        if (n < 0) {
             if (n == Integer.MIN_VALUE) {
-                return 1.0/myPow(x, Integer.MAX_VALUE)/x;
+                return 1.0/x/myPow(x, Integer.MAX_VALUE);
             }
-            return 1.0/myPow(x, -n);
-        }
-        if (n == 1) {
+            return 1.0/myPow(x, 0-n);
+        } else if (n == 0) {
+            return 1;
+        } else if (n == 1) {
             return x;
-        }
-
-        // n >= 2
-        if (n%2 == 0) {
-            return myPow(x*x, n/2);
         } else {
-            return x * myPow(x*x, n/2);
+            int v = n/2;
+            return myPow(x*x, v)*myPow(x, n-2*v);
         }
     }
 }
