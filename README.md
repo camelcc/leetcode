@@ -242,6 +242,7 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [L] 0257. Binary Tree Paths
 [W] 0258. Add Digits
 [B] 0260. Single Number III
+[W] 0262. Trips and Users
 [W] 0263. Ugly Number
 [B] 0264. Ugly Number II
 [W] 0268. Missing Number
@@ -476,17 +477,23 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [G] 0592. Fraction Addition and Subtraction
 [L] 0593. Valid Square
 [W] 0594. Longest Harmonious Subsequence
+[W] 0595. Big Countries
+[W] 0596. Classes More Than 5 Students
 [W] 0598. Range Addition II
 [W] 0599. Minimum Index Sum of Two Lists
 [G] 0600. Non-negative Integers without Consecutive Ones
+[W] 0601. Human Traffic of Stadium
 [L] 0605. Can Place Flowers
 [W] 0606. Construct String from Binary Tree
 [L] 0609. Find Duplicate File in System
 [G] 0611. Valid Triangle Number
 [W] 0617. Merge Two Binary Trees
+[W] 0620. Not Boring Movies
 [W] 0621. Task Scheduler
 [L] 0622. Design Circular Queue
 [W] 0623. Add One Row to Tree
+[W] 0626. Exchange Seats
+[W] 0627. Swap Salary
 [B] 0628. Maximum Product of Three Numbers
 [B] 0629. K Inverse Pairs Array
 [B] 0630. Course Schedule III
