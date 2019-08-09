@@ -191,6 +191,9 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 0192. Word Frequency
 [W] 0193. Valid Phone Numbers
 [W] 0194. Transpose File
+[W] 0195. Tenth Line
+[W] 0196. Delete Duplicate Emails
+[W] 0197. Rising Temperature
 [G] 0198. House Robber
 [L] 0199. Binary Tree Right Side View
 [L] 0200. Number of Islands
