@@ -1,19 +1,16 @@
 public class S0058LengthLastWord {
     public int lengthOfLastWord(String s) {
-        int count = 0;
-        int i = s.length()-1;
-        while (i >= 0 && s.charAt(i) == ' ') {
-            i--;
-        }
-        if (i < 0) {
+        if (s == null || s.length() == 0) {
             return 0;
         }
-        for (; i >= 0; i--) {
-            if (s.charAt(i) == ' ') {
-                return count;
-            }
-            count++;
+        int len = 0, pos = s.length()-1;
+        while (pos >= 0 && s.charAt(pos) == ' ') {
+            pos--;
         }
-        return count;
+        while (pos >= 0 && s.charAt(pos) != ' ') {
+            len++;
+            pos--;
+        }
+        return len;
     }
 }
