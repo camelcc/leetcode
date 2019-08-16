@@ -12,34 +12,27 @@ public class S0082RemoveDuplicatesSortedListII {
         if (head == null) {
             return null;
         }
-
-        ListNode res = null;
-        ListNode tail = null;
-
-        ListNode current = head;
+        ListNode res = null, last = null, current = head;
         while (current != null) {
-            ListNode next = current.next;
-            int count = 1;
-            while (next != null && current.val == next.val) {
-                count++;
-                next = next.next;
-            }
-            if (count < 2) {
-                if (tail == null) {
+            if (current.next == null || current.val != current.next.val) {
+                if (res == null) {
                     res = current;
-                    tail = current;
+                    last = res;
                 } else {
-                    tail.next = current;
-                    tail = tail.next;
+                    last.next = current;
+                    last = current;
+                }
+                current = current.next;
+            } else {
+                int v = current.val;
+                while (current != null && current.val == v) {
+                    current = current.next;
                 }
             }
-
-            current = next;
         }
-        if (tail != null) {
-            tail.next = null;
+        if (last != null) {
+            last.next = null;
         }
-
         return res;
     }
 }
