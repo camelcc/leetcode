@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class S0103BTZigzagLevelOrderTraversal {
@@ -18,35 +19,29 @@ public class S0103BTZigzagLevelOrderTraversal {
             return res;
         }
 
-        List<TreeNode> level = new ArrayList<>();
-        level.add(root);
-        boolean left2Right = true;
-        while (!level.isEmpty()) {
-            List<Integer> vals = new ArrayList<>();
-            List<TreeNode> newLevel = new ArrayList<>();
-            if (left2Right) {
-                for (int i = 0; i < level.size(); i++) {
-                    vals.add(level.get(i).val);
+        List<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        int level = 0;
+        while (!queue.isEmpty()) {
+            List<Integer> value = new ArrayList<>();
+            List<TreeNode> leaf = new LinkedList<>();
+            for (TreeNode node : queue) {
+                if (level % 2 == 0) {
+                    value.add(node.val);
+                } else {
+                    value.add(0, node.val);
                 }
-            } else {
-                for (int i = level.size()-1; i >= 0; i--) {
-                    vals.add(level.get(i).val);
+                if (node.left != null) {
+                    leaf.add(node.left);
                 }
-            }
-
-            for (TreeNode n : level) {
-                if (n.left != null) {
-                    newLevel.add(n.left);
-                }
-                if (n.right != null) {
-                    newLevel.add(n.right);
+                if (node.right != null) {
+                    leaf.add(node.right);
                 }
             }
-            res.add(vals);
-            level = newLevel;
-            left2Right = !left2Right;
+            queue = leaf;
+            res.add(value);
+            level++;
         }
-
         return res;
     }
 }
