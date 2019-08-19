@@ -13,17 +13,9 @@ public class S0112SumPath {
         if (root == null) {
             return false;
         }
-
-        int remains = sum - root.val;
         if (root.left == null && root.right == null) {
-            return remains == 0;
+            return root.val == sum;
         }
-        if (root.left == null) {
-            return hasPathSum(root.right, remains);
-        } else if (root.right == null) {
-            return hasPathSum(root.left, remains);
-        } else {
-            return hasPathSum(root.left, remains) || hasPathSum(root.right, remains);
-        }
+        return hasPathSum(root.left, sum-root.val) || hasPathSum(root.right, sum-root.val);
     }
 }
