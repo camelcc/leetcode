@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class S5053AsFarfromLandPossible {
+public class S1162AsFarfromLandPossible {
     public int maxDistance(int[][] grid) {
         int N = grid.length;
         LinkedList<int[]> bfs = new LinkedList<>();

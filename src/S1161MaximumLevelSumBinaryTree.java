@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class S5052MaximumLevelSumBinaryTree {
+public class S1161MaximumLevelSumBinaryTree {
     public static class TreeNode {
         int val;
         TreeNode left;

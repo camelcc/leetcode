@@ -1,4 +1,4 @@
-public class S5069LastSubstringLexicographicalOrder {
+public class S1163LastSubstringLexicographicalOrder {
     public String lastSubstring(String s) {
         int largestCharacter = s.charAt(0);
         boolean allCharsSame = true;

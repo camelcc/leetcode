@@ -927,6 +927,19 @@ This repo is leetcode solutions in Java. Also include `algs4.jar` library for te
 [W] 1145. Binary Tree Coloring Game
 [W] 1146. Snapshot Array
 [W] 1147. Longest Chunked Palindrome Decomposition
+[W] 1154. Day of the Year
+[W] 1155. Number of Dice Rolls With Target Sum
+[L] 1156. Swap For Longest Repeated Character Substring
+[B] 1157. Online Majority Element In Subarray
+[W] 1160. Find Words That Can Be Formed by Characters
+[W] 1161. Maximum Level Sum of a Binary Tree
+[L] 1162. As Far from Land as Possible
+[L] 1163. Last Substring in Lexicographical Order
+[W] 1165. Single-Row Keyboard
+[W] 1166. Design File System
+
+
+
 
 ```
 

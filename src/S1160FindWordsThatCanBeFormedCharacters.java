@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class S5048FindWordsThatCanBeFormedCharacters {
+public class S1160FindWordsThatCanBeFormedCharacters {
     public int countCharacters(String[] words, String chars) {
         int[] cnt = new int[26];
         for (char c : chars.toCharArray()) {
