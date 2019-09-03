@@ -2,21 +2,10 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S1172DinnerPlateStacks.DinnerPlates plates = new S1172DinnerPlateStacks.DinnerPlates(2);
-        plates.push(1);
-        plates.push(2);
-        plates.push(3);
-        plates.push(4);
-        plates.push(5);
-        StdOut.println(plates.popAtStack(0));
-        plates.push(20);
-        plates.push(21);
-        StdOut.println(plates.popAtStack(0));
-        StdOut.println(plates.popAtStack(2));
-        StdOut.println(plates.pop());
-        StdOut.println(plates.pop());
-        StdOut.println(plates.pop());
-        StdOut.println(plates.pop());
-        StdOut.println(plates.pop());
+        S1177CanMakePalindromeSubstring s = new S1177CanMakePalindromeSubstring();
+//        S1178 s = new S1178();
+//        StdOut.println(s.numPrimeArrangements(5));
+        StdOut.println(s.canMakePaliQueries("hunu", new int[][]{{1,1,1},{2,3,0},{3,3,1},{0,3,2},{1,3,3},{2,3,1},{3,3,1},{0,3,0},{1,1,1},{2,3,0},{3,3,1},{0,3,1},{1,1,1}}));
+        StdOut.println(s.canMakePaliQueries("abcda", new int[][]{{3,3,0},{1,2,0},{0,3,1},{0,3,2},{0,4,1}}));
     }
 }
