@@ -2,20 +2,10 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class S0000Main {
     public static void main(String[] args) {
-        S1210MinimumMovesReachTargetRotations s = new S1210MinimumMovesReachTargetRotations();
-        StdOut.println(s.minimumMoves(new int[][]{{0,0,0,0,0,1},
-                {1,1,0,0,1,0},
-                {0,0,0,0,1,1},
-                {0,0,1,0,1,0},
-                {0,1,1,0,0,0},
-                {0,1,1,0,0,0}}));
-        StdOut.println(s.minimumMoves(new int[][]{{0,0,1,1,1,1},
-                {0,0,0,0,1,1},
-                {1,1,0,0,0,1},
-                {1,1,1,0,0,1},
-                {1,1,1,0,0,1},
-                {1,1,1,0,0,0}}));
-        StdOut.println(s.minimumMoves(new int[][]{{0,0,0,0,0,0,0,0,0,1},{0,1,0,0,0,0,0,1,0,1},{1,0,0,1,0,0,1,0,1,0},{0,0,0,1,0,1,0,1,0,0},{0,0,0,0,1,0,0,0,0,1},{0,0,1,0,0,0,0,0,0,0},{1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{1,1,0,0,0,0,0,0,0,0}}
-        ));
+        S1218LongestArithmeticSubsequenceGivenDifference s = new S1218LongestArithmeticSubsequenceGivenDifference();
+        StdOut.println(s.longestSubsequence(new int[]{1,2,3,4}, 1));
+        StdOut.println(s.longestSubsequence(new int[]{1,3,5,7}, 1));
+        StdOut.println(s.longestSubsequence(new int[]{1,5,7,8,5,3,4,2,1}, -2));
+        StdOut.println(s.longestSubsequence(new int[]{-12,-12,-10,-3,-8,-11,-7,3,12,3,7,4}, -11));
     }
 }
