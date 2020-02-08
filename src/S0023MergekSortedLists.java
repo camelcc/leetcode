@@ -1,16 +1,9 @@
+import util.ListNode;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class S0023MergekSortedLists {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<ListNode> queue = new PriorityQueue<>(new Comparator<ListNode>() {
             @Override

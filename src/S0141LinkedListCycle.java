@@ -1,14 +1,6 @@
+import util.ListNode;
+
 public class S0141LinkedListCycle {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;

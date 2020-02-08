@@ -1,16 +1,8 @@
+import util.TreeNode;
+
 import java.util.HashMap;
 
 public class S0337HouseRobberIII {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private HashMap<TreeNode, Integer> map = new HashMap<>();
 
     public int rob(TreeNode root) {

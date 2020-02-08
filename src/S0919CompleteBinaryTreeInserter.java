@@ -1,17 +1,9 @@
+import util.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class S0919CompleteBinaryTreeInserter {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public static class CBTInserter {
         private TreeNode root;
         private Queue<TreeNode> brokenParent;

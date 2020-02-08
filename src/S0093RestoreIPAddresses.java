@@ -1,57 +1,65 @@
-import javafx.util.Pair;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class S0093RestoreIPAddresses {
     public List<String> restoreIpAddresses(String s) {
-        List<String> ip = new ArrayList<>();
-        if (s.length() < 4) {
-            return ip;
+        List<List<String>> ips = splitIP(s, 4);
+        List<String> res = new ArrayList<>();
+        for (List<String> ip : ips) {
+            StringBuilder sb = new StringBuilder();
+            for (String i : ip) {
+                sb.append(i);
+                sb.append('.');
+            }
+            sb.deleteCharAt(sb.length()-1);
+            res.add(sb.toString());
+        }
+        return res;
+    }
+
+    private List<List<String>> splitIP(String s, int num) {
+        List<List<String>> res = new ArrayList<>();
+        if (s.length() < num) {
+            return res;
+        }
+        if (num < 0) {
+            return res;
+        } else if (num == 1) {
+            if (s.length() > 3 || Integer.parseInt(s) > 255 || (s.length() > 1 && s.startsWith("0"))) {
+                return res;
+            }
+            List<String> r = new ArrayList<>();
+            r.add(s);
+            res.add(r);
+            return res;
         }
 
-        for (Pair<String, String> first : nextIp(s)) {
-            for (Pair<String, String> second: nextIp(first.getValue())) {
-                for (Pair<String, String> third: nextIp(second.getValue())) {
-                    for (Pair<String, String> forth: nextIp(third.getValue())) {
-                        if (forth.getValue().isEmpty()) {
-                            ip.add(first.getKey() + "." + second.getKey() + "." + third.getKey() + "." + forth.getKey());
-                        }
-                    }
+
+        // 1 digits
+        for (List<String> r : splitIP(s.substring(1), num-1)) {
+            r.add(0, s.substring(0, 1));
+            res.add(r);
+        }
+
+        // 2 digits
+        if (!s.startsWith("0") && s.length() > 2) {
+            for (List<String> r : splitIP(s.substring(2), num-1)) {
+                r.add(0, s.substring(0, 2));
+                res.add(r);
+            }
+        }
+
+        // 3 digits
+        if (!s.startsWith("0") && s.length() > 3) {
+            String t = s.substring(0, 3);
+            if (Integer.parseInt(t) <= 255) {
+                for (List<String> r : splitIP(s.substring(3), num-1)) {
+                    r.add(0, t);
+                    res.add(r);
                 }
             }
         }
 
-        return ip;
-    }
-
-    private List<Pair<String, String>> nextIp(String s) {
-        List<Pair<String, String>> ips = new ArrayList<>();
-        if (s.isEmpty()) {
-            return ips;
-        }
-
-        if (s.startsWith("0")) {
-            ips.add(new Pair<>("0", s.substring(1)));
-            return ips;
-        }
-
-        // 1 digits, 1-9
-        ips.add(new Pair<>(s.substring(0, 1), s.substring(1)));
-
-        // 2 digits, 10-99
-        if (s.length() >= 2) {
-            ips.add(new Pair<>(s.substring(0, 2), s.substring(2)));
-        }
-
-        // 3 digits, 100-255
-        if (s.length() >= 3) {
-            int v = Integer.valueOf(s.substring(0, 3));
-            if (v <= 255) {
-                ips.add(new Pair<>(s.substring(0, 3), s.substring(3)));
-            }
-        }
-
-        return ips;
+        return res;
     }
 }

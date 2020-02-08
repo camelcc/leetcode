@@ -1,18 +1,10 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
 public class S1110DeleteNodesAndReturnForest {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {
         if (root == null) {
             return new ArrayList<>();

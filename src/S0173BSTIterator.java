@@ -1,16 +1,8 @@
+import util.TreeNode;
+
 import java.util.Stack;
 
 public class S0173BSTIterator {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     // time - O(1), space - O(h)
     public class BSTIterator {
         Stack<TreeNode> path = new Stack<>();

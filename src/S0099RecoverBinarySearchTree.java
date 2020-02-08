@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0099RecoverBinarySearchTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public void recoverTree(TreeNode root) {
         TreeNode pre = null;
         TreeNode first = null, second = null;

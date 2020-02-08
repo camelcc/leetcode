@@ -1,14 +1,6 @@
+import util.ListNode;
+
 public class S0142LinkedListCycleII {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     public ListNode detectCycle(ListNode head) {
         if (head == null) {
             return null;

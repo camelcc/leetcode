@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0563BinaryTreeTilt {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private int sum = 0;
 
     public int findTilt(TreeNode root) {

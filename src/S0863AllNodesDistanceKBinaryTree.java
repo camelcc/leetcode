@@ -1,19 +1,11 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
 public class S0863AllNodesDistanceKBinaryTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     class Solution {
         public List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
             HashMap<Integer, Integer> map = new HashMap<>();

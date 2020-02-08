@@ -1,20 +1,18 @@
-import javafx.util.Pair;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
 public class S0433MinimumGeneticMutation {
     public int minMutation(String start, String end, String[] bank) {
-        List<Pair<String, Integer>> mutations = new ArrayList<>();
-        mutations.add(new Pair<>(start, 0));
+        List<String[]> mutations = new ArrayList<>();
+        mutations.add(new String[]{start, String.valueOf(0)});
         HashSet<String> visited = new HashSet<>();
         visited.add(start);
 
         while (!mutations.isEmpty()) {
-            Pair<String, Integer> m = mutations.remove(0);
-            String gene = m.getKey();
-            int steps = m.getValue();
+            String[] m = mutations.remove(0);
+            String gene = m[0];
+            int steps = Integer.valueOf(m[1]);
             assert !gene.equals(end);
 
             for (String mutes : mutations(gene, bank)) {
@@ -22,7 +20,7 @@ public class S0433MinimumGeneticMutation {
                     return steps + 1;
                 }
                 if (!visited.contains(mutes)) {
-                    mutations.add(new Pair<>(mutes, steps+1));
+                    mutations.add(new String[]{mutes, String.valueOf(steps+1)});
                 }
             }
             visited.add(gene);

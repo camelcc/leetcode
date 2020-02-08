@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0110BalancedBTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public boolean isBalanced(TreeNode root) {
         return height(root) >= 0;
     }

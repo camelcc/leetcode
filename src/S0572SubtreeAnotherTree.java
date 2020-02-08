@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0572SubtreeAnotherTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public boolean isSubtree(TreeNode s, TreeNode t) {
         if (s == null && t == null) {
             return true;

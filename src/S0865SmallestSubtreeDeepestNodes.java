@@ -1,44 +1,33 @@
-import javafx.util.Pair;
+import util.TreeNode;
+
+import java.util.HashMap;
 
 public class S0865SmallestSubtreeDeepestNodes {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode subtreeWithAllDeepest(TreeNode root) {
         if (root == null) {
             return null;
         }
-        Pair<TreeNode, Integer> res = deepest(root, 0);
-        return res.getKey();
+        return deepest(root, 0, new HashMap<>());
     }
 
-    private Pair<TreeNode, Integer> deepest(TreeNode node, int depth) {
-        Pair<TreeNode, Integer> left = null;
-        if (node.left != null) {
-            left = deepest(node.left, depth+1);
-        }
-        Pair<TreeNode, Integer> right = null;
-        if (node.right != null) {
-            right = deepest(node.right, depth+1);
-        }
-        if (left == null && right == null) {
-            return new Pair<>(node, depth);
-        } else if (left == null) {
-            return right;
-        } else if (right == null) {
-            return left;
+    private TreeNode deepest(TreeNode node, int depth, HashMap<Integer, Integer> dp) {
+        dp.put(node.val, depth);
+
+        if (node.left == null && node.right == null) {
+            return node;
+        } else if (node.left == null) {
+            return deepest(node.right, depth+1, dp);
+        } else if (node.right == null) {
+            return deepest(node.left, depth+1, dp);
         } else {
-            if (left.getValue() < right.getValue()) {
+            TreeNode left = deepest(node.left, depth+1, dp);
+            TreeNode right = deepest(node.right, depth+1, dp);
+
+            if (dp.get(left.val) < dp.get(right.val)) {
                 return right;
-            } else if (left.getValue() == right.getValue()) {
-                return new Pair<>(node, left.getValue());
+            } else if (dp.get(left.val) == dp.get(right.val)) {
+                dp.put(node.val, dp.get(left.val));
+                return node;
             } else {
                 return left;
             }

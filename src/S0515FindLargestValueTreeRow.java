@@ -1,17 +1,9 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class S0515FindLargestValueTreeRow {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if (root == null) {

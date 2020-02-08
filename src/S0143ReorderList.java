@@ -1,13 +1,6 @@
+import util.ListNode;
+
 public class S0143ReorderList {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public void reorderList(ListNode head) {
         if (head == null || head.next == null) {
             return;

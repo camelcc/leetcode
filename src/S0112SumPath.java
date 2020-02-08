@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0112SumPath {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) {
             return false;

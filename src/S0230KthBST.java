@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0230KthBST {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int kthSmallest(TreeNode root, int k) {
         int left = size(root.left);
         if (k == left+1) {

@@ -1,17 +1,9 @@
+import util.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class S0958CheckCompletenessBinaryTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public boolean isCompleteTree(TreeNode root) {
         Queue<TreeNode> level = new LinkedList<>();
         level.offer(root);

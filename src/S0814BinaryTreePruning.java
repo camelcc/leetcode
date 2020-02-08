@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0814BinaryTreePruning {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode pruneTree(TreeNode root) {
         assert root != null;
         if (root.left != null) {

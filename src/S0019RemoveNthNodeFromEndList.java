@@ -1,13 +1,6 @@
+import util.ListNode;
+
 public class S0019RemoveNthNodeFromEndList {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode fast = head, slow = null;
         for (int i = 1; i < n; i++) {

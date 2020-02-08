@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S1008ConstructBinarySearchTreePreorderTraversal {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode bstFromPreorder(int[] preorder) {
         return bst(preorder, 0, preorder.length-1);
     }

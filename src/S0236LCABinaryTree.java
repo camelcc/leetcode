@@ -1,16 +1,8 @@
+import util.TreeNode;
+
 import java.util.Stack;
 
 public class S0236LCABinaryTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         Stack<TreeNode> pPath = new Stack<>();
         contains(root, p, pPath);

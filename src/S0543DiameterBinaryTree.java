@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0543DiameterBinaryTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private int diameter = 0;
 
     public int diameterOfBinaryTree(TreeNode root) {

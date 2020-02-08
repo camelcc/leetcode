@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0938RangeSumBST {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int rangeSumBST(TreeNode root, int L, int R) {
         assert L <= R;
         if (root == null) {

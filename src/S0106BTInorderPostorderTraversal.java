@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0106BTInorderPostorderTraversal {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         if (inorder == null || inorder.length == 0) {
             return null;

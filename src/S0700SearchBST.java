@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0700SearchBST {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode searchBST(TreeNode root, int val) {
         if (root == null) {
             return null;

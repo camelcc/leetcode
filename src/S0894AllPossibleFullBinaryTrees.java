@@ -1,18 +1,10 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class S0894AllPossibleFullBinaryTrees {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     HashMap<Integer, List<TreeNode>> dp = new HashMap<>();
 
     public List<TreeNode> allPossibleFBT(int N) {

@@ -1,13 +1,6 @@
+import util.ListNode;
+
 public class S0725SplitLinkedListParts {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode[] splitListToParts(ListNode root, int k) {
         if (k == 0) {
             return null;

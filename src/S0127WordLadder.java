@@ -1,6 +1,5 @@
-import javafx.util.Pair;
-
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 public class S0127WordLadder {
@@ -8,39 +7,43 @@ public class S0127WordLadder {
         if (!wordList.contains(endWord)) {
             return 0;
         }
+        HashMap<String, Boolean> adjDP = new HashMap<>();
 
-        List<String> visited = new ArrayList<>();
+        int res = 1;
+        HashSet<String> visited = new HashSet<>();
         visited.add(beginWord);
 
-        List<Pair<Integer, String>> nodes = new ArrayList<>();
-        nodes.add(new Pair<>(1, beginWord));
-        while (!nodes.isEmpty()) {
-            Pair<Integer, String> n = nodes.remove(0);
-            List<String> adjcents = new ArrayList<>();
-            for (String w : wordList) {
-                if (isAdj(n.getValue(), w)) {
-                    adjcents.add(w);
+        HashSet<String> current = new HashSet<>();
+        current.add(beginWord);
+        while (!current.isEmpty()) {
+            if (current.contains(endWord)) {
+                return res;
+            }
+
+            HashSet<String> next = new HashSet<>();
+            for (String c : current) {
+                for (String w : wordList) {
+                    if (!visited.contains(w) && isAdj(c, w, adjDP)) {
+                        next.add(w);
+                        visited.add(w);
+                    }
                 }
             }
 
-            for (String adj : adjcents) {
-                if (visited.contains(adj)) {
-                    continue;
-                }
-                if (adj.equals(endWord)) {
-                    return n.getKey()+1;
-                }
-
-                nodes.add(new Pair<>(n.getKey()+1, adj));
-                visited.add(adj);
-            }
+            res++;
+            current = next;
         }
         return 0;
     }
 
-    private boolean isAdj(String a, String b) {
+    private boolean isAdj(String a, String b, HashMap<String, Boolean> dp) {
         assert !a.isEmpty();
         assert a.length() == b.length();
+        String key = a + ' ' + b;
+        if (dp.containsKey(key)) {
+            return dp.get(key);
+        }
+
         int diff = 0;
         for (int i = 0; i < a.length(); i++) {
             if (a.charAt(i) != b.charAt(i)) {
@@ -51,6 +54,9 @@ public class S0127WordLadder {
                 }
             }
         }
-        return diff == 1;
+        boolean res = diff == 1;
+        dp.put(key, res);
+        dp.put(b + ' ' + a, res);
+        return res;
     }
 }

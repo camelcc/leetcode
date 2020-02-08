@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S1145BinaryTreeColoringGame {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
         int[] cnt = new int[n+1];
         int total = cnt(root, cnt);

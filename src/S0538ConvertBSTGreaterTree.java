@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0538ConvertBSTGreaterTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode convertBST(TreeNode root) {
         postSum(root, 0);
         return root;

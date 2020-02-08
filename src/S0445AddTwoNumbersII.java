@@ -1,15 +1,8 @@
+import util.ListNode;
+
 import java.util.Stack;
 
 public class S0445AddTwoNumbersII {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         Stack<ListNode> sum = new Stack<>();
         Stack<ListNode> l1Stack = new Stack<>();

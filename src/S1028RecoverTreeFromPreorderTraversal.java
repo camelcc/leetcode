@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S1028RecoverTreeFromPreorderTraversal {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode recoverFromPreorder(String S) {
         TreeNode t = new TreeNode(0);
         build(S, 0, 0, t, true);

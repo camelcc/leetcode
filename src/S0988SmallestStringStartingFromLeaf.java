@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0988SmallestStringStartingFromLeaf {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     String candidate = null;
 
     public String smallestFromLeaf(TreeNode root) {

@@ -1,16 +1,8 @@
+import util.TreeNode;
+
 import java.util.*;
 
 public class S0652FindDuplicateSubtrees {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private HashMap<String, TreeNode> map = new HashMap<>();
 
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {

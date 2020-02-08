@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0979DistributeCoinsBinaryTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int distributeCoins(TreeNode root) {
         if (root == null) {
             return 0;

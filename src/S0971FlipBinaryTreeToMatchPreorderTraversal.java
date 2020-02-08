@@ -1,17 +1,9 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class S0971FlipBinaryTreeToMatchPreorderTraversal {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<Integer> flipMatchVoyage(TreeNode root, int[] voyage) {
         List<Integer> res = new ArrayList<>();
         int r = match(root, voyage, 0, res);

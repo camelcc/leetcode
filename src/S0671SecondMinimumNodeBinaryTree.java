@@ -1,17 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
+import util.TreeNode;
 
 public class S0671SecondMinimumNodeBinaryTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int findSecondMinimumValue(TreeNode root) {
         if (root == null || root.left == null) {
             return -1;

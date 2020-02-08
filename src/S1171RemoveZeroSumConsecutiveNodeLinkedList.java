@@ -1,15 +1,8 @@
+import util.ListNode;
+
 import java.util.*;
 
 public class S1171RemoveZeroSumConsecutiveNodeLinkedList {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode removeZeroSumSublists(ListNode head) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;

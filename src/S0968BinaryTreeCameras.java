@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0968BinaryTreeCameras {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int minCameraCover(TreeNode root) {
         if (root == null) {
             return 0;

@@ -1,19 +1,10 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 public class S1305AllElementsTwoBinarySearchTrees {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
-
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
         TreeNode t = root1;
         Stack<TreeNode> stack1 = new Stack<>();

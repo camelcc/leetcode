@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S1302DeepestLeavesSum {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     int deepestLevel = 0, sum = 0;
 
     public int deepestLeavesSum(TreeNode root) {

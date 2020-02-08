@@ -1,18 +1,10 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class S0501FindModeBST {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int[] findMode(TreeNode root) {
         HashMap<Integer, Integer> counts = new HashMap<>();
         countMode(root, counts);

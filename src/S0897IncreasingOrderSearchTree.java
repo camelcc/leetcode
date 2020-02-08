@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0897IncreasingOrderSearchTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private TreeNode tail = null;
     public TreeNode increasingBST(TreeNode root) {
         if (root == null) {

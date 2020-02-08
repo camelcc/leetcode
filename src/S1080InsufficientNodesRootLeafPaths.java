@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S1080InsufficientNodesRootLeafPaths {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode sufficientSubset(TreeNode root, int limit) {
         if (insufficient(root, 0, limit)) {
             return null;

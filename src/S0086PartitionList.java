@@ -1,13 +1,6 @@
+import util.ListNode;
+
 public class S0086PartitionList {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode partition(ListNode head, int x) {
         if (head == null) {
             return null;

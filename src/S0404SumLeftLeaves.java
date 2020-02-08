@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0404SumLeftLeaves {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int sumOfLeftLeaves(TreeNode root) {
         if (root == null) {
             return 0;

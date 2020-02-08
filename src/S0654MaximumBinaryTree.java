@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0654MaximumBinaryTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode constructMaximumBinaryTree(int[] nums) {
         return build(nums, 0, nums.length-1);
     }

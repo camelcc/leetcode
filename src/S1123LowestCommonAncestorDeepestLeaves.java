@@ -1,18 +1,10 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class S1123LowestCommonAncestorDeepestLeaves {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode lcaDeepestLeaves(TreeNode root) {
         if (root == null) {
             return null;

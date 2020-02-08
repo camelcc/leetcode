@@ -1,13 +1,6 @@
+import util.ListNode;
+
 public class S0024SwapNodesPairs {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.next == null) {
             return head;

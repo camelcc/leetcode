@@ -1,16 +1,7 @@
+import util.TreeNode;
+
 public class S0297SerializeDeserializeBinaryTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public static class Codec {
-
         public String serialize(TreeNode root) {
             if (root == null) {
                 return "";

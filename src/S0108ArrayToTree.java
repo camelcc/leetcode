@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0108ArrayToTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode sortedArrayToBST(int[] nums) {
         return generateTree(nums, 0, nums.length-1);
     }

@@ -1,13 +1,6 @@
+import util.ListNode;
+
 public class S0147InsertionSortList {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode insertionSortList(ListNode head) {
         if (head == null) {
             return null;

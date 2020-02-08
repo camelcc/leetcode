@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0993CousinsBinaryTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private int dx = -1, dy = -1;
     public boolean isCousins(TreeNode root, int x, int y) {
         if (x == y) {

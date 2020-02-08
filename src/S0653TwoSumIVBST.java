@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0653TwoSumIVBST {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public boolean findTarget(TreeNode root, int k) {
         if (root == null) {
             return false;

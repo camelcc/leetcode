@@ -1,17 +1,9 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class S0872LeafSimilarTrees {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
         List<Integer> leaf1 = new ArrayList<>();
         travel(root1, leaf1);

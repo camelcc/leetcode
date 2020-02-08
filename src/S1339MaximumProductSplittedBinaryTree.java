@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S1339MaximumProductSplittedBinaryTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int maxProduct(TreeNode root) {
         long total = sum(root);
         int MOD = (int)Math.pow(10, 9)+7;

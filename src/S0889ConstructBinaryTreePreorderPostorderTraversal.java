@@ -1,17 +1,9 @@
+import util.TreeNode;
+
 import java.util.Arrays;
 import java.util.HashMap;
 
 public class S0889ConstructBinaryTreePreorderPostorderTraversal {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode constructFromPrePost(int[] pre, int[] post) {
         TreeNode root = new TreeNode(pre[0]);
         if (pre.length == 1) {

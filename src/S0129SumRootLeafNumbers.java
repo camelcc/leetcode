@@ -1,17 +1,9 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class S0129SumRootLeafNumbers {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public int sumNumbers(TreeNode root) {
         List<String> nums = new ArrayList<>();
         traveral(root, "", nums);

@@ -1,13 +1,6 @@
+import util.ListNode;
+
 public class S0025ReverseNodesKGroup {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) {
             return null;

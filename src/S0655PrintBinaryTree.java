@@ -1,18 +1,9 @@
+import util.TreeNode;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class S0655PrintBinaryTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<List<String>> printTree(TreeNode root) {
         if (root == null) {
             return null;

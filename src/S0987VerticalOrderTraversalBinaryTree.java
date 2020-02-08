@@ -1,16 +1,8 @@
+import util.TreeNode;
+
 import java.util.*;
 
 public class S0987VerticalOrderTraversalBinaryTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         TreeMap<Integer, TreeMap<Integer, TreeSet<Integer>>> res = new TreeMap<>();
         travel(root, 0, 0, res);

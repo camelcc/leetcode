@@ -1,16 +1,8 @@
+import util.TreeNode;
+
 import java.util.HashMap;
 
 public class S0437PathSumIII {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private HashMap<Integer, Integer> preSum = new HashMap<>();
 
     public int pathSum(TreeNode root, int sum) {

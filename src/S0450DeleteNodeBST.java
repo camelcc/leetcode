@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0450DeleteNodeBST {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
             return root;

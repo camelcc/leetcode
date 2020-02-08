@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0114FlattenBT2LinkedList {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode flatten(TreeNode root) {
         return flatten(root, null);
     }

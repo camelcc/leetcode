@@ -1,15 +1,8 @@
+import util.ListNode;
+
 import java.util.Random;
 
 public class S0382LinkedListRandomNode {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     class Solution {
         private ListNode head;
         private Random random;

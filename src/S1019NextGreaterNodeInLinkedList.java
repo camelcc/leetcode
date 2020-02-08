@@ -1,17 +1,10 @@
+import util.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 public class S1019NextGreaterNodeInLinkedList {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public int[] nextLargerNodes(ListNode head) {
         List<Integer> res = new ArrayList<>();
         Stack<int[]> prev = new Stack<>();

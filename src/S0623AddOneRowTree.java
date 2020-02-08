@@ -1,14 +1,6 @@
+import util.TreeNode;
+
 public class S0623AddOneRowTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode addOneRow(TreeNode root, int v, int d) {
         if (d == 1) {
             TreeNode res = new TreeNode(v);
