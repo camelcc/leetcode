@@ -1,5 +1,8 @@
 package util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Utils {
     public static String array2str(int[] array) {
         StringBuilder sb = new StringBuilder();
@@ -12,5 +15,21 @@ public class Utils {
         }
         sb.append(']');
         return sb.toString();
+    }
+
+    public static List<Integer> array2list(int[] array) {
+        List<Integer> res = new ArrayList<>();
+        for (int value : array) {
+            res.add(value);
+        }
+        return res;
+    }
+
+    public static List<List<Integer>> array2d2list(int[][] array) {
+        List<List<Integer>> res = new ArrayList<>();
+        for (int[] ints : array) {
+            res.add(array2list(ints));
+        }
+        return res;
     }
 }
