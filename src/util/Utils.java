@@ -17,6 +17,19 @@ public class Utils {
         return sb.toString();
     }
 
+    public static String arrdy2d2str(int[][] array) {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int r = 0; r < array.length; r++) {
+            sb.append(array2str(array[r]));
+            if (r != array.length-1) {
+                sb.append(',');
+            }
+        }
+        sb.append(']');
+        return sb.toString();
+    }
+
     public static List<Integer> array2list(int[] array) {
         List<Integer> res = new ArrayList<>();
         for (int value : array) {
@@ -31,5 +44,30 @@ public class Utils {
             res.add(array2list(ints));
         }
         return res;
+    }
+
+    // [[], [], []]
+    public static int[][] str2array2d(String array) {
+        int len = 0;
+        List<int[]> res = new ArrayList<>();
+
+        String[] arr = array.trim().substring(1, array.length()-1).split("],");
+        for (String a : arr) {
+            if (a.endsWith("]")) {
+                a = a.substring(0, a.length()-1);
+            }
+            String[] d = a.trim().substring(1, a.length()).split(",");
+            int[] line = new int[d.length];
+            for (int i = 0; i < d.length; i++) {
+                line[i] = Integer.parseInt(d[i].trim());
+            }
+            res.add(line);
+        }
+
+        int[][] r = new int[res.size()][len];
+        for (int i = 0; i < res.size(); i++) {
+            r[i] = res.get(i);
+        }
+        return r;
     }
 }

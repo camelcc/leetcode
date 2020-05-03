@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class S0384ShuffleArray {
-    class Solution {
+    public static class Solution {
         private int[] origin;
 
         public Solution(int[] nums) {
