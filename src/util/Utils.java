@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Utils {
+    public static ArrayList<Boolean> array2list(boolean[] data) {
+        ArrayList<Boolean> res = new ArrayList<>(data.length);
+        for (int i = 0; i < data.length; i++) {
+            res.add(data[i]);
+        }
+        return res;
+    }
+
     public static String array2str(int[] array) {
         StringBuilder sb = new StringBuilder();
         sb.append('[');
