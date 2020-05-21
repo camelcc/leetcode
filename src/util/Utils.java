@@ -12,10 +12,18 @@ public class Utils {
         return res;
     }
 
-    public static ArrayList<String> array2list(String[] data) {
-        ArrayList<String> res = new ArrayList<>(data.length);
+    public static <T> List<T> array2List(T[] data) {
+        ArrayList<T> res = new ArrayList<>(data.length);
         for (int i = 0; i < data.length; i++) {
             res.add(data[i]);
+        }
+        return res;
+    }
+
+    public static <T> List<List<T>> array2d2list(T[][] array) {
+        List<List<T>> res = new ArrayList<>();
+        for (T[] ints : array) {
+            res.add(array2List(ints));
         }
         return res;
     }
@@ -54,13 +62,7 @@ public class Utils {
         return res;
     }
 
-    public static List<List<String>> array2d2list(String[][] array) {
-        List<List<String>> res = new ArrayList<>();
-        for (String[] ints : array) {
-            res.add(array2list(ints));
-        }
-        return res;
-    }
+
 
     public static List<List<Integer>> array2d2list(int[][] array) {
         List<List<Integer>> res = new ArrayList<>();
