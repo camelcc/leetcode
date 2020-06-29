@@ -92,6 +92,9 @@ public class Utils {
 
         String[] arr = array.trim().substring(1, array.length()-1).split("],");
         for (String a : arr) {
+            if (a.isBlank()) {
+                continue;
+            }
             if (a.endsWith("]")) {
                 a = a.substring(0, a.length()-1);
             }
