@@ -95,10 +95,12 @@ public class Utils {
             if (a.isBlank()) {
                 continue;
             }
+            a = a.trim();
             if (a.endsWith("]")) {
                 a = a.substring(0, a.length()-1);
             }
-            String[] d = a.trim().substring(1, a.length()).split(",");
+            a = a.trim();
+            String[] d = a.substring(1).split(",");
             int[] line = new int[d.length];
             for (int i = 0; i < d.length; i++) {
                 line[i] = Integer.parseInt(d[i].trim());
