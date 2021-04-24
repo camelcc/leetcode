@@ -1,4 +1,4 @@
-public class S1664 {
+public class S1664WaysMakeFairArray {
     public int waysToMakeFair(int[] nums) {
         if (nums.length == 1) {
             return 1;

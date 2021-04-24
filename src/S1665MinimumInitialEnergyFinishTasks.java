@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class S1665 {
+public class S1665MinimumInitialEnergyFinishTasks {
     public int minimumEffort(int[][] tasks) {
         Arrays.sort(tasks, (int[] t1, int[] t2) -> {
             int d1 = t1[1]-t1[0];

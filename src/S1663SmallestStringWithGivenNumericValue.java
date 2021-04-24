@@ -1,4 +1,4 @@
-public class S1663 {
+public class S1663SmallestStringWithGivenNumericValue {
     public String getSmallestString(int n, int k) {
         if (!valid(n, k)) {
             return null;

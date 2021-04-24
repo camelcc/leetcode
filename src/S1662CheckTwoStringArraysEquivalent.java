@@ -1,4 +1,4 @@
-public class S1662 {
+public class S1662CheckTwoStringArraysEquivalent {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
         StringBuilder s1 = new StringBuilder();
         for (String w : word1) {
