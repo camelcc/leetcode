@@ -114,4 +114,35 @@ public class Utils {
         }
         return r;
     }
+
+    public static ListNode array2listnode(int[] data) {
+        if (data.length == 0) {
+            return null;
+        }
+        ListNode res = new ListNode(data[0]);
+        ListNode c = res;
+        for (int i = 1; i < data.length; i++) {
+            c.next = new ListNode(data[i]);
+            c = c.next;
+        }
+        return res;
+    }
+
+    public static String listnode2str(ListNode list) {
+        if (list == null) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        ListNode c = list;
+        while (c != null) {
+            sb.append(c.val);
+            if (c.next != null) {
+                sb.append(',');
+            }
+            c = c.next;
+        }
+        sb.append(']');
+        return sb.toString();
+    }
 }
