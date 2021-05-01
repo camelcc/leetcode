@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class S1674 {
+public class S1674MinimumMovesMakeArrayComplementary {
     public int minMoves(int[] nums, int limit) {
         int[] delta = new int[2 * limit + 2];
         Arrays.fill(delta, 0);

@@ -1,6 +1,6 @@
 import java.util.PriorityQueue;
 
-public class S1673 {
+public class S1673FindMostCompetitiveSubsequence {
     public int[] mostCompetitive(int[] nums, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>((Integer o1, Integer o2) -> {
             if (nums[o1] != nums[o2]) {

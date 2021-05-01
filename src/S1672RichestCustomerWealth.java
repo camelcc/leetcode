@@ -1,4 +1,4 @@
-public class S1672 {
+public class S1672RichestCustomerWealth {
     public int maximumWealth(int[][] accounts) {
         int max = 0;
         for (int i = 0; i < accounts.length; i++) {

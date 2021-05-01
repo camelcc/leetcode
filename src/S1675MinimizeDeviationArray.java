@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class S1675 {
+public class S1675MinimizeDeviationArray {
     public int minimumDeviation(int[] nums) {
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o[1]));
         int max = 0;
