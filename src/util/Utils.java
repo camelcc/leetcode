@@ -113,6 +113,9 @@ public class Utils {
 
     // [[], [], []]
     public static int[][] str2array2d(String array) {
+        if (array.isBlank()) {
+            return new int[0][0];
+        }
         int len = 0;
         List<int[]> res = new ArrayList<>();
 
