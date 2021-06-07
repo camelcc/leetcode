@@ -80,7 +80,33 @@ public class Utils {
         return sb.toString();
     }
 
+    public static String array2str(char[] array) {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int i = 0; i < array.length; i++) {
+            sb.append(array[i]);
+            if (i < array.length-1) {
+                sb.append(", ");
+            }
+        }
+        sb.append(']');
+        return sb.toString();
+    }
+
     public static String arrdy2d2str(int[][] array) {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int r = 0; r < array.length; r++) {
+            sb.append(array2str(array[r]));
+            if (r != array.length-1) {
+                sb.append(',');
+            }
+        }
+        sb.append(']');
+        return sb.toString();
+    }
+
+    public static String arrdy2d2str(char[][] array) {
         StringBuilder sb = new StringBuilder();
         sb.append('[');
         for (int r = 0; r < array.length; r++) {
@@ -138,6 +164,38 @@ public class Utils {
         }
 
         int[][] r = new int[res.size()][len];
+        for (int i = 0; i < res.size(); i++) {
+            r[i] = res.get(i);
+        }
+        return r;
+    }
+
+    public static char[][] str2array2dchar(String array) {
+        if (array.isBlank()) {
+            return new char[0][0];
+        }
+        int len = 0;
+        List<char[]> res = new ArrayList<>();
+
+        String[] arr = array.trim().substring(1, array.length()-1).split("],");
+        for (String a : arr) {
+            if (a.isBlank()) {
+                continue;
+            }
+            a = a.trim();
+            if (a.endsWith("]")) {
+                a = a.substring(0, a.length()-1);
+            }
+            a = a.trim();
+            String[] d = a.substring(1).split(",");
+            char[] line = new char[d.length];
+            for (int i = 0; i < d.length; i++) {
+                line[i] = d[i].substring(1, d[i].length()-1).trim().charAt(0);
+            }
+            res.add(line);
+        }
+
+        char[][] r = new char[res.size()][len];
         for (int i = 0; i < res.size(); i++) {
             r[i] = res.get(i);
         }
