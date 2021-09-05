@@ -93,7 +93,7 @@ public class Utils {
         return sb.toString();
     }
 
-    public static String arrdy2d2str(int[][] array) {
+    public static String array2d2str(int[][] array) {
         StringBuilder sb = new StringBuilder();
         sb.append('[');
         for (int r = 0; r < array.length; r++) {
@@ -106,7 +106,7 @@ public class Utils {
         return sb.toString();
     }
 
-    public static String arrdy2d2str(char[][] array) {
+    public static String array2d2str(char[][] array) {
         StringBuilder sb = new StringBuilder();
         sb.append('[');
         for (int r = 0; r < array.length; r++) {
