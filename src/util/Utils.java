@@ -190,7 +190,7 @@ public class Utils {
             String[] d = a.substring(1).split(",");
             char[] line = new char[d.length];
             for (int i = 0; i < d.length; i++) {
-                line[i] = d[i].substring(1, d[i].length()-1).trim().charAt(0);
+                line[i] = d[i].trim().substring(1, d[i].length()-1).charAt(0);
             }
             res.add(line);
         }
