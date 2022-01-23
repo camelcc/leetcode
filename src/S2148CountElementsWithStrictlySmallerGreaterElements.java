@@ -1,0 +1,2 @@
+public class S2148CountElementsWithStrictlySmallerGreaterElements {
+}
