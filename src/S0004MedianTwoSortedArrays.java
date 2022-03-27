@@ -1,56 +1,41 @@
 public class S0004MedianTwoSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        if (nums1.length > nums2.length) {
-            int[] t = nums1;
-            nums1 = nums2;
-            nums2 = t;
-        }
-        if (nums1.length == 0) {
-            if (nums2.length == 0) {
-                return 0;
-            } else if (nums2.length == 1) {
-                return nums2[0];
-            }
-            if (nums2.length % 2 == 0) {
-                return (nums2[nums2.length/2-1]+nums2[nums2.length/2])/2.0;
-            } else {
-                return nums2[nums2.length/2];
-            }
-        }
-        int len = nums1.length+nums2.length;
+        int n1 = nums1.length;
+        int n2 = nums2.length;
 
-        int lo1 = 0, hi1 = nums1.length;
-        while (lo1 <= hi1) {
-            int i = (lo1+hi1)/2;
-            int j = (len+1)/2-i;
-            if (i < nums1.length && nums2[j-1] > nums1[i]) {
-                lo1 = i+1;
-            } else if (i > 0 && nums1[i-1] > nums2[j]) {
-                hi1 = i-1;
-            } else {
-                int lmax;
-                if (i == 0) {
-                    lmax = nums2[j-1];
-                } else if (j == 0) {
-                    lmax = nums1[i-1];
-                } else {
-                    lmax = Math.max(nums1[i-1], nums2[j-1]);
+        if(n1 > n2){
+            return findMedianSortedArrays(nums2, nums1);
+        }
+
+        int s = 0;
+        int e = n1;
+
+        while(s <= e){
+            int p1 = s + (e-s) / 2;
+            int p2 = ((n1 + n2) / 2) - p1;
+
+            int l1 = p1==0 ? Integer.MIN_VALUE : nums1[p1-1];
+            int l2 = p2==0 ? Integer.MIN_VALUE : nums2[p2-1];
+
+            int r1 = p1==nums1.length ? Integer.MAX_VALUE : nums1[p1];
+            int r2 = p2==nums2.length ? Integer.MAX_VALUE : nums2[p2];
+
+            if(l1 <= r2 && l2 <= r1){
+                int l = Math.max(l1, l2);
+                int r = Math.min(r1, r2);
+
+                if((n1+n2) % 2==0){
+                    return (l+r) / 2.0;
+                }else{
+                    return r * 1.0;
                 }
-                int rmin;
-                if (i == nums1.length) {
-                    rmin = nums2[j];
-                } else if (j == nums2.length) {
-                    rmin = nums1[i];
-                } else {
-                    rmin = Math.min(nums1[i], nums2[j]);
-                }
-                if (len%2 != 0) {
-                    return lmax;
-                } else {
-                    return (lmax+rmin)/2.0;
-                }
+            }else if(l1 > r2){
+                e = p1 - 1;
+            }else{
+                s = p1 + 1;
             }
         }
-        return 0;
+
+        return -1;
     }
 }
